@@ -5,12 +5,12 @@
         {$template:_head}
     </head>
     <body>
-
+    {$template:_header}
         <!-- Container -->
         <div id="page" class="container">
 
             <!-- Include header template -->
-            {$template:_header}
+
 
             <h1 class="grid_12" role="heading">{$page:h1}</h1>
 
@@ -47,9 +47,9 @@
 
             <!-- Footer -->
             <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
 
+        </div>
+    {$template:_footer}
         <!-- Include mobile elements template -->
         {$template:_mobile elements}
 

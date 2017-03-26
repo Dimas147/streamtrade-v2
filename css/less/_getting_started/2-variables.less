@@ -15,8 +15,8 @@
 
 // [Fonts]
 //==================================================
-@font-family-text     : Helvetica, "Helvetica Neue", Arial, sans-serif;
-@font-family-headings : "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
+@font-family-text     : Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
+@font-family-headings : Roboto, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, serif;
 
 // [Fonts size]
 //==================================================
@@ -43,7 +43,7 @@
 // [Grid system]
 //==================================================
 //Width for container
-@grid-container-width    : 960px;
+@grid-container-width    : 1200px;
 @grid-container-maxWidth : 95%;
 @grid-container-minWidth : 0;
 
@@ -78,7 +78,8 @@
 
 // Brand Color ( color schemes => http://javierbyte.github.io/cohesive-colors/ )
 //==================================================
-@brand-primary : #3F51B5; // #c2d2da
+@brand-primary : #fcc605; // #c2d2da
+@brand-dark    : #191919;
 @brand-success : #4fc752; // #52ff8c | #A4F14E | #8fd400
 @brand-info    : #28b0ed; // #94C5FF           | #00a1f1
 @brand-warning : #ffc159; // #ffd17b | #FADA32 | #ffbb00
@@ -135,17 +136,17 @@
 @text-select-color        : @primary-color;
 
 // variables for Header
-@header-bg                : transparent;
+@header-bg                : @brand-dark;
 @header-color             : @text-color;
 
 // variables for Main Menu
-@nav-bg                           : @primary-bg;
-@nav-color                        : @primary-color;
+@nav-bg                           : transparent;
+@nav-color                        : #000000;
 
 @nav-bg-li-hover                  : darken(@nav-bg, 10%);
 @nav-bg-li-current                : @nav-bg-li-hover;
 
-@nav-color-li-hover               : @nav-color;
+@nav-color-li-hover               : @primary-color;
 @nav-color-li-current             : @nav-color-li-hover;
 
 @nav-drop-down-list-bg            : #FFF;
@@ -167,15 +168,15 @@
 
 // [Links]
 //==================================================
-@link-color         : #07A0C3;
-@link-color-hover   : darken(@link-color, 20%);
+@link-color         : @brand-dark;
+@link-color-hover   : darken(@brand-primary, 10%);
 @link-color-active  : @link-color-hover;
 @link-color-visited : none;
 
 // [Heading]
 //==================================================
 @heading-color    : @gray-darker;
-@heading-weight   : bold;
+@heading-weight   : 900;
 @subheading-color : @gray;
 
 // [Indents]
@@ -252,8 +253,8 @@
 @button-inverse-bg     : darken(@gray-lighter, 10%);
 @button-inverse-color  : @gray;
 
-@button-primary-bg     : @primary-bg;
-@button-primary-color  : @primary-color;
+@button-primary-bg     : @brand-primary;
+@button-primary-color  : #000000;
 
 @button-success-bg     : @brand-success;
 @button-success-color  : #FFF;

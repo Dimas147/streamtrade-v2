@@ -3,6 +3,7 @@
 body {
 	// custom scroll-bar
 	//.scroll-bar();
+	background-color: #f3f3f3;
 }
 main {
 }
@@ -11,13 +12,18 @@ main {
 //	HEADER Style
 //==================================================
 header {
+	padding-top: 49px;
+	position: relative;
 	background : @header-bg;
 	color      : @header-color;
 
 	// -- LOGO Style
 	.logo {
+		position: relative;
+		margin-top: @font-size-base * 5;
+		margin-bottom: @font-size-base * 5;
 		text-decoration : none;
-
+		z-index: 1;
 		a {
 			display : inline-block;
 		}
@@ -26,6 +32,27 @@ header {
 		}
 	}
 }
+
+.top-line{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	padding-top: @font-size-base;
+	p{
+		.inline-block();
+		& + p {
+			margin-left: @font-size-base;
+		}
+		&[class*="icon"]{
+			&::before{
+				margin-right: @font-size-base / 2;
+			}
+		}
+	}
+}
+
 // -- NAV Style
 nav {
 }
@@ -54,4 +81,19 @@ footer {
 //==================================================
 #go-top {
 	.button-color(#ffffff; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
+}
+
+.main-content{
+	margin-top: 30px;
+}
+
+.image-example{
+	text-align: center;
+	overflow: hidden;
+	& > img{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -3432px;
+		display: block;
+	}
 }

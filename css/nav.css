@@ -12,7 +12,7 @@ extend ' .mobile-menu li' has no matches
 .featureditem li,
 .relatedpages li,
 .related-products li {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: top;
 }
@@ -20,16 +20,20 @@ extend ' .mobile-menu li' has no matches
   .main_menu {
     position: relative;
     z-index: 11;
-    background: #3f51b5;
-    color: #ffffff;
+    color: #000000;
   }
   .main_menu > li {
     float: left;
     position: relative;
   }
+  .main_menu > li > a {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
   .main_menu > li:hover,
   .main_menu a.current {
-    background: #32408f;
+    color: #FFF;
   }
   .main_menu > li:hover ul {
     display: block;
@@ -47,7 +51,7 @@ extend ' .mobile-menu li' has no matches
     z-index: 0;
     display: none;
     width: 300px;
-    background: #ffffff;
+    background: #FFF;
     color: #888888;
     box-shadow: 0 3px 5px #555555;
   }
@@ -72,10 +76,10 @@ extend ' .mobile-menu li' has no matches
 .featureapage,
 .featureditem li,
 .relatedpages li {
-  margin-bottom: 30px;
-  margin-left: 2%;
+  position: relative;
+  margin-left: 0%;
   margin-right: 0;
-  width: 32%;
+  width: 33.33333333%;
 }
 .featureapage:nth-of-type(3n + 1),
 .featureditem li:nth-of-type(3n + 1),
@@ -86,12 +90,12 @@ extend ' .mobile-menu li' has no matches
   .featureapage,
   .featureditem li,
   .relatedpages li {
-    width: 49%;
+    width: 50%;
   }
   .featureapage:nth-of-type(n),
   .featureditem li:nth-of-type(n),
   .relatedpages li:nth-of-type(n) {
-    margin-left: 2%;
+    margin-left: 0%;
   }
   .featureapage:nth-of-type(2n + 1),
   .featureditem li:nth-of-type(2n + 1),
@@ -111,11 +115,88 @@ extend ' .mobile-menu li' has no matches
     margin-left: 0;
   }
 }
-.featureapage .page-teaser-image,
-.featureditem li .page-teaser-image,
-.relatedpages li .page-teaser-image {
+.featureditem {
+  font-size: 0;
+}
+.featureditem >* {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.featureditem.right-categories li {
+  border-top: 1px solid #000;
+  margin-bottom: 0;
+}
+.featureditem.right-categories .page-title {
+  background: #292929;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 10px 18px 30px;
+  margin-bottom: 0;
+  white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 0.5em;
+  text-overflow: ellipsis;
+}
+.featureditem.right-categories .page-title:hover,
+.featureditem.right-categories .page-title.current {
+  background: #3f3f3f;
+  color: #FFF;
+}
+.featureditem.categories .page-teaser-image {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.featureditem.categories .page-teaser-image img {
+  -webkit-transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+  transition: all 0.5s ease-in-out;
+}
+.featureditem.categories .page-teaser-image::before {
+  content: '';
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.featureditem.categories .page-title {
+  font-size: 3em;
+  line-height: 1;
+  position: absolute;
+  left: 0.23em;
+  right: 0.23em;
+  bottom: 0.23em;
+  padding: 0.42em;
+  margin-bottom: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: left;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+.featureditem.categories li:hover .page-teaser-image::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+.featureditem.categories li:hover .page-teaser-image img {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.featureditem.categories li:hover .page-title {
+  background: #fcc605;
+  color: #000000;
+  white-space: normal;
+  text-overflow: initial;
 }
 .featureapage {
   float: left;
@@ -170,7 +251,7 @@ aside .relatedpages li p {
 .news-item .news-item-date::before {
   top: 2px;
   font-size: 16px;
-  color: #3f51b5;
+  color: #fcc605;
 }
 .news-item .news-item-tags a {
   color: #888888;
@@ -187,6 +268,15 @@ aside .relatedpages li p {
 }
 .news-item .newslog-tag-filter::before {
   content: "\e023";
+}
+.search-results li {
+  margin-bottom: 30px;
+}
+.search-results .page-teaser-image {
+  overflow: hidden;
+  float: left;
+  margin-right: 2%;
+  width: 150px;
 }
 @media (min-width: 801px) {
   body .mobile-bar,
@@ -254,8 +344,8 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 56px;
-  color: #ffffff;
-  background: #3f51b5;
+  color: #FFF;
+  background: #fcc605;
 }
 .mobile-bar.top .btn.icon {
   width: 56px;
@@ -313,7 +403,7 @@ aside .relatedpages li p {
   -ms-flex: 1 0 100%;
   flex: 1 0 100%;
   text-transform: uppercase;
-  color: #98a2db;
+  color: #fee383;
   font-weight: 500;
   overflow-x: auto;
   height: 48px;
@@ -331,12 +421,12 @@ aside .relatedpages li p {
   height: 0;
 }
 .tabs::-webkit-scrollbar-track {
-  background: #666666;
+  background: #666;
   border-radius: 10px;
 }
 .tabs::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #cccccc;
+  background: #ccc;
 }
 .tabs .sub-menu-btn {
   display: none;
@@ -392,8 +482,8 @@ aside .relatedpages li p {
 }
 .tabs a.current {
   background-color: transparent !important;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #FFF;
+  color: #FFF;
 }
 .tabs.sub-of-main {
   display: none;
@@ -405,7 +495,7 @@ aside .relatedpages li p {
 .sub-menu-btn {
   width: 48px;
   text-align: center;
-  color: #ffffff;
+  color: #FFF;
   font-size: 1.25em;
   position: absolute;
   right: 0;
@@ -560,10 +650,10 @@ aside .relatedpages li p {
 .m-menu li a:hover,
 .m-menu li a.current {
   background: #f2f2f2;
-  color: #3f51b5;
+  color: #fcc605;
 }
 .m-menu li:hover {
-  background: transparent;
+  color: inherit;
 }
 .m-menu li:hover ul {
   display: none;
@@ -582,7 +672,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #ffffff !important;
+  background: #fff !important;
   color: #555555 !important;
   position: absolute;
   z-index: 92 !important;

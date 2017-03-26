@@ -51,10 +51,10 @@
 .button-color(
     @color;
     @background;
-    @border      : softlight(extract(@background, 1), #000);
-    @color2      : extract(@color, 1);
-    @background2 : darken(extract(@background, 1), 10%);
-    @border2     : darken(extract(@border, 1), 10%)
+    @border      : extract(@background, 1);
+    @color2      : extract(@primary-color, 1);
+    @background2 : extract(@color, 1);
+    @border2     : extract(@border, 1)
 ) {
     color            : extract(@color, 1);
     border-color     : extract(@border, 1);

@@ -1,28 +1,41 @@
 //	Search form
 //==================================================
 #search-form when (@widget-search){
-    p{
-        float  : left;
-        width  : 30%;
-        margin : 0;
+    margin-top: 0.57em;
+    .clearfix-mixin();
 
-        &:first-child{
-            width : 70%;
-        }
-
+    input, button{
+        float: left;
     }
-
-    input{
+    button{
+        background-color: @brand-dark;
     }
 
     [type="text"]{
-        border-color : @brand-primary;
+        width: ~'calc(100% - 2.3em)';
+        border-color : @primary-color;
+        &:focus{
+            border-color: @brand-dark;
+        }
     }
 
     [type="submit"]{
-        width         : 100%;
-        padding-left  : 0;
-        padding-right : 0;
-        margin        : 0;
+        overflow    : hidden;
+        padding     : 0;
+        white-space : nowrap;
+        width       : unit(@button-line-height * 2, em);
+        color: @primary-color;
+        &:focus, &:hover{
+            background-color: darken(@brand-primary, 10%);
+        }
+
+        &::before {
+            width       : 100%;
+            float       : left;
+            margin      : 0;
+            line-height : inherit !important;
+            content: "\e068";
+            font-family: @font-family-icons;
+        }
     }
 }

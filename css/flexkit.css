@@ -25,7 +25,7 @@
   min-width: 100%;
 }
 .carousel .carousel-wrap .carousel-item {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: top;
 }
@@ -93,9 +93,9 @@
   text-align: center;
 }
 .smoke-base .dialog.primary .dialog-inner {
-  color: #222b61;
-  border-color: #7f8bce;
-  background-color: #ccd1eb;
+  color: #876a03;
+  border-color: #fdd959;
+  background-color: #fef0bd;
 }
 .smoke-base .dialog.success .dialog-inner {
   color: #2a6a2c;
@@ -127,7 +127,7 @@
 .smoke-base .dialog-inner {
   overflow: auto;
   margin-top: 15%;
-  max-width: 720px;
+  max-width: 900px;
   max-height: 70%;
   font-size: 1.25em;
   padding: 1em 2em;
@@ -142,29 +142,29 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #ffffff;
-  border-color: #189b1a;
+  color: #FFF;
+  border-color: #4fc752;
   background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #ffffff;
-  border-color: #126f13;
-  background-color: #37ac3a;
+  color: #FFF;
+  border-color: #4fc752;
+  background-color: #FFF;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #ffffff;
-  border-color: #e62321;
+  color: #FFF;
+  border-color: #f25f5c;
   background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #ffffff;
-  border-color: #be1816;
-  background-color: #ee312d;
+  color: #FFF;
+  border-color: #f25f5c;
+  background-color: #FFF;
 }
 .tooltip {
   cursor: help;
@@ -257,7 +257,7 @@ a.tooltip {
 }
 .dataTables_paginate .paginate_button.current {
   font-weight: bold;
-  background: #a0aae3;
+  background: #ffe589;
   color: #fff;
 }
 .dataTables_paginate .paginate_button.first::before,
@@ -299,6 +299,49 @@ a.tooltip {
 .dataTables_paginate .paginate_button.last::after,
 .dataTables_paginate .paginate_button.next::after {
   content: "\e0af";
+}
+.parallax {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: 200px;
+}
+.parallax.take-from-widget,
+.parallax .take-from-widget {
+  position: relative;
+}
+.parallax.take-from-widget > img,
+.parallax .take-from-widget > img,
+.parallax.take-from-widget > ._lbox,
+.parallax .take-from-widget > ._lbox {
+  display: none;
+}
+.parallax.take-from-widget [data-url*="imageonly"],
+.parallax .take-from-widget [data-url*="imageonly"] {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 999;
+}
+.parallax.height-auto {
+  height: auto;
+}
+.parallax.top-img {
+  background-attachment: scroll;
+}
+.gradient {
+  background: #1e5799;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
+  /* IE6-9 */
 }
 .responsive-ratio {
   position: relative;
