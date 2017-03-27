@@ -1,5 +1,5 @@
 @media only screen and (min-width : @responsive-size-tablet) {
-	.main_menu when (@menu-main) {
+	#main-menu .main_menu when (@menu-main) {
 		position : relative;
 		z-index  : 11;
 		& when not(@nav-bg = transparent) {
@@ -17,6 +17,9 @@
 				font-size: 1.5em;
 				text-transform: uppercase;
 				font-weight: 900;
+				&.current{
+					color: @primary-color;
+				}
 			}
 
 			&:hover {
@@ -107,6 +110,20 @@
 						}
 					}
 				}
+			}
+		}
+	}
+
+	#footer-menu .main_menu when (@menu-main) {
+		li{
+			& + li{
+				margin-top: 1em;
+			}
+		}
+		a{
+			color: @primary-color;
+			&:hover, &.current{
+				color: @brand-primary;
 			}
 		}
 	}

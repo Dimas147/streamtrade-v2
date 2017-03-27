@@ -162,9 +162,9 @@
 @content-color            : @text-color;
 
 // variables for Footer
-@footer-bg                : transparent;
-@footer-color             : @text-color;
-@footer-heading-color     : @heading-color;
+@footer-bg                : #191919;
+@footer-color             : #888888;
+@footer-heading-color     : @primary-color;
 
 // [Links]
 //==================================================
@@ -187,7 +187,7 @@
 @padding-large-vertical    : 10px;
 @padding-large-horizontal  : 16px;
 
-@padding-base-vertical     : 8px;
+@padding-base-vertical     : 9px;
 @padding-base-horizontal   : 12px;
 
 @padding-small-vertical    : 4px;
@@ -279,15 +279,15 @@
 @input-bg-disabled        : @gray-lighter;
 
 @input-border-width          : 1px;
-@input-border-color          : @gray-light;//border color and shadow in focus
-@input-border-color-focus    : @primary-bg;
+@input-border-color          : @primary-color;//border color and shadow in focus
+@input-border-color-focus    : @brand-dark;
 @input-border-color-disabled : darken(@input-bg-disabled, 7%);
 @input-border-radius         : 0;
 @input-shadow-focus          : true;//Do you need a shadow on focus? (true / false)
 @input-inner-shadow          : false;
 @input-shadow-size           : 3px;
 
-@input-color-placeholder  : darken(@input-bg, 10%);
+@input-color-placeholder  : @brand-dark;
 
 @checkbox-radio-width     : 16px;
 

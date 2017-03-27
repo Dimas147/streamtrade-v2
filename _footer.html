@@ -1,3 +1,21 @@
-<footer class="hide" itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
-
+<footer itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
+    <div class="footer-content container">
+        <nav id="footer-menu" class="grid_4 suffix_4 d-visible" role="navigation">{$menu:main:_main menu}</nav>
+        <div class="grid_4">
+            <div class="footer-logo">
+                {$imageonly:footer-logo:270:static}
+            </div>
+            <div class="company-description text-justify">
+                {$content:footer-content:static}
+            </div>
+            <p class="social-links">
+                {$template:_social links}
+            </p>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <h4 class="grid_12">{$header:copyright:static}</h4>
+        </div>
+    </div>
 </footer>

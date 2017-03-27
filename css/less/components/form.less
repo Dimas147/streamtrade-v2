@@ -26,6 +26,25 @@
             &:hover {
             }
         }
+        &#subscribeform{
+            .clearfix-mixin();
+            input{
+                height: 3.57em;
+                &[type="text"], &[type="submit"]{
+                    float: left;
+                }
+                &[type="text"]{
+                    width: ~'calc(100% - 7.143em)';
+                }
+                &[type="submit"]{
+                    background: @brand-dark;
+                    color: @primary-color;
+                    &:focus, &:hover{
+                        background-color: darken(@brand-primary, 10%);
+                    }
+                }
+            }
+        }
     }
 
     fieldset {
@@ -140,8 +159,8 @@
 
     input, select {
         padding     : 0 .5em;
-        height      : unit(@input-line-height * 2, em);
-        line-height : unit(@input-line-height * 2, em) - 1;
+        height      : 3.57em;
+        line-height : 3.57em;
     }
 
     select {

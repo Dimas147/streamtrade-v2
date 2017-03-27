@@ -1,0 +1,12 @@
+<article class="news-item">
+    <div class="news-item-content">
+        {$news:actions}
+        <a class="news-item-image" href="{$news:url}"><img src="{$news:preview:crop:370x270}" alt="{$news:title:inline}"/></a>
+        <div class="news-text">
+            <a class="news-item-title" href="{$news:url}">{$news:title}</a>
+            <p class="news-item-description">{$news:teaser}</p>
+            <time class="news-item-date icon-calendar2" datetime="{$news:date:Y-m-d}">{$news:date: M d, Y}</time>
+            <p class="news-item-tags">{$news:tags}</p>
+        </div>
+    </div>
+</article>

@@ -10,113 +10,116 @@
 // Links
 //==================================================
 a {
-    color: @brand-dark;
-    text-decoration: none;
+	color           : @brand-dark;
+	text-decoration : none;
 
-    &:visited when not(@link-color-visited = none) {
-        color: @link-color-visited;
-    }
+	&:visited when not(@link-color-visited = none) {
+		color : @link-color-visited;
+	}
 
-    &:hover {
-        color: @link-color-hover
-    }
+	&:hover {
+		color : @link-color-hover
+	}
 
-    &:active {
-        color: @link-color-active;
-    }
+	&:active {
+		color : @link-color-active;
+	}
 }
-
 // Heading
 //==================================================
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: @heading-color;
-    font-family: @font-family-headings;
-    & when not(@heading-weight = bold) and not (@heading-weight = 700) {
-        font-weight: @heading-weight;
-    }
+	margin-top    : 1.5em;
+	margin-bottom : 0.5em;
+	color         : @heading-color;
+	font-family   : @font-family-headings;
+	& when not(@heading-weight = bold) and not (@heading-weight = 700) {
+		font-weight : @heading-weight;
+	}
 
-    &:first-child:not(.logo) {
-        margin-top: 0;
-    }
+	&:first-child:not(.logo) {
+		margin-top : 0;
+	}
 
-    & when (@componentsJS) and (@widget-rotator) {
-        .slide .slide-description & {
-            color: @slider-heading-color;
-        }
-    }
+	& when (@componentsJS) and (@widget-rotator) {
+		.slide .slide-description & {
+			color : @slider-heading-color;
+		}
+	}
 
-    & when not(@footer-heading-color = @heading-color) {
-        footer & {
-            color: @footer-heading-color;
-        }
-    }
+	& when not(@footer-heading-color = @heading-color) {
+		footer & {
+			color : @footer-heading-color;
+		}
+	}
 
-    &:empty {
-        display: none;
-    }
-    & when (@heading-color = #FFFFFF) {
-        #tinymce & {
-            color: #000000;
-        }
-    }
+	&:empty {
+		display : none;
+	}
+	& when (@heading-color = #FFF) {
+		#tinymce & {
+			color : #000;
+		}
+	}
 }
-
 h1, .h1 {
-    font-size: 2.25em;
+	font-size : 2.25em;
 }
-
 h2, .h2 {
-    font-size: 2.43em;
-    font-weight: 100;
-    line-height: 1;
-    text-transform: uppercase;
-    background: #292929;
-    padding: 0.47em 0.88em 0.5em;
-    margin-bottom: 2.142rem;
-    color: @primary-color;
-    strong {
-        font-weight: 700;
-    }
+	font-size      : 2.43em;
+	font-weight    : 100;
+	line-height    : 1;
+	text-transform : uppercase;
+	padding        : 0.47em 0.88em 0.5em;
+	margin-bottom  : 2.142rem;
+	color          : @primary-color;
+	strong {
+		font-weight : 700;
+	}
+	.blog & {
+		margin         : 8.5px 0 47px;
+		background     : none;
+		padding        : 0;
+		font           : 700 74px/74px Lato;
+		text-align     : center;
+		text-transform : uppercase;
+	}
+	.main-content &{
+		background: #292929;
+	}
 }
-
 h3, .h3 {
-    font-size: 2.43em;
-    line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: @primary-color;
-    background: #292929;
-    padding: 0.47em 0.88em 0.5em;
-    border-bottom: 1px solid #373737;
-    margin: 0;
+	font-size      : 2.43em;
+	line-height    : 1;
+	font-weight    : 700;
+	text-transform : uppercase;
+	color          : @primary-color;
+	padding        : 0.47em 0.88em 0.5em;
+	margin         : 0;
+	.main-content aside &{
+		background: #292929;
+		border-bottom  : 1px solid #373737;
+	}
 }
 
 h4, .h4 {
-    font-size: 1em;
+	font-size : 1em;
 }
-
 h5, .h5 {
-    font-size: 0.875em;
+	font-size : 0.875em;
 }
-
 h6, .h6 {
-    font-size: 0.75em;
+	font-size : 0.75em;
 }
-
 .subtitle {
-    color: @subheading-color;
-    font-size: @font-size-mini;
+	color     : @subheading-color;
+	font-size : @font-size-mini;
 }
-
 p {
-    margin-top: 0;
-    margin-bottom: @font-size-base;
+	margin-top    : 0;
+	margin-bottom : @font-size-base;
 }
-
 address {
-    margin-bottom: 20px;
-    font-style: normal;
+	margin-bottom : 20px;
+	font-style    : normal;
 }

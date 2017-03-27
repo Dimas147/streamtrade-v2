@@ -1,47 +1,108 @@
-.news-item when (@widget-news-list){
+.news-item when (@widget-news-list) {
 
-    .news-item-image{
-        img{ }
-    }
+	.news-item-content{
+		background: #000000;
+		.transition();
+		&:hover{
+			background: @brand-primary;
+		}
+	}
+	.news-text{
+		padding: 7px 30px 27px;
+	}
 
-    .news-item-title{ }
+	.news-item-image {
+		display: block;
+		margin : 0 0 8px;
+		img {
+			width: 100%;
+		}
+	}
 
-    .newslog-admin-actions{
-        text-align : right;
-        a{ }
-    }
+	.news-item-title {
+		//height: 54px;
+		display: block;
+		color: @primary-color;
+		font: 700 21px/27px Lato;
+		text-transform: uppercase;
+		margin: 8.5px 0;
+	}
 
-    .news-item-date{
-        color : lighten(@text-color, 15%);
+	.newslog-admin-actions {
+		text-align : right;
+		a {
+		}
+	}
 
-        &::before{
-            top       : 2px;
-            font-size : 16px;
-            color     : @primary-bg;
-        }
-    }
+	.news-item-date {
+		color: @brand-primary;
+		display: block;
+		margin-bottom: 8.5px;
 
-    .news-item-description{ }
+		&::before {
+			margin-right : 0.5em;
+		}
+	}
 
-    .news-item-tags{
+	.news-item-description {
+		color: #888888;
+		margin-bottom: 8.5px;
+		font-size: 12px;
+		line-height: 17px;
+	}
 
-        a{
-            .link-color(@gray);
+	.news-item-tags {
+		margin-bottom: 8.5px;
+		.inline-block-wrap();
 
-            & + a{
-                margin-left : 0.5em;
-            }
+		a {
+			.button();
 
-            &::before{
-                color        : @gray;
-                margin-right : 0.5em;
-            }
-        }
-    }
+			& + a {
+				margin-left : 0.5em;
+			}
 
-    .newslog-tag-filter{
-        &::before{
-            content : "\e023";
-        }
-    }
+			&::before {
+				margin-right : 0.5em;
+			}
+		}
+	}
+
+	.newslog-tag-filter {
+		&::before {
+			font-family: @font-family-icons;
+			content : "\e023";
+		}
+	}
+	&:hover{
+		.news-item-description {
+			color: #292929;
+		}
+		.news-item-date{
+			color: @primary-color;
+		}
+		.news-item-tags{
+			a{
+				background: #000000;
+				color: @brand-primary;
+				&:hover{
+					color: @primary-color;
+				}
+			}
+		}
+	}
+
+}
+.news-list {
+	.inline-block-wrap(top);
+	margin-left   : -15px;
+	margin-right  : -15px;
+	margin-bottom : -30px;
+	.news-item {
+		.grid-elements(3; 0; true);
+		.clearfix-mixin();
+		padding-left  : 15px;
+		padding-right : 15px;
+		margin-bottom : 30px;
+	}
 }

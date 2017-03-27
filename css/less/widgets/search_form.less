@@ -1,41 +1,43 @@
 //	Search form
 //==================================================
-#search-form when (@widget-search){
-    margin-top: 0.57em;
-    .clearfix-mixin();
+#search-form when (@widget-search) {
+	.clearfix-mixin();
 
-    input, button{
-        float: left;
-    }
-    button{
-        background-color: @brand-dark;
-    }
+	input, button {
+		float : left;
+	}
+	button {
+		background-color : @brand-dark;
+	}
 
-    [type="text"]{
-        width: ~'calc(100% - 2.3em)';
-        border-color : @primary-color;
-        &:focus{
-            border-color: @brand-dark;
-        }
-    }
+	[type="text"] {
+		width        : ~'calc(100% - 3.57em)';
+		border-color : @primary-color;
+		&:focus {
+			border-color : @brand-dark;
+		}
+	}
 
-    [type="submit"]{
-        overflow    : hidden;
-        padding     : 0;
-        white-space : nowrap;
-        width       : unit(@button-line-height * 2, em);
-        color: @primary-color;
-        &:focus, &:hover{
-            background-color: darken(@brand-primary, 10%);
-        }
+	[type="submit"] {
+		overflow    : hidden;
+		padding     : 0;
+		white-space : nowrap;
+		width       : 3.57em;
+		height      : 3.57em;
+		line-height : 3.57em;
+		color       : @primary-color;
+		&:focus, &:hover {
+			background-color : darken(@brand-primary, 10%);
+		}
 
-        &::before {
-            width       : 100%;
-            float       : left;
-            margin      : 0;
-            line-height : inherit !important;
-            content: "\e068";
-            font-family: @font-family-icons;
-        }
-    }
+		&::before {
+			width       : 100%;
+			float       : left;
+			margin      : 0;
+			font-size   : 1.714em;
+			line-height : inherit !important;
+			content     : "\e068";
+			font-family : @font-family-icons;
+		}
+	}
 }

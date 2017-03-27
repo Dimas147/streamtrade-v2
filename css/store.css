@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #FFF;
+  color: #ffffff;
   padding: 5px;
 }
 .product .product-image {
@@ -64,7 +64,7 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -88,9 +88,9 @@
   margin-bottom: -30px;
 }
 .product-list >* {
-  font-size: 1rem;
+  font-size: 14px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .product-item {
   margin-left: 0%;
@@ -182,7 +182,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -364,7 +364,7 @@
   font-size: 0;
 }
 #checkout-landing-forms >* {
-  font-size: 1rem;
+  font-size: 14px;
   display: inline-block;
   vertical-align: top;
 }
@@ -479,12 +479,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #FFF;
+  background: #ffffff;
   color: #555555;
   transition: all 0.3s;
 }
@@ -609,7 +609,7 @@
   font-size: 0;
 }
 #checkout-user-address >* {
-  font-size: 1rem;
+  font-size: 14px;
   display: inline-block;
   vertical-align: top;
 }
@@ -759,14 +759,14 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #f00;
+  box-shadow: 0 0 1px 1px #ff0000;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
   font-size: 0;
 }
 #payment-zone form.paymentForm >* {
-  font-size: 1rem;
+  font-size: 14px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1087,7 +1087,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }

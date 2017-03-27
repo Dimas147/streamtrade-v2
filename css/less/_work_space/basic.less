@@ -3,7 +3,7 @@
 body {
 	// custom scroll-bar
 	//.scroll-bar();
-	background-color: #f3f3f3;
+	background-color : #F3F3F3;
 }
 main {
 }
@@ -12,18 +12,18 @@ main {
 //	HEADER Style
 //==================================================
 header {
-	padding-top: 49px;
-	position: relative;
-	background : @header-bg;
-	color      : @header-color;
+	padding-top : 49px;
+	position    : relative;
+	background  : @header-bg;
+	color       : @header-color;
 
 	// -- LOGO Style
 	.logo {
-		position: relative;
-		margin-top: @font-size-base * 5;
-		margin-bottom: @font-size-base * 5;
+		position        : relative;
+		margin-top      : @font-size-base * 5;
+		margin-bottom   : @font-size-base * 5;
 		text-decoration : none;
-		z-index: 1;
+		z-index         : 1;
 		a {
 			display : inline-block;
 		}
@@ -32,27 +32,25 @@ header {
 		}
 	}
 }
-
-.top-line{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-	padding-top: @font-size-base;
-	p{
+.top-line {
+	position    : absolute;
+	top         : 0;
+	left        : 0;
+	width       : 100%;
+	z-index     : 1;
+	padding-top : @font-size-base;
+	p {
 		.inline-block();
 		& + p {
-			margin-left: @font-size-base;
+			margin-left : @font-size-base;
 		}
-		&[class*="icon"]{
-			&::before{
-				margin-right: @font-size-base / 2;
+		&[class*="icon"] {
+			&::before {
+				margin-right : @font-size-base / 2;
 			}
 		}
 	}
 }
-
 // -- NAV Style
 nav {
 }
@@ -72,28 +70,97 @@ aside {
 //	FOOTER Style
 //==================================================
 footer {
-	padding    : @padding-larger-vertical * 2 0;
+	padding: 90px 0 40px;
 	background : @footer-bg;
 	color      : @footer-color;
-	font-size  : @font-size-small;
 }
+.footer-logo{
+	margin-bottom: 22px;
+}
+.company-description{
+	margin-bottom: 22px;
+}
+
 //	Button to scroll top
 //==================================================
 #go-top {
-	.button-color(#ffffff; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
+	.button-color(#FFF; fade(#000, 50%); fade(#000, 50%); @primary-color; @primary-bg; @primary-bg);
+}
+.main-content {
+	margin-top : 30px;
+}
+.subscribe {
+	padding : 58px 0;
+	h3 {
+		background     : none;
+		border-bottom  : none;
+		font           : 700 21px/30px Lato;
+		text-transform : uppercase;
+		&::before {
+			margin-right : 10px;
+		}
+	}
+}
+.blog {
+	padding : 62px 0 120px;
 }
 
-.main-content{
-	margin-top: 30px;
+.contact-info {
+	position : relative;
+	&::before {
+		position : absolute;
+		content  : '';
+		display  : block;
+		left     : 0;
+		right    : 0;
+		top      : 0;
+		bottom   : 0;
+		.rgba(#000; 70%);
+		z-index  : 1;
+	}
+	.contact-text {
+		position : absolute;
+		top      : 50%;
+		left     : 0;
+		right    : 0;
+		z-index  : 2;
+		color    : @primary-color;
+		.translate(0; -50%);
+		&::before {
+			position      : relative;
+			display       : block;
+			top           : 0;
+			font-size     : 74px;
+			line-height   : 1;
+			color         : #FCC605;
+			margin-bottom : 36px;
+		}
+	}
+	address {
+		display        : block;
+		font           : 700 21px/24px Lato;
+		text-transform : uppercase;
+		color          : #FFF;
+		margin-bottom  : 11px;
+	}
+	.email, .phone {
+		font          : 400 34px/34px Lato;
+		margin-bottom : 0;
+		margin-top    : 8.5px;
+		a {
+			color : @brand-primary;
+		}
+	}
 }
 
-.image-example{
-	text-align: center;
-	overflow: hidden;
-	& > img{
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: -3432px;
-		display: block;
+.copyright{
+	border-top: 1px solid #777777;
+	margin-top: 95px;
+	h4{
+		font-size: 12px;
+		line-height: 18px;
+		color: #777777;
+		padding: 29px 0;
+		font-weight: 400;
 	}
 }

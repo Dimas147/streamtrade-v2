@@ -37,7 +37,7 @@
 </div>
 {$featured:area:categories:6:0:template=_fa - categories}
 <div class="container main-content">
-    <section class="grid_9 push_3" role="main">
+    <section class="grid_9 push_3 alpha p-l" role="main">
         <article>
             <h2>{$header:new-products:static}</h2>
             {$productlist:_products list new-products:tagnames-New products}
@@ -47,7 +47,7 @@
             {$productlist:_products list new-products:tagnames-New products}
         </article>
     </section>
-    <aside class="pull_9 grid_3" role="complementary">
+    <aside class="pull_9 grid_3 omega" role="complementary">
         <section class="aside-box">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
@@ -56,10 +56,50 @@
     </aside>
 </div>
 
+<div class="parallax height-auto take-from-widget">
+    {$imageonly:blog-parallax:original:static}
+    <section class="container blog">
+        <div class="grid_12">
+            <h2>{$header:blog-title:static}</h2>
+            <div class="news-list">
+                {$newslist:_news list - index:desc:3}
+            </div>
+        </div>
+    </section>
+</div>
 
-{$content:content_example}
-<div class="image-example">
-    {$imageonly:site-example:1920:static}
+<div class="subscribe yellow-bg">
+    <section class="container">
+        <h3 class="grid_5 icon-mail text-right">{$header:subscribe-title:static}</h3>
+        <div class="grid_6">
+            {$form:subscribe-form:{$prepop:submit:text:static:readonly}}
+            {adminonly}
+            <div class="panel">
+                <div class="panel-header">Name for submit button:</div>
+                <div class="panel-content">
+                    <p class="icon-cog">{$prepop:submit:text:static}</p>
+                </div>
+            </div>
+            {/adminonly}
+        </div>
+    </section>
+</div>
+
+<div class="contact-info text-center">
+    {$plugin:gmaps:bizlocation:3440:470:12}
+    <div class="container contact-text icon-location">
+        <div class="grid_12">
+            <address>
+                {$plugin:widcard:BizAddress1}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizZip}
+            </address>
+            <p class="icon-contact-mobile phone">
+                <a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a>
+            </p>
+            <p class="icon-contact-email email">
+                <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
+            </p>
+        </div>
+    </div>
 </div>
 {$template:_footer}
 {$template:_mobile elements}

@@ -184,8 +184,14 @@
         color: @primary-color;
     }
 }
+.darker-bg{
+
+}
 .yellow-bg{
     background-color: @brand-primary;
+    *{
+        color: #000000;
+    }
 }
 
 .relative{ position : relative; }
@@ -205,6 +211,38 @@
     [role="main"]{
         article{
             margin-bottom: 2.142rem;
+        }
+    }
+}
+
+.p-l{
+    padding-left: 30px;
+}
+
+.p-r{
+    padding-right: 30px;
+}
+
+.panel {
+    .panel-header{
+        margin-bottom: 5px;
+    }
+    p {
+        &[class*="icon-"] {
+            position : relative;
+            color: @primary-color;
+            &::before {
+                position : absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                background: @brand-dark;
+                line-height: 2.3;
+            }
+            input {
+                padding-left : 35px;
+            }
         }
     }
 }

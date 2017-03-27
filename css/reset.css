@@ -173,7 +173,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 fieldset {
   border: 1px solid #eeeeee;
-  padding: 8px 12px;
+  padding: 9px 12px;
 }
 legend {
   border: 0;
@@ -205,11 +205,11 @@ th {
 }
 ::-moz-selection {
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 ::selection {
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 blockquote,
 q {
@@ -281,8 +281,8 @@ iframe {
 [contenteditable="true"] {
   display: inline-block;
   vertical-align: middle;
-  background: #fff;
-  border: 1px solid #bbbbbb;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   cursor: text;
   padding: 2px 6px;
 }
@@ -302,25 +302,25 @@ input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 button::-webkit-input-placeholder {
-  color: #e6e6e6;
+  color: #191919;
 }
 input::-moz-placeholder,
 select::-moz-placeholder,
 textarea::-moz-placeholder,
 button::-moz-placeholder {
-  color: #e6e6e6;
+  color: #191919;
 }
 input:-ms-input-placeholder,
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 button:-ms-input-placeholder {
-  color: #e6e6e6;
+  color: #191919;
 }
 input:placeholder,
 select:placeholder,
 textarea:placeholder,
 button:placeholder {
-  color: #e6e6e6;
+  color: #191919;
 }
 button,
 [type="file"],
