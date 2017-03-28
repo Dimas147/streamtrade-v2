@@ -19,9 +19,11 @@
                 <p class="icon-contact-mobile">
                     <a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a>
                 </p>
+
                 <p class="icon-contact-email">
                     <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
                 </p>
+
                 <p class="icon-clock fl-right">
                     {$header:working-time:static}
                 </p>
@@ -44,7 +46,9 @@
         </article>
         <article>
             <h2>{$header:products-for-sale:static}</h2>
-            {$productlist:_products list new-products:tagnames-New products}
+            <div id="products-in-carousel">
+                {$productlist:_products list carousel:tagnames-New products}
+            </div>
         </article>
     </section>
     <aside class="pull_9 grid_3 omega" role="complementary">
@@ -61,6 +65,7 @@
     <section class="container blog">
         <div class="grid_12">
             <h2>{$header:blog-title:static}</h2>
+
             <div class="news-list">
                 {$newslist:_news list - index:desc:3}
             </div>
@@ -71,6 +76,7 @@
 <div class="subscribe yellow-bg">
     <section class="container">
         <h3 class="grid_5 icon-mail text-right">{$header:subscribe-title:static}</h3>
+
         <div class="grid_6">
             {$form:subscribe-form:{$prepop:submit:text:static:readonly}}
             {adminonly}
@@ -95,6 +101,7 @@
             <p class="icon-contact-mobile phone">
                 <a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a>
             </p>
+
             <p class="icon-contact-email email">
                 <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
             </p>
@@ -104,5 +111,32 @@
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
+<script src="js/plugin/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#products-in-carousel .product-list').addClass("owl-carousel");
+        $('.owl-carousel').owlCarousel({
+            loop: 'true',
+            margin: 10,
+            responsiveClass: 'true',
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: 'true'
+                },
+                600: {
+                    items: 3,
+                    nav: 'false'
+                },
+                1000: {
+                    items: 3,
+                    nav: 'true',
+                    loop: 'false',
+                    margin: 30
+                }
+            }
+        })
+    })
+</script>
 </body>
 </html>

@@ -1,0 +1,137 @@
+.owl-carousel when (@widget-owl-carousel) {
+	display : none;
+	width   : 100%;
+	z-index : 1;
+	&, & .owl-item {
+		-webkit-tap-highlight-color : transparent;
+		position                    : relative;
+	}
+	.owl-stage {
+		position                 : relative;
+		-ms-touch-action         : pan-Y;
+		-moz-backface-visibility : hidden;
+		&:after {
+			content     : ".";
+			display     : block;
+			clear       : both;
+			visibility  : hidden;
+			line-height : 0;
+			height      : 0;
+		}
+	}
+	.owl-stage-outer {
+		position : relative;
+		overflow : hidden;
+		.translate3d(0, 0, 0);
+	}
+	.owl-item, .owl-wrapper {
+		-webkit-backface-visibility : hidden;
+		-moz-backface-visibility    : hidden;
+		-ms-backface-visibility     : hidden;
+		.translate3d(0, 0, 0);
+	}
+	.owl-item {
+		min-height                  : 1px;
+		float                       : left;
+		-webkit-backface-visibility : hidden;
+		-webkit-touch-callout       : none;
+		img {
+			display : block;
+			width   : 100%;
+			&.owl-lazy {
+				transform-style : preserve-3d;
+			}
+		}
+		.owl-lazy {
+			.opacity(0);
+			.transition();
+		}
+	}
+
+	.owl-dots, .owl-nav {
+		&.disabled {
+			display : none;
+		}
+	}
+
+	.owl-dots {
+		display : none;
+	}
+
+	.no-js &, &.owl-loaded {
+		display : block;
+	}
+	.owl-dot, .owl-nav .owl-next, .owl-nav .owl-prev {
+		cursor : pointer;
+		cursor : hand;
+		.user-select(none);
+	}
+	&.owl-loading, &.owl-hidden {
+		.opacity(0);
+		display : block;
+	}
+	&.owl-refresh {
+		.owl-item {
+			visibility : hidden;
+		}
+	}
+	&.owl-drag .owl-item {
+		.user-select(none);
+	}
+	&.owl-grab {
+		cursor : move;
+		cursor : grab;
+	}
+	&.owl-rtl {
+		direction : rtl;
+		.owl-item {
+			float : right;
+		}
+	}
+	.animated {
+		animation-duration  : 1s;
+		animation-fill-mode : both;
+	}
+	.owl-animated-in {
+		z-index : 0;
+	}
+	.owl-animated-out {
+		z-index : 1;
+	}
+	.fadeOut {
+		animation-name : fadeOut;
+	}
+	&.owl-height, & .owl-height {
+		.transition(height);
+	}
+	.owl-video-wrapper {
+		position   : relative;
+		height     : 100%;
+		background : #000;
+	}
+	.owl-nav {
+		display : block;
+		.owl-prev, .owl-next {
+			.inline-block();
+			.button();
+			&::before{
+				font-family: @font-family-icons;
+			}
+		}
+		.owl-prev{
+			content: "1";
+			& + .owl-next{
+				margin-left: 0.5em;
+			}
+		}
+		.owl-next{
+			content: "2";
+		}
+	}
+}
+
+
+
+
+
+

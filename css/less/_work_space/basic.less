@@ -12,7 +12,7 @@ main {
 //	HEADER Style
 //==================================================
 header {
-	padding-top : 49px;
+	padding-top : 3.5em;
 	position    : relative;
 	background  : @header-bg;
 	color       : @header-color;
@@ -64,33 +64,47 @@ section {
 //==================================================
 aside {
 	.aside-box {
-		margin-bottom : 30px;
+		margin-bottom : 2.142em;
 	}
 }
 //	FOOTER Style
 //==================================================
 footer {
-	padding: 90px 0 40px;
+	padding: 6.428em 0 2.857em;
 	background : @footer-bg;
 	color      : @footer-color;
 }
 .footer-logo{
-	margin-bottom: 22px;
+	margin-bottom: 1.571em;
 }
 .company-description{
-	margin-bottom: 22px;
+	margin-bottom: 1.571em;
 }
 
 //	Button to scroll top
 //==================================================
-#go-top {
-	.button-color(#FFF; fade(#000, 50%); fade(#000, 50%); @primary-color; @primary-bg; @primary-bg);
+.webPage-go-top{
+	&.btn{
+		line-height: 4em;
+		width: 4em;
+		background: @primary-color;
+		.border-radius(50%);
+		.box-shadow(1px 1px 10px 0 rgba(0,0,0,0.25));
+		&:hover{
+			background: @brand-primary;
+			color: @brand-dark;
+		}
+		&::before{
+			font-size: 2.142em;
+		}
+	}
 }
+
 .main-content {
-	margin-top : 30px;
+	margin-top : 2.142rem;
 }
 .subscribe {
-	padding : 58px 0;
+	padding : 4.142rem 0;
 	h3 {
 		background     : none;
 		border-bottom  : none;

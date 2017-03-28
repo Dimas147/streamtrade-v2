@@ -6,7 +6,7 @@ var topBox = $('<div class="webPage-go-top"></div>').css({
     'z-index' : '555',
     'cursor'  : 'pointer',
     'display' : 'none'
-}).addClass('btn icon icon-arrow-up7');
+}).addClass('btn icon icon-arrow-up2');
 if(!device.type) {
     $('body').append(topBox);
     $(window).scroll(function(e) {

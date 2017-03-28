@@ -1,116 +1,144 @@
-.show-more{
-    border-bottom  : 1px solid #DDDDDD;
-    border-top     : 1px solid #DDDDDD;
-    display        : block;
-    font-size      : 20px;
-    padding        : 10px 0;
-    text-align     : center;
-    text-transform : uppercase;
+.show-more {
+	border-bottom  : 1px solid #DDD;
+	border-top     : 1px solid #DDD;
+	display        : block;
+	font-size      : 1.428em;
+	padding        : 0.5em 0;
+	text-align     : center;
+	text-transform : uppercase;
 }
-
 // Products List
 //==================================================
-.product-list{
-    .inline-block-wrap(top);
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: -30px;
+.product-list {
+	.inline-block-wrap(top);
+	margin-left   : -1.07rem;
+	margin-right  : -1.07rem;
+	margin-bottom : -2.142rem;
+	&.owl-carousel {
+		margin-left   : 0;
+		margin-right  : 0;
+		overflow      : hidden;
+		margin-bottom : 2.142rem;
+		.product-item {
+			.grid-elements(1; 0; true; 1; 1);
+			padding-left  : 0;
+			padding-right : 0;
+		}
+		.owl-nav{
+			text-align: right;
+		}
+	}
 }
-
 .product-item {
-    .grid-elements(3; 0; true);
-    .clearfix-mixin();
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 30px;
+	.grid-elements(3; 0; true; 2; 1);
+	.clearfix-mixin();
+	padding-left  : 1.07rem;
+	padding-right : 1.07rem;
+	margin-bottom : 2.142rem;
 
-    &.grid{ }
+	&.grid {
+	}
 
-    &.list{ }
+	&.list {
+	}
 
-    // General styles
-    .product-image{
-        display: block;
-        margin-bottom: 45px;
+	// General styles
+	.product-image {
+		display       : block;
+		margin-bottom : 3.214em;
 
-        img{ }
-    }
+		img {
+		}
+	}
 
-    .product-title{
-        display: block;
-        font: 400 14px/20px Lato;
-        color: #292929;
-        padding-bottom: 10px;
-        text-transform: uppercase;
-    }
+	.product-title {
+		display        : block;
+		font-weight    : 400;
+		font-size      : 1em;
+		line-height    : 1.4;
+		color          : #292929;
+		padding-bottom : 0.71em;
+		text-transform : uppercase;
+	}
 
-    .product-description{
-        margin-bottom: 10px;
-        font-size: 12px;
-    }
+	.product-description {
+		margin-bottom : 0.83em;
+		font-size     : 0.857em;
+	}
 
-    .product-price{
-        display: block;
-        font: 700 48px/48px Lato;
-        color: #292929;
-        padding: 0;
-        margin-bottom: 10px;
-    }
+	.product-price {
+		display       : block;
+		font-weight   : 700;
+		font-size     : 3.428em;
+		line-height   : 1;
+		color         : #292929;
+		padding       : 0;
+		margin-bottom : 0.2em;
+	}
 
-    .tcart-add, .btn{
-        .button();
-        .user-select();
-        .box-shadow(none; @input-shadow-focus);
-        font: 900 21px/34px Lato;
-        padding: 16px 10px;
-        text-transform: uppercase;
-        text-align: center;
-        display: block;
-        margin: 0 0 1px 0;
-    }
+	.tcart-add, .btn {
+		.button();
+		.user-select();
+		.box-shadow(none; @input-shadow-focus);
+		font-size      : 1.5em;
+		font-weight    : 900;
+		line-height    : 1.6;
+		padding        : 0.76em 0.47em;
+		text-transform : uppercase;
+		text-align     : center;
+		display        : block;
+		margin         : 0;
+	}
 }
-
-.product-item-content{
-    text-align: left;
-    background: #fff;
-    padding: 30px 30px 13px;
+.product-item-content {
+	text-align : left;
+	background : #FFF;
+	padding    : 2.142em 2.142em 1em;
 }
-
 // Products List in SideBar
 //==================================================
-.sidebar{
+.sidebar {
 
-    .product-item{
+	.product-item {
 
-        .product-image{
-            img{ }
-        }
+		.product-image {
+			img {
+			}
+		}
 
-        .product-title{ }
+		.product-title {
+		}
 
-        .product-description{ }
+		.product-description {
+		}
 
-        .product-price{ }
+		.product-price {
+		}
 
-        .tcart-add{ }
-    }
+		.tcart-add {
+		}
+	}
 }
-
 // Related Products
 //==================================================
-.related-products{
-    li{
-        .product-title{ }
+.related-products {
+	li {
+		.product-title {
+		}
 
-        .product-image{
-            img{ }
-        }
+		.product-image {
+			img {
+			}
+		}
 
-        .product-description{ }
+		.product-description {
+		}
 
-        .product-price{ }
+		.product-price {
+		}
 
-        .tcart-add{ }
+		.tcart-add {
+		}
 
-    }
+	}
 }
