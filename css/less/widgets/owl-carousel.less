@@ -114,18 +114,29 @@
 		.owl-prev, .owl-next {
 			.inline-block();
 			.button();
+			overflow: hidden;
+			padding: 0;
+			white-space: nowrap;
 			&::before{
 				font-family: @font-family-icons;
+				width: 100%;
+				float: left;
+				margin: 0;
+				line-height: inherit !important;
 			}
 		}
 		.owl-prev{
-			content: "1";
+			&::before{
+				content: "\e0a9";
+			}
 			& + .owl-next{
 				margin-left: 0.5em;
 			}
 		}
 		.owl-next{
-			content: "2";
+			&::before{
+				content: "\e0a7";
+			}
 		}
 	}
 }

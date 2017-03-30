@@ -636,10 +636,10 @@ ul.list-select > li.active::after {
 .icon-logout:before {
   content: "\e0a5";
 }
-.icon-arrow-right:before {
+.icon-arrow-up:before {
   content: "\e0a6";
 }
-.icon-arrow-right4:before {
+.icon-arrow-right:before {
   content: "\e0a7";
 }
 .icon-arrow-down:before {

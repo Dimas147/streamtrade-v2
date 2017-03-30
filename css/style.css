@@ -963,6 +963,9 @@ textarea.resize {
   box-shadow: none;
   border: none;
   transition: background 0.3s;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
 }
 .owl-carousel .owl-nav .owl-prev:hover,
 .owl-carousel .owl-nav .owl-next:hover,
@@ -983,15 +986,19 @@ textarea.resize {
 .owl-carousel .owl-nav .owl-prev::before,
 .owl-carousel .owl-nav .owl-next::before {
   font-family: flexkit-icons;
+  width: 100%;
+  float: left;
+  margin: 0;
+  line-height: inherit !important;
 }
-.owl-carousel .owl-nav .owl-prev {
-  content: "1";
+.owl-carousel .owl-nav .owl-prev::before {
+  content: "\e0a9";
 }
 .owl-carousel .owl-nav .owl-prev + .owl-next {
   margin-left: 0.5em;
 }
-.owl-carousel .owl-nav .owl-next {
-  content: "2";
+.owl-carousel .owl-nav .owl-next::before {
+  content: "\e0a7";
 }
 @media only screen and (min-width: 801px) {
   .d-hide,
