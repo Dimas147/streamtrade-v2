@@ -1,231 +1,255 @@
 .rotator when (@widget-rotator) {
-	position   : relative;
-	overflow   : hidden;
-	background : #FFF;
-	width      : 100%;
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    width: 100%;
 
-	// -- Description
-	.slide-description {
-		padding : @padding-large-vertical @padding-large-horizontal;
-		color   : #FFF;
-		.rgba(#000; 0.5);
-	}
+    // -- Description
+    .slide-description {
+        padding: @padding-large-vertical @padding-large-horizontal;
+        color: #FFFFFF;
+        .rgba(#000000; 0.5);
+    }
 
-	img {
-		width : 100%;
+    img {
+        width: 100%;
 
-		& ~ .slide-description {
-			position : absolute;
-			right    : 0;
-			bottom   : 0;
-			left     : 0;
-		}
-	}
+        & ~ .slide-description {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
 }
+
 .cycle-slideshow when (@widget-rotator) {
-	position : relative;
-	overflow : hidden;
+    position: relative;
+    overflow: hidden;
 
-	& > .tpopup {
-		position : absolute;
-		top      : 10px;
-		left     : 10px;
-		z-index  : 11;
-	}
+    & > .tpopup {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 11;
+    }
 
-	.slide {
-		position   : relative;
-		width      : 100%;
-		list-style : none;
+    .slide {
+        position: relative;
+        width: 100%;
+        list-style: none;
 
-		& > a.generator-links:not(:first-child), & > a.tpopup:not(:first-child) {
-			position : absolute;
-			top      : 10px;
-			left     : 10px;
-			z-index  : 11;
-		}
-		& > img {
-			width : 100%;
-		}
-	}
+        & > a.generator-links:not(:first-child), & > a.tpopup:not(:first-child) {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 11;
+        }
+        & > img {
+            width: 100%;
+        }
+    }
 
-	// -- Pager
-	.cycle-pager {
-		position    : absolute;
-		top         : 5px;
-		right       : 0;
-		z-index     : 20;
-		text-align  : center;
-		font-size   : 0;
-		line-height : 0;
+    // -- Pager
+    .cycle-pager {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        z-index: 20;
+        text-align: center;
+        font-size: 0;
+        line-height: 0;
 
-		> * {
-			.inline-block;
-			cursor     : pointer;
-			margin     : 0 3px;
-			color      : @primary-color;
-			background : #FFF;
-			.border-radius(14px);
-			.icon-size(10px; true);
+        > * {
+            .inline-block;
+            cursor: pointer;
+            margin: 0 3px;
+            color: @primary-color;
+            background: #FFFFFF;
+            .border-radius(14px);
+            .icon-size(10px; true);
 
-			&:hover {
-				background : darken(@primary-bg, 10%);
-			}
+            &:hover {
+                background: darken(@primary-bg, 10%);
+            }
 
-			&.cycle-pager-active {
-				cursor     : default;
-				color      : @primary-color;
-				background : @primary-bg;
-			}
-		}
-	}
+            &.cycle-pager-active {
+                cursor: default;
+                color: @primary-color;
+                background: @primary-bg;
+            }
+        }
+    }
 
-	[class*="cycle-"].action-button {
-		background : @primary-bg;
-		color      : @primary-color;
-		position   : absolute;
-		top        : 50%;
-		z-index    : 20;
-		cursor     : pointer;
-		margin-top : -@slider-button-size / 2 - @padding-large-vertical;
-		padding    : @padding-large-vertical;
-		.box-sizing(content-box);
-		.icon-size(@slider-button-size; true);
-		.transition();
+    [class*="cycle-"].action-button {
+        background: @primary-bg;
+        color: @primary-color;
+        position: absolute;
+        top: 50%;
+        z-index: 20;
+        cursor: pointer;
+        margin-top: -@slider-button-size / 2 - @padding-large-vertical;
+        padding: @padding-large-vertical;
+        .box-sizing(content-box);
+        .icon-size(@slider-button-size; true);
+        .transition();
 
-		&:hover {
-			background : darken(@primary-bg, 10%);
-			color      : @primary-color;
-		}
+        &:hover {
+            background: darken(@primary-bg, 10%);
+            color: @primary-color;
+        }
 
-		&::before {
-			font-family : @font-family-icons;
-		}
+        &::before {
+            font-family: @font-family-icons;
+        }
 
-		&.cycle-prev {
-			left : -@slider-button-size * 3;
+        &.cycle-prev {
+            left: -@slider-button-size * 3;
 
-			&::before {
-				content : "\e0a9";
-			}
-		}
+            &::before {
+                content: "\e0a9";
+            }
+        }
 
-		&.cycle-next {
-			right : -@slider-button-size * 3;
+        &.cycle-next {
+            right: -@slider-button-size * 3;
 
-			&::before {
-				content : "\e0a7";
-			}
-		}
-	}
+            &::before {
+                content: "\e0a7";
+            }
+        }
+    }
 
-	&:hover .action-button {
-		&.cycle-prev {
-			left : 10px;
-		}
+    &:hover .action-button {
+        &.cycle-prev {
+            left: 10px;
+        }
 
-		&.cycle-next {
-			right : 10px;
-		}
+        &.cycle-next {
+            right: 10px;
+        }
 
-	}
+    }
 
-	.top-slider & {
-		.slide {
-			background-color : @brand-dark;
-		}
-	}
-	&.carousel {
-		margin-top    : 2.94em;
-		margin-bottom : 2.65em;
-		overflow      : visible;
-		.slide {
-			padding : 0 0.588em;
-			.inline-block(top);
-		}
-		.product-title {
-			height : 60px;
-		}
-	}
+    .top-slider & {
+        .slide {
+            background-color: @brand-dark;
+        }
+    }
+    &.carousel {
+        margin-top: 2.94em;
+        margin-bottom: 2.65em;
+        overflow: visible;
+        .slide {
+            padding: 0 0.588em;
+            .inline-block(top);
+        }
+        .product-title {
+            height: 60px;
+        }
+    }
 }
+
 .carousel-container {
-	position : relative;
-	.paginators {
-		.inline-block-wrap();
-		position : absolute;
-		top      : 0.35rem;
-		right    : 0.4rem;
-		.btn {
-			background : @brand-dark;
-			&:hover {
-				background : @brand-primary;
-			}
-			& + .btn {
-				margin-left : 1px;
-			}
-		}
-	}
+    position: relative;
+    .paginators {
+        .inline-block-wrap();
+        position: absolute;
+        top: 0.35rem;
+        right: 0.4rem;
+        .btn {
+            background: @brand-dark;
+            &:hover {
+                background: @brand-primary;
+            }
+            & + .btn {
+                margin-left: 1px;
+            }
+        }
+    }
 }
+
 .top-slider {
-	min-height    : 100%;
-	margin-bottom : -70px;
-	.cycle-slideshow {
-		position : absolute;
-		top      : 0;
-		left     : 0;
-		width    : 100%;
-	}
-	.logo {
-		position : absolute;
-		left     : 50%;
-		top      : 50%;
-		z-index  : 122;
-		.translate(-50%; -50%);
-	}
-	.cycle-slideshow, .slide {
-		height : 100%;
-		& > .tpopup {
-			top : 50%;
-		}
-	}
-	.slide {
-		& > a.tpopup:not(:first-child) {
-			top : 53%;
-		}
-	}
+    min-height: 100%;
+    margin-bottom: -70px;
+    .cycle-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 122;
+        .translate(-50%; -50%);
+    }
+    .cycle-slideshow, .slide {
+        height: 100%;
+        & > .tpopup {
+            top: 50%;
+        }
+    }
+    .slide {
+        & > a.tpopup:not(:first-child) {
+            top: 53%;
+        }
+    }
+    .action-button {
+        position: absolute;
+        top: 50%;
+        z-index: 122;
+        font-size: 60px;
+        padding: 0;
+        line-height: 1;
+        .button-color(@brand-primary; transparent; transparent; @primary-color; transparent; transparent);
+        margin-top: -30px;
+        &.cycle-next {
+            right: 10px;
+        }
+        &.cycle-prev {
+            left: 10px;
+        }
+        &:focus, &:active{
+            .box-shadow(none);
+        }
+    }
 }
+
 .slider-navigation {
-	position  : absolute;
-	top       : 75px;
-	left      : 0;
-	right     : 0;
-	z-index   : 122;
-	font-size : 0;
-	button, span {
-		&:not(.icon-main-arrow) {
-			.button();
-			border : 1px solid;
-			.button-color(@brand-primary; #000; @brand-primary; @primary-color; #000; @primary-color);
-			.icon-size(30px; true);
-			&::before {
-				font-size : 10px;
-			}
-		}
-	}
-	span {
-		&.cycle-pager-active {
-			color        : @primary-color;
-			border-color : @primary-color;
-		}
-		& + span {
-			margin-left : 3px;
-		}
-	}
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    z-index: 122;
+    font-size: 0;
+    button, span {
+        &:not(.icon-main-arrow) {
+            .button();
+            border: 1px solid;
+            .button-color(@brand-primary; #000000; @brand-primary; @primary-color; #000000; @primary-color);
+            .icon-size(30px; true);
+            &::before {
+                font-size: 10px;
+            }
+        }
+    }
+    span {
+        &.cycle-pager-active {
+            color: @primary-color;
+            border-color: @primary-color;
+        }
+        & + span {
+            margin-left: 3px;
+        }
+    }
 }
+
 #slider-pager {
-	.inline-block();
-	margin : 0 3px;
-	span{
-		font-size : 10px;
-	}
+    .inline-block();
+    margin: 0 3px;
+    span {
+        font-size: 10px;
+    }
 }

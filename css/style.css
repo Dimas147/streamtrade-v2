@@ -94,7 +94,9 @@ footer {
 .subscribe h3 {
   background: none;
   border-bottom: none;
-  font: 700 21px/30px Lato;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.428em;
   text-transform: uppercase;
 }
 .subscribe h3::before {
@@ -140,14 +142,18 @@ footer {
 }
 .contact-info address {
   display: block;
-  font: 700 21px/24px Lato;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.14;
   text-transform: uppercase;
   color: #FFF;
   margin-bottom: 11px;
 }
 .contact-info .email,
 .contact-info .phone {
-  font: 400 34px/34px Lato;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 2.428em;
   margin-bottom: 0;
   margin-top: 8.5px;
 }
@@ -156,14 +162,14 @@ footer {
   color: #fcc605;
 }
 .copyright {
-  border-top: 1px solid #777;
+  border-top: 1px solid #777777;
   margin-top: 95px;
 }
 .copyright h4 {
-  font-size: 12px;
-  line-height: 18px;
-  color: #777;
-  padding: 29px 0;
+  font-size: 0.857em;
+  line-height: 1.5;
+  color: #777777;
+  padding: 2.41em 0;
   font-weight: 400;
 }
 .animated-circles::before,
@@ -191,16 +197,16 @@ footer {
   position: absolute;
   bottom: 85px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -30px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 100px;
+  font-size: 60px;
   line-height: 1;
-  color: #FFF;
+  color: #fcc605;
   z-index: 122;
 }
 .main-arrow:hover {
-  color: #fcc605;
+  color: #FFF;
 }
 form::after {
   content: "";
@@ -781,12 +787,12 @@ textarea.resize {
 .rotator {
   position: relative;
   overflow: hidden;
-  background: #FFF;
+  background: #FFFFFF;
   width: 100%;
 }
 .rotator .slide-description {
   padding: 10px 16px;
-  color: #FFF;
+  color: #FFFFFF;
   background: rgba(0, 0, 0, 0.005);
 }
 .rotator img {
@@ -838,7 +844,7 @@ textarea.resize {
   cursor: pointer;
   margin: 0 3px;
   color: #FFF;
-  background: #FFF;
+  background: #FFFFFF;
   border-radius: 14px;
   width: 10px;
   height: 10px;
@@ -970,6 +976,35 @@ textarea.resize {
 .top-slider .slide > a.tpopup:not(:first-child) {
   top: 53%;
 }
+.top-slider .action-button {
+  position: absolute;
+  top: 50%;
+  z-index: 122;
+  font-size: 60px;
+  padding: 0;
+  line-height: 1;
+  color: #fcc605;
+  border-color: transparent;
+  background-color: transparent;
+  margin-top: -30px;
+}
+.top-slider .action-button:hover,
+.top-slider .action-button:active,
+.top-slider .action-button.active {
+  color: #FFF;
+  border-color: transparent;
+  background-color: transparent;
+}
+.top-slider .action-button.cycle-next {
+  right: 10px;
+}
+.top-slider .action-button.cycle-prev {
+  left: 10px;
+}
+.top-slider .action-button:focus,
+.top-slider .action-button:active {
+  box-shadow: none;
+}
 .slider-navigation {
   position: absolute;
   top: 75px;
@@ -1002,7 +1037,7 @@ textarea.resize {
   border: 1px solid;
   color: #fcc605;
   border-color: #fcc605;
-  background-color: #000;
+  background-color: #000000;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -1032,7 +1067,7 @@ textarea.resize {
 .slider-navigation span:not(.icon-main-arrow).active {
   color: #FFF;
   border-color: #FFF;
-  background-color: #000;
+  background-color: #000000;
 }
 .slider-navigation button:not(.icon-main-arrow)::before,
 .slider-navigation span:not(.icon-main-arrow)::before {

@@ -53,12 +53,10 @@
         </div>
         {/repeat}
     </div>
-    <div class="slider-navigation text-center d-visible">
-        <button class="cycle-prev icon-arrow-left">prev</button>
-        <div id="slider-pager"></div>
-        <button class="cycle-next icon-arrow-right">next</button>
-    </div>
-    <a href="#navigation-box" class="icon-main-arrow main-arrow"></a>
+    <div id="slider-pager" class="slider-navigation text-center d-visible"></div>
+    <button class="action-button cycle-prev icon-arrow-left"></button>
+    <button class="action-button cycle-next icon-arrow-right"></button>
+    <a href="#navigation-box" class="icon-arrow-down main-arrow"></a>
 </div>
 
 <div class="yellow-bg navigation-box d-visible" id="navigation-box">
@@ -74,12 +72,34 @@
 <div class="container main-content">
     <section class="grid_9 push_3 alpha p-l" role="main">
         <article>
+            <h2>{$header:stock:static}</h2>
+            <ul class="list-stock">
+                {repeat:list-stock:key}
+                <li>
+                    <div class="text">
+                        <h3>
+                            {$header:stock-title_key:static}
+                        </h3>
+                        <h4>
+                            {$header:stock-subtitle_key:static}
+                        </h4>
+                        <p>
+                            {$header:stock-text_key:static}
+                        </p>
+                    </div>
+                    <div class="image">
+                        {$imageonly:stock-image_key:540:static}
+                    </div>
+                </li>
+                {/repeat}
+            </ul>
+        </article>
+        <article>
             <h2>{$header:new-products:static}</h2>
             {$productlist:_products list new-products:tagnames-New products}
         </article>
         <article>
             <h2>{$header:products-for-sale:static}</h2>
-
             <div id="products-in-carousel">
                 {$productlist:_products list carousel:tagnames-New products}
             </div>
@@ -149,11 +169,16 @@
 
 {device:desktop}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
-<script src="js/plugin/SmoothScroll.js" async></script>
-<script src="js/plugin/stickUp.js" async></script>
+<script src="js/plugin/SmoothScroll.js"></script>
+<script src="js/plugin/stickUp.js"></script>
 <script type="text/javascript">
     jQuery(function($) {
-        $(document).load( function() {
+        $(document).ready( function() {
+            $('#navigation-box').stickUp({
+                marginTop: 'auto'
+            });
+        });
+        $( window ).resize(function() {
             $('#navigation-box').stickUp({
                 marginTop: 'auto'
             });

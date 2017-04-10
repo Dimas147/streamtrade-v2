@@ -2776,6 +2776,97 @@ ul.list-select > li.active::after {
 ul.list-select > li:hover {
   background: #eeeeee;
 }
+ul.list-stock li {
+  overflow: hidden;
+  background: #000000;
+  margin-bottom: 0;
+}
+ul.list-stock li::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul.list-stock li div {
+  float: left;
+  margin-left: 0%;
+  margin-right: 0;
+  width: 50%;
+}
+ul.list-stock li div:nth-of-type(2n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+  ul.list-stock li div {
+    width: 100%;
+  }
+  ul.list-stock li div:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  ul.list-stock li div {
+    width: 100%;
+  }
+  ul.list-stock li div:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
+ul.list-stock li:nth-child(2n) .text {
+  float: right;
+}
+ul.list-stock li:hover h3,
+ul.list-stock li:hover p {
+  color: #fcc605;
+}
+ul.list-stock li:hover h4 {
+  color: #FFF;
+}
+ul.list-stock li:hover .image img {
+  -webkit-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+ul.list-stock .text {
+  padding: 1.357em 0.714em 1.5em 1.785em;
+}
+ul.list-stock .image {
+  max-height: 340px;
+  overflow: hidden;
+}
+ul.list-stock .image img {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  transition: all 0.3s;
+}
+ul.list-stock h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  font-size: 5em;
+  line-height: 1.2;
+  margin-bottom: -13px;
+}
+ul.list-stock h3 strong {
+  display: block;
+  margin-bottom: -13px;
+  font-weight: 700;
+}
+ul.list-stock h4 {
+  font-weight: 400;
+  font-size: 6.42em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fcc605;
+}
+ul.list-stock p {
+  margin-bottom: 8.5px;
+  font-size: 0.857em;
+  color: #FFF;
+  line-height: 1.4;
+}
 table {
   width: 100%;
   background-color: transparent;

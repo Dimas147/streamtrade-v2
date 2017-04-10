@@ -250,11 +250,11 @@ aside .relatedpages li p {
   line-height: 1.25;
 }
 .news-item .news-item-content {
-  background: #000000;
+  background: rgba(0, 0, 0, 0.65);
   transition: all 0.3s;
 }
 .news-item .news-item-content:hover {
-  background: #fcc605;
+  background: rgba(229, 179, 3, 0.9);
 }
 .news-item .news-text {
   padding: 7px 30px 27px;
@@ -300,39 +300,13 @@ aside .relatedpages li p {
   vertical-align: middle;
 }
 .news-item .news-item-tags a {
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  height: auto;
-  line-height: 3.5em;
-  padding: 0 1em;
-  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  color: #FFF;
   display: inline-block;
   vertical-align: middle;
-  color: #000000;
-  border-color: #f99a00;
-  background-color: #fcc605;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-shadow: none;
-  border: none;
-  transition: background 0.3s;
+  margin-right: 0.5em;
 }
-.news-item .news-item-tags a:hover,
-.news-item .news-item-tags a:active,
-.news-item .news-item-tags a.active {
-  color: #FFF;
-  border-color: #f99a00;
-  background-color: #000000;
-}
-.news-item .news-item-tags a:active,
-.news-item .news-item-tags a.active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
-}
-.news-item .news-item-tags a + a {
-  margin-left: 0.5em;
+.news-item .news-item-tags a:first-child {
+  display: none;
 }
 .news-item .news-item-tags a::before {
   margin-right: 0.5em;
@@ -348,8 +322,7 @@ aside .relatedpages li p {
   color: #FFF;
 }
 .news-item:hover .news-item-tags a {
-  background: #000000;
-  color: #fcc605;
+  color: #191919;
 }
 .news-item:hover .news-item-tags a:hover {
   color: #FFF;
