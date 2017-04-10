@@ -1,6 +1,6 @@
 .ui-dialog when (@componentsJS-dialog) {
     position         : absolute;
-    z-index          : 100;
+    z-index          : 125;
     padding          : 0;
     border-width     : @dialog-border-width;
     border-style     : solid;
@@ -46,12 +46,12 @@
         position   : absolute;
         top        : 0;
         bottom     : 0;
-        right      : 0;
+        right      : 1.3%;
         border     : none;
         margin     : auto;
         padding    : @padding-large-vertical;
         background : transparent;
-        .link-color(@dialog-header-color; @brand-error);
+        .link-color(@dialog-header-color; @brand-dark);
         .box-sizing(content-box);
         .icon-size(@icon-size-base; true);
 
@@ -72,7 +72,7 @@
     .ui-dialog-content {
         position : relative;
         border   : 0;
-        padding  : @padding-large-vertical @padding-large-horizontal;
+        padding  : @padding-large-vertical @padding-large-horizontal (@padding-large-vertical * 1.4);
         & when not(@dialog-content-bg = transparent) {
             background : @dialog-content-bg;
         }

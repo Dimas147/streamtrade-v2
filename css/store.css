@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #ffffff;
+  color: #FFF;
   padding: 5px;
 }
 .product .product-image {
@@ -44,7 +44,7 @@
   cursor: pointer;
   text-decoration: none;
   height: auto;
-  line-height: 2.3em;
+  line-height: 3.5em;
   padding: 0 1em;
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
@@ -64,7 +64,7 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -130,12 +130,12 @@
 .product-item {
   margin-left: 0%;
   margin-right: 0;
-  width: 33.33333333%;
+  width: 25%;
   padding-left: 1.07rem;
   padding-right: 1.07rem;
   margin-bottom: 2.142rem;
 }
-.product-item:nth-of-type(3n + 1) {
+.product-item:nth-of-type(4n + 1) {
   margin-left: 0;
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
@@ -182,7 +182,7 @@
 .product-item .product-price {
   display: block;
   font-weight: 700;
-  font-size: 3.428em;
+  font-size: 2.428em;
   line-height: 1;
   color: #292929;
   padding: 0;
@@ -193,7 +193,7 @@
   cursor: pointer;
   text-decoration: none;
   height: auto;
-  line-height: 2.3em;
+  line-height: 3.5em;
   padding: 0 1em;
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
@@ -223,7 +223,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -520,12 +520,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #ffffff;
+  color: #FFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #ffffff;
+  background: #FFF;
   color: #555555;
   transition: all 0.3s;
 }
@@ -800,7 +800,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #ff0000;
+  box-shadow: 0 0 1px 1px #f00;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -1108,7 +1108,7 @@
   cursor: pointer;
   text-decoration: none;
   height: auto;
-  line-height: 2.3em;
+  line-height: 3.5em;
   padding: 0 1em;
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
@@ -1128,7 +1128,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }

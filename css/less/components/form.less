@@ -21,7 +21,7 @@
 
         // -- Buttons
         [type="submit"] {
-            float : right;
+            float : left;
 
             &:hover {
             }
@@ -43,6 +43,20 @@
                         background-color: darken(@brand-primary, 10%);
                     }
                 }
+            }
+        }
+        &#callus{
+            input, textarea{
+                border-color: darken(@brand-primary, 5%);
+                &:focus{
+                    border-color: @brand-dark;
+                }
+            }
+        }
+        .captcha{
+            text-align: center;
+            label{
+                text-align: left;
             }
         }
     }

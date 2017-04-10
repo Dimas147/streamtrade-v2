@@ -3,7 +3,7 @@
 		<img src="{$product:photourl:small}" alt="{$product:name}" />
 	</a>
 	<a class="product-title" href="{$product:url}">{$product:name}</a>
-	<span class="product-price">{$product:price}</span>
+	<span class="product-price">{$product:price:nocurrency}</span>
 	<p class="product-description">{$product:description}</p>
 	{$store:addtocart:{$product:id}}
 </div>

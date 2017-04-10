@@ -19,7 +19,7 @@ extend ' .mobile-menu li' has no matches
 @media only screen and (min-width: 800px) {
   #main-menu .main_menu {
     position: relative;
-    z-index: 11;
+    z-index: 12;
     color: #000000;
   }
   #main-menu .main_menu > li {
@@ -32,10 +32,10 @@ extend ' .mobile-menu li' has no matches
     font-weight: 900;
   }
   #main-menu .main_menu > li > a.current {
-    color: #ffffff;
+    color: #FFF;
   }
   #main-menu .main_menu > li:hover {
-    color: #ffffff;
+    color: #FFF;
   }
   #main-menu .main_menu > li:hover ul {
     display: block;
@@ -53,7 +53,7 @@ extend ' .mobile-menu li' has no matches
     z-index: 0;
     display: none;
     width: 300px;
-    background: #ffffff;
+    background: #FFF;
     color: #888888;
     box-shadow: 0 3px 5px #555555;
   }
@@ -67,7 +67,7 @@ extend ' .mobile-menu li' has no matches
     margin-top: 1em;
   }
   #footer-menu .main_menu a {
-    color: #ffffff;
+    color: #FFF;
   }
   #footer-menu .main_menu a:hover,
   #footer-menu .main_menu a.current {
@@ -102,16 +102,11 @@ extend ' .mobile-menu li' has no matches
   .featureapage,
   .featureditem li,
   .relatedpages li {
-    width: 50%;
+    width: 100%;
   }
-  .featureapage:nth-of-type(n),
-  .featureditem li:nth-of-type(n),
-  .relatedpages li:nth-of-type(n) {
-    margin-left: 0%;
-  }
-  .featureapage:nth-of-type(2n + 1),
-  .featureditem li:nth-of-type(2n + 1),
-  .relatedpages li:nth-of-type(2n + 1) {
+  .featureapage:nth-of-type(1n + 1),
+  .featureditem li:nth-of-type(1n + 1),
+  .relatedpages li:nth-of-type(1n + 1) {
     margin-left: 0;
   }
 }
@@ -153,7 +148,7 @@ extend ' .mobile-menu li' has no matches
 .featureditem.right-categories .page-title:hover,
 .featureditem.right-categories .page-title.current {
   background: #3f3f3f;
-  color: #ffffff;
+  color: #FFF;
 }
 .featureditem.categories .page-teaser-image {
   position: relative;
@@ -189,7 +184,7 @@ extend ' .mobile-menu li' has no matches
   font-weight: 100;
   text-transform: uppercase;
   text-align: left;
-  color: #ffffff;
+  color: #FFF;
   background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow: hidden;
@@ -273,10 +268,11 @@ aside .relatedpages li p {
 }
 .news-item .news-item-title {
   display: block;
-  color: #ffffff;
-  font: 700 21px/27px Lato;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 1.5em;
   text-transform: uppercase;
-  margin: 8.5px 0;
+  margin: 0.4rem 0;
 }
 .news-item .newslog-admin-actions {
   text-align: right;
@@ -284,19 +280,18 @@ aside .relatedpages li p {
 .news-item .news-item-date {
   color: #fcc605;
   display: block;
-  margin-bottom: 8.5px;
+  margin-bottom: 0.4rem;
 }
 .news-item .news-item-date::before {
   margin-right: 0.5em;
 }
 .news-item .news-item-description {
   color: #888888;
-  margin-bottom: 8.5px;
-  font-size: 12px;
-  line-height: 17px;
+  margin-bottom: 0.4rem;
+  font-size: 0.85em;
 }
 .news-item .news-item-tags {
-  margin-bottom: 8.5px;
+  margin-bottom: 0.4rem;
   font-size: 0;
 }
 .news-item .news-item-tags >* {
@@ -309,7 +304,7 @@ aside .relatedpages li p {
   cursor: pointer;
   text-decoration: none;
   height: auto;
-  line-height: 2.3em;
+  line-height: 3.5em;
   padding: 0 1em;
   font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
@@ -328,7 +323,7 @@ aside .relatedpages li p {
 .news-item .news-item-tags a:hover,
 .news-item .news-item-tags a:active,
 .news-item .news-item-tags a.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -350,17 +345,33 @@ aside .relatedpages li p {
   color: #292929;
 }
 .news-item:hover .news-item-date {
-  color: #ffffff;
+  color: #FFF;
 }
 .news-item:hover .news-item-tags a {
   background: #000000;
   color: #fcc605;
 }
 .news-item:hover .news-item-tags a:hover {
-  color: #ffffff;
+  color: #FFF;
 }
 .news-list {
   font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: -30px;
@@ -383,12 +394,9 @@ aside .relatedpages li p {
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
   .news-list .news-item {
-    width: 50%;
+    width: 100%;
   }
-  .news-list .news-item:nth-of-type(n) {
-    margin-left: 0%;
-  }
-  .news-list .news-item:nth-of-type(2n + 1) {
+  .news-list .news-item:nth-of-type(1n + 1) {
     margin-left: 0;
   }
 }
@@ -480,7 +488,7 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 56px;
-  color: #ffffff;
+  color: #FFF;
   background: #fcc605;
 }
 .mobile-bar.top .btn.icon {
@@ -557,12 +565,12 @@ aside .relatedpages li p {
   height: 0;
 }
 .tabs::-webkit-scrollbar-track {
-  background: #666666;
+  background: #666;
   border-radius: 10px;
 }
 .tabs::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #cccccc;
+  background: #ccc;
 }
 .tabs .sub-menu-btn {
   display: none;
@@ -618,8 +626,8 @@ aside .relatedpages li p {
 }
 .tabs a.current {
   background-color: transparent !important;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #FFF;
+  color: #FFF;
 }
 .tabs.sub-of-main {
   display: none;
@@ -631,7 +639,7 @@ aside .relatedpages li p {
 .sub-menu-btn {
   width: 48px;
   text-align: center;
-  color: #ffffff;
+  color: #FFF;
   font-size: 1.25em;
   position: absolute;
   right: 0;
@@ -808,7 +816,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #ffffff !important;
+  background: #fff !important;
   color: #555555 !important;
   position: absolute;
   z-index: 92 !important;

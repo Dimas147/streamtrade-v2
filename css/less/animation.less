@@ -57,3 +57,66 @@
         .animation-name(rotate)
     }
 }
+
+& when (@animate-scale) {
+    @-webkit-keyframes scaleToggleOne {
+        0% {
+            .scale(1);
+        }
+
+        50% {
+            .scale(2);
+        }
+
+        100% {
+            .scale(1);
+        }
+    }
+    @keyframes scaleToggleOne {
+        0% {
+            .scale(1);
+        }
+
+        50% {
+            .scale(2);
+        }
+
+        100% {
+            .scale(1);
+        }
+    }
+    @-webkit-keyframes scaleToggleTwo {
+        0% {
+            .scale(1);
+        }
+
+        20% {
+            .scale(1);
+        }
+
+        60% {
+            .scale(2);
+        }
+
+        100% {
+            .scale(1);
+        }
+    }
+    @keyframes scaleToggleTwo {
+        0% {
+            .scale(1);
+        }
+
+        20% {
+            .scale(1);
+        }
+
+        60% {
+            .scale(2);
+        }
+
+        100% {
+            .scale(1);
+        }
+    }
+}

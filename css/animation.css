@@ -7627,3 +7627,81 @@
   -webkit-animation-name: rotate;
   animation-name: rotate;
 }
+@-webkit-keyframes scaleToggleOne {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes scaleToggleOne {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes scaleToggleTwo {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  20% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  60% {
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes scaleToggleTwo {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  20% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  60% {
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}

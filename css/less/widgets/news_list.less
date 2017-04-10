@@ -23,9 +23,10 @@
 		//height: 54px;
 		display: block;
 		color: @primary-color;
-		font: 700 21px/27px Lato;
+		font-weight: 700;
+		font-size: 1.5em;
 		text-transform: uppercase;
-		margin: 8.5px 0;
+		margin: 0.4rem 0;
 	}
 
 	.newslog-admin-actions {
@@ -37,7 +38,7 @@
 	.news-item-date {
 		color: @brand-primary;
 		display: block;
-		margin-bottom: 8.5px;
+		margin-bottom: 0.4rem;
 
 		&::before {
 			margin-right : 0.5em;
@@ -46,13 +47,12 @@
 
 	.news-item-description {
 		color: #888888;
-		margin-bottom: 8.5px;
-		font-size: 12px;
-		line-height: 17px;
+		margin-bottom: 0.4rem;
+		font-size: 0.85em;
 	}
 
 	.news-item-tags {
-		margin-bottom: 8.5px;
+		margin-bottom: 0.4rem;
 		.inline-block-wrap();
 
 		a {
@@ -95,11 +95,12 @@
 }
 .news-list {
 	.inline-block-wrap(top);
+	.flexbox(row; wrap);
 	margin-left   : -15px;
 	margin-right  : -15px;
 	margin-bottom : -30px;
 	.news-item {
-		.grid-elements(3; 0; true);
+		.grid-elements(3; 0; true; 1; 1);
 		.clearfix-mixin();
 		padding-left  : 15px;
 		padding-right : 15px;
