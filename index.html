@@ -22,9 +22,15 @@
                     <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
                 </p>
 
+                <div class="fl-right cart-container">
+                    <a href="#" class="icon-cart btn icon cart-btn">Cart</a>
+                    {$store:cartblock}
+                </div>
+
                 <p class="icon-clock fl-right">
                     {$header:working-time:static}
                 </p>
+
             </div>
         </div>
     </div>
@@ -59,10 +65,10 @@
     <a href="#navigation-box" class="icon-arrow-down main-arrow"></a>
 </div>
 
-<div class="yellow-bg navigation-box d-visible" id="navigation-box">
+<div class="yellow-bg navigation-box shadow d-visible" id="navigation-box">
     <div class="container">
         <nav id="main-menu" class="d-visible grid_9" role="navigation">{$menu:main:_main menu}</nav>
-        <div class="grid_3" role="search">{$search:form}</div>
+        <div class="grid_3 alpha" role="search">{$search:form}</div>
     </div>
     <div class="animated-circles call-us-btn" id="animation">
         <button id="call-us-btn" class="dialog-btn btn icon icon-phone4 tooltip" title="{$header:order-call:static:readonly}" data-dialog-element="#call-us">{$header:order-call:static}</button>
@@ -165,30 +171,18 @@
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
-<script src="js/plugin/owl.carousel.min.js"></script>
-
 {device:desktop}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
-<script src="js/plugin/SmoothScroll.js"></script>
-<script src="js/plugin/stickUp.js"></script>
-<script type="text/javascript">
-    jQuery(function($) {
-        $(document).ready( function() {
-            $('#navigation-box').stickUp({
-                marginTop: 'auto'
-            });
-        });
-        $( window ).resize(function() {
-            $('#navigation-box').stickUp({
-                marginTop: 'auto'
-            });
-        });
-    });
-</script>
 {/device}
-
+<script src="js/plugin/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function () {
+        $("a[href^='#']").on("click", function(e) {
+            e.preventDefault();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top
+            }, 1000);
+        });
         $('#products-in-carousel .product-list').addClass("owl-carousel");
         $('.owl-carousel').owlCarousel({
             loop: 'true',
@@ -212,29 +206,6 @@
                 }
             }
         });
-
-        $("a[href^='#']").on("click", function(e) {
-            e.preventDefault();
-            $("html, body").animate({
-                scrollTop: $($(this).attr("href")).offset().top
-            }, 1000);
-        });
-
-        function loopIt() {
-            $('#animation').each(function (i) {
-                var t = $('#animation');
-                setTimeout(function () {
-                    t.addClass('animated');
-                    setTimeout(function () {
-                        t.removeClass('animated');
-                        if (i == $('#animation').length - 1) loopIt();
-                    }, 15000);
-                }, 20000 * i);
-            });
-        }
-
-        loopIt();
-
     })
 </script>
 

@@ -11,6 +11,8 @@
     }
     .product-image{
         display : block;
+        background: @primary-color;
+        padding: 2.14rem;
 
         img{
             width : 100%;
@@ -18,7 +20,15 @@
     }
     .product-name{ }
 
-    .product-price {}
+    .product-price {
+        display       : block;
+        font-weight   : 700;
+        font-size     : 2.428em;
+        line-height   : 1;
+        color         : #292929;
+        padding       : 0;
+        text-transform: uppercase;
+    }
 
     .product-info {
         .title {
@@ -29,15 +39,22 @@
     .product-description-short{
     }
 
-    .product-description-full{ }
+    .product-description-full{
+        &:empty{
+            display: none;
+        }
+    }
+
+    .product-option{
+        margin-bottom: 1em;
+        overflow : hidden;
+    }
 
     .product-options-listing{
-        margin-bottom : 1em;
         overflow: hidden;
 
         .product-option{
             overflow : hidden;
-            margin-bottom: 1em;
 
             & > label{
                 font-weight : bold;
@@ -66,5 +83,17 @@
         .box-shadow(none; @input-shadow-focus);
         display: block;
 
+    }
+
+    .product-rating{
+        .r-head-text, .total-review{
+            display: none;
+        }
+        .starrating{
+            .inline-block();
+        }
+    }
+    .product-top-part{
+        margin-bottom: @font-size-base;
     }
 }

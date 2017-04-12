@@ -32,10 +32,13 @@ extend ' .mobile-menu li' has no matches
     font-weight: 900;
   }
   #main-menu .main_menu > li > a.current {
-    color: #FFF;
+    color: #ffffff;
+  }
+  #main-menu .main_menu > li:first-child a {
+    padding-left: 0;
   }
   #main-menu .main_menu > li:hover {
-    color: #FFF;
+    color: #ffffff;
   }
   #main-menu .main_menu > li:hover ul {
     display: block;
@@ -53,7 +56,7 @@ extend ' .mobile-menu li' has no matches
     z-index: 0;
     display: none;
     width: 300px;
-    background: #FFF;
+    background: #ffffff;
     color: #888888;
     box-shadow: 0 3px 5px #555555;
   }
@@ -67,7 +70,7 @@ extend ' .mobile-menu li' has no matches
     margin-top: 1em;
   }
   #footer-menu .main_menu a {
-    color: #FFF;
+    color: #ffffff;
   }
   #footer-menu .main_menu a:hover,
   #footer-menu .main_menu a.current {
@@ -148,7 +151,7 @@ extend ' .mobile-menu li' has no matches
 .featureditem.right-categories .page-title:hover,
 .featureditem.right-categories .page-title.current {
   background: #3f3f3f;
-  color: #FFF;
+  color: #ffffff;
 }
 .featureditem.categories .page-teaser-image {
   position: relative;
@@ -184,7 +187,7 @@ extend ' .mobile-menu li' has no matches
   font-weight: 100;
   text-transform: uppercase;
   text-align: left;
-  color: #FFF;
+  color: #ffffff;
   background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow: hidden;
@@ -268,7 +271,7 @@ aside .relatedpages li p {
 }
 .news-item .news-item-title {
   display: block;
-  color: #FFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -300,7 +303,7 @@ aside .relatedpages li p {
   vertical-align: middle;
 }
 .news-item .news-item-tags a {
-  color: #FFF;
+  color: #ffffff;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5em;
@@ -319,13 +322,13 @@ aside .relatedpages li p {
   color: #292929;
 }
 .news-item:hover .news-item-date {
-  color: #FFF;
+  color: #ffffff;
 }
 .news-item:hover .news-item-tags a {
   color: #191919;
 }
 .news-item:hover .news-item-tags a:hover {
-  color: #FFF;
+  color: #ffffff;
 }
 .news-list {
   font-size: 0;
@@ -461,7 +464,7 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 56px;
-  color: #FFF;
+  color: #ffffff;
   background: #fcc605;
 }
 .mobile-bar.top .btn.icon {
@@ -538,12 +541,12 @@ aside .relatedpages li p {
   height: 0;
 }
 .tabs::-webkit-scrollbar-track {
-  background: #666;
+  background: #666666;
   border-radius: 10px;
 }
 .tabs::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #ccc;
+  background: #cccccc;
 }
 .tabs .sub-menu-btn {
   display: none;
@@ -599,8 +602,8 @@ aside .relatedpages li p {
 }
 .tabs a.current {
   background-color: transparent !important;
-  border-color: #FFF;
-  color: #FFF;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 .tabs.sub-of-main {
   display: none;
@@ -612,7 +615,7 @@ aside .relatedpages li p {
 .sub-menu-btn {
   width: 48px;
   text-align: center;
-  color: #FFF;
+  color: #ffffff;
   font-size: 1.25em;
   position: absolute;
   right: 0;
@@ -621,7 +624,7 @@ aside .relatedpages li p {
 .sub-menu-btn::before {
   content: "\e0ac";
   font-family: flexkit-icons;
-  color: #bbbbbb;
+  color: #dddddd;
 }
 .sub-menu-btn:hover::before,
 .sub-menu-btn.active::before {
@@ -789,7 +792,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #fff !important;
+  background: #ffffff !important;
   color: #555555 !important;
   position: absolute;
   z-index: 92 !important;

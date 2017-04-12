@@ -1,10 +1,10 @@
 .ui-state-error {
-  background-color: #fcd5d4;
+  background-color: #fdeae9;
   border-color: #f69593;
   color: #813331;
 }
 .ui-state-highlight {
-  background-color: #c6eafa;
+  background-color: #e2f4fd;
   border-color: #70caf3;
   color: #155e7f;
 }
@@ -95,27 +95,27 @@
 .smoke-base .dialog.primary .dialog-inner {
   color: #876a03;
   border-color: #fdd959;
-  background-color: #fef0bd;
+  background-color: #fff7de;
 }
 .smoke-base .dialog.success .dialog-inner {
   color: #2a6a2c;
   border-color: #8ada8c;
-  background-color: #d0f0d1;
+  background-color: #e8f8e8;
 }
 .smoke-base .dialog.warning .dialog-inner {
   color: #886730;
   border-color: #ffd691;
-  background-color: #ffefd3;
+  background-color: #fff7e9;
 }
 .smoke-base .dialog.error .dialog-inner {
   color: #813331;
   border-color: #f69593;
-  background-color: #fcd5d4;
+  background-color: #fdeae9;
 }
 .smoke-base .dialog.info .dialog-inner {
   color: #155e7f;
   border-color: #70caf3;
-  background-color: #c6eafa;
+  background-color: #e2f4fd;
 }
 .smoke-base .dialog li {
   margin: 0;
@@ -142,29 +142,29 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #FFF;
+  color: #ffffff;
   border-color: #4fc752;
   background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #4fc752;
-  background-color: #FFF;
+  background-color: #ffffff;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #FFF;
+  color: #ffffff;
   border-color: #f25f5c;
   background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f25f5c;
-  background-color: #FFF;
+  background-color: #ffffff;
 }
 .ui-dialog {
   position: absolute;
@@ -173,7 +173,7 @@
   border-width: 0;
   border-style: solid;
   border-color: #e5b303;
-  background-color: #fff;
+  background-color: #ffffff;
   max-width: 90%;
   color: inherit;
   box-shadow: 4px 4px 4px #222222;
@@ -193,7 +193,7 @@
 .ui-dialog .ui-dialog-titlebar {
   font-size: 1.25em;
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
   padding: 10px 16px;
   position: relative;
   line-height: 1.5;
@@ -214,7 +214,7 @@
   margin: auto;
   padding: 10px;
   background: transparent;
-  color: #FFF;
+  color: #ffffff;
   box-sizing: content-box;
   width: 16px;
   height: 16px;
@@ -333,7 +333,7 @@
 .ui-dialog.warning .ui-dialog-titlebar,
 .ui-dialog.error .ui-dialog-titlebar,
 .ui-dialog.info .ui-dialog-titlebar {
-  color: #fff;
+  color: #FFF;
 }
 .ui-dialog.success {
   border-color: #4fc752;
@@ -361,6 +361,9 @@
 }
 .ui-dialog.info .ui-dialog-titlebar {
   background: #28b0ed;
+}
+#call-us.dialog {
+  display: none;
 }
 .chosen-select {
   width: 100%;
@@ -520,15 +523,18 @@
 }
 .parallax.top-img {
   background-attachment: scroll;
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: bottom center;
 }
 .gradient {
   background: #1E5799;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #1E5799 0%, #7DB9E8 100%);
+  background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #1E5799 0%, #7DB9E8 100%);
+  background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #1E5799 0%, #7DB9E8 100%);
+  background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
   /* IE6-9 */

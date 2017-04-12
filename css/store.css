@@ -3,25 +3,41 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #FFF;
+  color: #ffffff;
   padding: 5px;
 }
 .product .product-image {
   display: block;
+  background: #ffffff;
+  padding: 2.14rem;
 }
 .product .product-image img {
   width: 100%;
 }
+.product .product-price {
+  display: block;
+  font-weight: 700;
+  font-size: 2.428em;
+  line-height: 1;
+  color: #292929;
+  padding: 0;
+  text-transform: uppercase;
+}
 .product .product-info .title {
   font-weight: bold;
 }
-.product .product-options-listing {
+.product .product-description-full:empty {
+  display: none;
+}
+.product .product-option {
   margin-bottom: 1em;
+  overflow: hidden;
+}
+.product .product-options-listing {
   overflow: hidden;
 }
 .product .product-options-listing .product-option {
   overflow: hidden;
-  margin-bottom: 1em;
 }
 .product .product-options-listing .product-option > label {
   font-weight: bold;
@@ -64,13 +80,24 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
 .product .tcart-add:active,
 .product .tcart-add.active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
+}
+.product .product-rating .r-head-text,
+.product .product-rating .total-review {
+  display: none;
+}
+.product .product-rating .starrating {
+  display: inline-block;
+  vertical-align: middle;
+}
+.product .product-top-part {
+  margin-bottom: 14px;
 }
 .show-more {
   border-bottom: 1px solid #DDD;
@@ -224,7 +251,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -243,7 +270,7 @@
 .errors {
   margin: 0 0 10px;
   padding: 0;
-  background: #fcd5d4;
+  background: #fdeae9;
   border: 1px solid #f69593;
   color: #813331;
   font-size: 12px;
@@ -366,7 +393,7 @@
 #checkout-widget h3.checkout-forms-header {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 0.25em;
   margin-bottom: 1em;
 }
@@ -521,12 +548,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #FFF;
+  background: #ffffff;
   color: #555555;
   transition: all 0.3s;
 }
@@ -801,7 +828,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #f00;
+  box-shadow: 0 0 1px 1px #ff0000;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -816,7 +843,7 @@
   font-size: 18.2px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -882,7 +909,7 @@
   font-size: 17.5px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -912,7 +939,7 @@
   margin-bottom: 0.25em;
 }
 .post-purchase p.createdOrderDate {
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
 }
 .post-purchase .post-purchase-report-billing,
 .post-purchase .post-purchase-report-shipping {
@@ -1032,7 +1059,7 @@
 .quote-info p.title {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 }
@@ -1129,7 +1156,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -1201,6 +1228,6 @@
 }
 #user-orders-table_paginate .paginate_active,
 #user-orders-table_paginate .paginate_button_disabled {
-  color: #bbbbbb;
+  color: #dddddd;
   cursor: default;
 }
