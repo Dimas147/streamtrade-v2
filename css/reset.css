@@ -282,7 +282,7 @@ iframe {
   display: inline-block;
   vertical-align: middle;
   background: #ffffff;
-  border: 1px solid #e5b303;
+  border: 1px solid #dddddd;
   cursor: text;
   padding: 2px 6px;
 }

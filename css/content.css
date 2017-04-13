@@ -2780,7 +2780,7 @@ ul.list-bordered.dashed > li {
   border-bottom-style: dashed;
 }
 ul.list-select {
-  border: 1px solid #e5b303;
+  border: 1px solid #dddddd;
   min-height: calc(24px + 1em);
 }
 ul.list-select > li {
@@ -3847,7 +3847,7 @@ a.inherit-color:hover {
   width: 100%;
 }
 .navigation-box.shadow {
-  box-shadow: 0px 5px 48px 0px #000000;
+  box-shadow: 0px 5px 20px 0px #000000;
 }
 .box-shadow {
   box-shadow: 0 5px 48px 0 #000000;

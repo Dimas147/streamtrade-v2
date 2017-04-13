@@ -18,7 +18,9 @@
             <a class="_lbox product-image" href="{$product:photourl:original}">
                 <img itemprop="image" src="{$product:photourl:medium}" alt="{$product:name}"/>
             </a>
-            {$content:product-gallery}
+            <div id="product-image-gallery">
+                {$content:product-gallery}
+            </div>
         </div>
         <div class="grid_8 alpha omega p-l offers" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="product-top-part clearfix">
@@ -92,7 +94,6 @@
         <section class="aside-box">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
-            {$featured:area:right-categories:6:0:template=_fa - categories - right}
         </section>
     </aside>
 
@@ -103,8 +104,30 @@
 <script src="js/plugin/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#products-in-carousel .product-list').addClass("owl-carousel");
-        $('.owl-carousel').owlCarousel({
+        $('#product-image-gallery .img_gallery, #products-in-carousel .product-list').addClass("owl-carousel");
+        $('#product-image-gallery .img_gallery').owlCarousel({
+            loop: 'true',
+            margin: 10,
+            responsiveClass: 'true',
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: 'true'
+                },
+                481: {
+                    items: 2,
+                    nav: 'false',
+                    margin: 15
+                },
+                801: {
+                    items: 3,
+                    nav: 'true',
+                    loop: 'false',
+                    margin: 15
+                }
+            }
+        });
+        $('#products-in-carousel .product-list').owlCarousel({
             loop: 'true',
             margin: 10,
             responsiveClass: 'true',
