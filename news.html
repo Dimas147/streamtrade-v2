@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-
-        <!-- Container -->
-        <div id="page" class="container">
-
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="grid_9" role="main">
-                <!-- news content -->
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="news-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_8" role="heading">{$news:title}</h1>
+        <time class="grid_4 h1 news-item-date icon-calendar2 text-right" datetime="{$news:date:Y-m-d}">{$news:date: F d, Y}</time>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="grid_9 omega p-r" role="main">
+        <article class="news-item clearfix">
+            {$news:actions}
+            <div class="grid_4 alpha omega news-item-image">
+                <img src="{$news:preview}" alt="{$news:title:inline}"/>
+            </div>
+            <div class="grid_8 alpha omega p-l news-item-content">
                 {newscontent}
-                {repeat:Article blocks:key}
-                <article>
-                    <h2>{$header:content_key}</h2>
-                    {$content:content_key1}
-                    {$content:content_key2}
-                </article>
-                {/repeat}
+                    <h2>{$header:news_content_title}</h2>
+                    {$content:news_content_text}
                 {/newscontent}
-            </section>
-
-            <!-- Right box -->
-            <aside class="grid_3" role="complementary">
-                {repeat:Aside right box:key:1}
-                <section class="aside-box">
-                    <h3>{$header:right_key}</h3>
-                    {$content:right_key}
-                </section>
-                {/repeat}
-            </aside>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
-
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+                <p class="news-item-tags">{$news:tags}</p>
+                <div class="share-news">{$template:_social share}</div>
+            </div>
+            <div class="grid_12 alpha omega">
+                <h2>{$header:related-news:static}</h2>
+                <div class="news-list-related">
+                    {$newslist:_news list - related:desc:4}
+                </div>
+            </div>
+        </article>
+    </section>
+    <aside class="grid_3 alpha" role="complementary">
+        <section class="aside-box">
+            <h3>{$header:right-categories:static}</h3>
+            {$featured:area:right-categories:6:0:template=_fa - categories - right}
+        </section>
+        <section class="aside-box">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
+        </section>
+    </aside>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>

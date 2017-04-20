@@ -1,0 +1,17 @@
+<article class="news-item clearfix">
+    {$news:actions}
+    <a class="news-item-title grid_12 alpha omega" href="{$news:url}">
+        {$news:title}
+        <time class="news-item-date icon-calendar2" datetime="{$news:date:Y-m-d}">{$news:date: F d, Y}</time>
+    </a>
+    <div class="grid_4 alpha omega">
+        <a class="news-item-image" href="{$news:url}">
+            <img src="{$news:preview}" alt="{$news:title:inline}"/>
+        </a>
+    </div>
+    <div class="grid_8 alpha omega p-l static">
+        <p class="news-item-description">{$news:teaser}</p>
+        <p class="news-item-tags">{$news:tags}</p>
+        <a href="{$news:url}" class="read-more btn">{$textonly:read-more:static}</a>
+    </div>
+</article>

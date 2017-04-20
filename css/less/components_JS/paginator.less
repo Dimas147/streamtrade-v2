@@ -1,38 +1,45 @@
 .paginator when (@componentsJS-pagination) {
-    color       : @gray-light;
-    font-size   : @font-size-small;
-    cursor      : default;
-    line-height : 1;
-    .inline-block();
+	color       : @gray-light;
+	cursor      : default;
+	line-height : 1;
+	font-size   : @font-size-base;
+	.inline-block-wrap();
 
-    * {
-        .inline-block;
-        border  : 1px solid @gray-light;
-        padding : @padding-small-vertical @padding-small-horizontal;
-        margin  : 0 0.1em;
+	a, span {
+		.button();
+		min-width : 3.5em;
+		border    : none;
+		margin    : 0 1.07em 0 0;
 
-        &:empty {
-            display : none;
-        }
-    }
+		&:empty {
+			display : none;
+		}
+		&.disabled, &.current {
+			pointer-events : none;
+			background     : @primary-color;
+		}
+	}
 
-    .page {
-        cursor       : pointer;
-        border-color : @gray-light;
+	.page {
+		cursor       : pointer;
+		border-color : @gray-light;
 
-        &:hover {
-            background : @gray-light;
-            color      : @gray;
-        }
+		&:hover {
+			background : @gray-light;
+			color      : @gray;
+		}
 
-        &.selected {
-            background   : @primary-bg;
-            color        : @primary-color;
-            border-color : @primary-bg;
-        }
-    }
+		&.selected {
+			background   : @primary-bg;
+			color        : @primary-color;
+			border-color : @primary-bg;
+		}
+	}
 
-    :first-child, :last-child {
-        font-weight : bold;
-    }
+	:first-child, :last-child {
+		font-weight : bold;
+	}
+	&.news-list-pagination {
+		margin-bottom : 2.142rem;
+	}
 }

@@ -374,6 +374,12 @@
     * {
         color: #000000;
     }
+    input[type="text"]{
+        border-color: @primary-color;
+        &:focus, &:active{
+            border-color: @brand-dark;
+        }
+    }
 }
 
 .relative {
@@ -382,6 +388,9 @@
 
 .absolute {
     position: absolute;
+}
+.static{
+    position: static;
 }
 
 .navigation-box {
@@ -416,29 +425,5 @@
 .p-r {
     @media only screen and (min-width : @responsive-size-tablet) {
         padding-right: 30px;
-    }
-}
-
-.panel {
-    .panel-header {
-        margin-bottom: 5px;
-    }
-    p {
-        &[class*="icon-"] {
-            position: relative;
-            color: @primary-color;
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                width: 30px;
-                background: @brand-dark;
-                line-height: 2.3;
-            }
-            input {
-                padding-left: 35px;
-            }
-        }
     }
 }

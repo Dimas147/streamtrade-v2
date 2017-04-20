@@ -91,3 +91,27 @@
         }
     }
 }
+
+.panel {
+    .panel-header {
+        margin-bottom: 5px;
+    }
+    p {
+        &[class*="icon-"] {
+            position: relative;
+            color: @primary-color;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                background: @brand-dark;
+                line-height: 3.5;
+            }
+            input {
+                padding-left: 35px;
+            }
+        }
+    }
+}

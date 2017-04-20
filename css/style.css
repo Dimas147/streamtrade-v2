@@ -62,8 +62,8 @@ aside .aside-box {
 }
 footer {
   padding: 6.428em 0 2.857em;
-  background: #191919;
   color: #888888;
+  background: url("/media/bg/original/footer_background.png") repeat-x center top #191919;
 }
 .footer-logo {
   margin-bottom: 1.571em;
@@ -99,7 +99,7 @@ footer {
   margin-top: 2.142rem;
 }
 .subscribe {
-  padding: 4.142rem 0;
+  padding: 0.71rem 0;
 }
 .subscribe h3 {
   background: none;
@@ -221,11 +221,15 @@ footer {
 .top-title {
   padding: 2.07em 0 1.857em;
 }
-.top-title h1 {
+.top-title h1,
+.top-title .h1 {
   margin: 0;
   font-size: 2.428em;
   line-height: 1;
   font-weight: 700;
+}
+.top-title time.h1 {
+  font-weight: 100;
 }
 .product-tabs {
   margin-bottom: 2.142rem;
@@ -292,6 +296,15 @@ footer {
 .pagerating-list .pagerating-info .published {
   display: block;
 }
+.mfp-figure:after {
+  background: #ffffff !important;
+}
+.starrating .r-head-text {
+  display: none;
+}
+.starrating .stars-container {
+  margin-bottom: 14px;
+}
 form::after {
   content: "";
   display: table;
@@ -337,7 +350,7 @@ form .captcha .captcha_image a {
   padding: 0;
   white-space: nowrap;
   width: 3.5em;
-  margin-right: 0.25em;
+  margin-right: 1.07rem;
 }
 form .captcha .recaptcha_links a:hover,
 form .captcha .captcha_image a:hover,
@@ -378,7 +391,6 @@ form .captcha .captcha_image span {
 }
 form .captcha .recaptcha_links {
   float: left;
-  margin-bottom: 1em;
 }
 form .captcha .recaptcha_links a[href="javascript:Recaptcha.reload();"]::before {
   content: "\e093";
@@ -463,7 +475,6 @@ form#subscribeform input[type="submit"] {
 }
 form#subscribeform input[type="text"] {
   width: calc(100% - 7.143em);
-  border-color: #ffffff;
 }
 form#subscribeform input[type="submit"] {
   background: #191919;
@@ -606,9 +617,9 @@ input.noedit,
 select.noedit:focus,
 textarea.noedit:focus,
 input.noedit:focus {
-  border-color: #dddddd;
-  background: #eeeeee;
-  color: #a2a2a2;
+  border-color: #dbab03;
+  background: #fcc605;
+  color: #675101;
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -678,12 +689,12 @@ textarea.resize {
   background: #4fc752;
 }
 .filed-upgrade:disabled ~ .checkbox_radio {
-  background: #eeeeee !important;
-  border-color: #d5d5d5 !important;
+  background: #fcc605 !important;
+  border-color: #cca002 !important;
   color: transparent;
 }
 .filed-upgrade:disabled:checked ~ .checkbox_radio::before {
-  background: #a2a2a2 !important;
+  background: #675101 !important;
 }
 .filed-upgrade[type="radio"] ~ .checkbox_radio,
 .filed-upgrade[type="radio"] ~ .checkbox_radio::before {
@@ -733,11 +744,11 @@ textarea.resize {
   background: #4fc752;
 }
 .filed-upgrade[type="checkbox"].switcher:disabled ~ .checkbox_radio::before {
-  color: #a2a2a2 !important;
+  color: #675101 !important;
   background: none !important;
 }
 .filed-upgrade[type="checkbox"].switcher:disabled ~ .checkbox_radio::after {
-  background: #a2a2a2 !important;
+  background: #675101 !important;
 }
 #search-form::after {
   content: "";

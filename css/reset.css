@@ -172,7 +172,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 fieldset {
-  border: 1px solid #eeeeee;
+  border: 1px solid #fcc605;
   padding: 9px 12px;
 }
 legend {

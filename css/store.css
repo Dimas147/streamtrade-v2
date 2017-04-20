@@ -291,12 +291,16 @@
 #quote-summary .quote-widget-title,
 #checkoutsummary .checkout-widget-title,
 .post-purchase-report-summary .summary-title {
-  background: #eeeeee;
-  margin: 15px 0 10px;
-  padding: 5px 10px;
+  background: #fcc605;
+  margin: 0 0 2.142rem;
+  padding: 0.5em 0.75em;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1.5;
+  border-top: 1px solid #191919;
+  border-bottom: 1px solid #191919;
+  color: #191919;
 }
 .cart-summary-row,
 .quote-summary-row,
@@ -345,6 +349,10 @@
   font-weight: bold;
   font-size: 1.1em;
 }
+#cart-summary,
+#checkout-widget-preview {
+  margin-bottom: 2.142rem;
+}
 #checkout-widget-preview .checkout-edit {
   color: #f25f5c;
   float: right;
@@ -358,9 +366,6 @@
 }
 #checkout-widget-preview .preview-content span {
   display: block;
-}
-#checkout-widget {
-  margin-top: 15px;
 }
 #checkout-widget .checkout-button {
   text-align: center;
@@ -378,7 +383,7 @@
   vertical-align: middle;
   border-radius: 50px;
   background: #888888;
-  color: #fff;
+  color: #FFF;
   font-size: 0.85em;
   width: 50px;
   line-height: 50px;
@@ -569,14 +574,14 @@
 }
 .cart-content {
   border: none;
-  margin-bottom: 1em;
+  margin-bottom: 2.142rem;
   width: 100%;
 }
 .cart-content th,
 .cart-content td {
   text-align: center;
   padding: 0.5em 0.75em;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #191919;
 }
 .cart-content th.product-info,
 .cart-content td.product-info {
@@ -587,7 +592,7 @@
   width: 130px;
 }
 .cart-content th {
-  background: #eeeeee;
+  background: #fcc605;
 }
 .cart-content .quote-item-name,
 .cart-content .toastercart-item-name,
@@ -625,7 +630,7 @@
   }
   .cart-content tr {
     display: block;
-    border: 1px solid #dddddd;
+    border: 1px solid #191919;
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
@@ -720,7 +725,7 @@
   margin-left: 2%;
   margin-right: 0;
   width: 32%;
-  background: #d5d5d5;
+  background: #cca002;
   overflow: hidden;
   margin-bottom: 10px;
   border: none;
@@ -748,7 +753,7 @@
   }
 }
 #shipper-select .shipping-methods li:hover {
-  background: #eeeeee;
+  background: #fcc605;
 }
 #shipper-select .shipping-methods li label {
   padding: 5%;
@@ -778,7 +783,7 @@
 }
 #shipper-select .shipping-methods li .shipping-price:after {
   content: '';
-  border: 2px solid #d5d5d5;
+  border: 2px solid #cca002;
   position: absolute;
   left: 0;
   right: 0;
@@ -789,7 +794,7 @@
   display: block;
 }
 #shipper-select .shipping-methods li p {
-  border-top: 1px dotted #eeeeee;
+  border-top: 1px dotted #fcc605;
   clear: both;
   color: #000;
   font-size: 0.75em;
@@ -1180,13 +1185,13 @@
 #user-orders-table {
   margin-bottom: 1em;
   background-color: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #191919;
 }
 #user-orders-table th,
 #user-orders-table td {
   vertical-align: middle;
   padding: .5em .75em;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #191919;
 }
 #user-orders-table th:last-child,
 #user-orders-table td:last-child {

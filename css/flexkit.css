@@ -365,6 +365,89 @@
 #call-us.dialog {
   display: none;
 }
+.paginator {
+  color: #dddddd;
+  cursor: default;
+  line-height: 1;
+  font-size: 14px;
+  font-size: 0;
+}
+.paginator >* {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.paginator a,
+.paginator span {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  height: auto;
+  line-height: 3.5em;
+  padding: 0 1em;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  color: #000000;
+  border-color: #f99a00;
+  background-color: #fcc605;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  transition: background 0.3s;
+  min-width: 3.5em;
+  border: none;
+  margin: 0 1.07em 0 0;
+}
+.paginator a:hover,
+.paginator span:hover,
+.paginator a:active,
+.paginator span:active,
+.paginator a.active,
+.paginator span.active {
+  color: #ffffff;
+  border-color: #f99a00;
+  background-color: #000000;
+}
+.paginator a:active,
+.paginator span:active,
+.paginator a.active,
+.paginator span.active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
+}
+.paginator a:empty,
+.paginator span:empty {
+  display: none;
+}
+.paginator a.disabled,
+.paginator span.disabled,
+.paginator a.current,
+.paginator span.current {
+  pointer-events: none;
+  background: #ffffff;
+}
+.paginator .page {
+  cursor: pointer;
+  border-color: #dddddd;
+}
+.paginator .page:hover {
+  background: #dddddd;
+  color: #888888;
+}
+.paginator .page.selected {
+  background: #fcc605;
+  color: #ffffff;
+  border-color: #fcc605;
+}
+.paginator :first-child,
+.paginator :last-child {
+  font-weight: bold;
+}
+.paginator.news-list-pagination {
+  margin-bottom: 2.142rem;
+}
 .chosen-select {
   width: 100%;
 }
@@ -389,7 +472,7 @@
   cursor: pointer;
   position: relative;
   padding-right: 16px;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #191919;
 }
 .dataTables_wrapper .sorting::after,
 .dataTables_wrapper .sorting_asc::after,
@@ -430,7 +513,7 @@
   font-size: 12px;
 }
 .dataTables_paginate .paginate_button {
-  background: #eeeeee;
+  background: #fcc605;
   margin: 0 .25em;
   padding: .25em .75em;
   min-width: 2em;
@@ -440,13 +523,13 @@
   color: #222222;
 }
 .dataTables_paginate .paginate_button:hover {
-  background: #e7e7e7;
+  background: #efbb03;
 }
 .dataTables_paginate .paginate_button.disabled,
 .dataTables_paginate .paginate_button.current {
   cursor: default;
-  color: #e2e2e2;
-  background: #f6f6f6;
+  color: #e5b303;
+  background: #fcc914;
 }
 .dataTables_paginate .paginate_button.current {
   font-weight: bold;

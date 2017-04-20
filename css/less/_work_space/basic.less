@@ -87,8 +87,8 @@ aside {
 //==================================================
 footer {
 	padding    : 6.428em 0 2.857em;
-	background : @footer-bg;
 	color      : @footer-color;
+	background : url("/media/bg/original/footer_background.png") repeat-x center top @footer-bg;
 }
 .footer-logo {
 	margin-bottom : 1.571em;
@@ -123,7 +123,7 @@ footer {
 	margin-top : 2.142rem;
 }
 .subscribe {
-	padding : 4.142rem 0;
+	padding : 0.71rem 0;
 	h3 {
 		background     : none;
 		border-bottom  : none;
@@ -239,11 +239,14 @@ footer {
 }
 .top-title {
 	padding : 2.07em 0 1.857em;
-	h1 {
+	h1, .h1 {
 		margin      : 0;
 		font-size   : 2.428em;
 		line-height : 1;
 		font-weight : 700;
+	}
+	time.h1 {
+		font-weight : 100;
 	}
 }
 .product-tabs {
@@ -308,5 +311,18 @@ footer {
 		.published {
 			display : block;
 		}
+	}
+}
+
+.mfp-figure:after{
+	background: @primary-color !important;
+}
+
+.starrating{
+	.r-head-text{
+		display: none;
+	}
+	.stars-container{
+		margin-bottom: @font-size-base;
 	}
 }
