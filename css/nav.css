@@ -32,13 +32,13 @@ extend ' .mobile-menu li' has no matches
     font-weight: 900;
   }
   #main-menu .main_menu > li > a.current {
-    color: #ffffff;
+    color: #FFF;
   }
   #main-menu .main_menu > li:first-child a {
     padding-left: 0;
   }
   #main-menu .main_menu > li:hover {
-    color: #ffffff;
+    color: #FFF;
   }
   #main-menu .main_menu > li:hover ul {
     display: block;
@@ -56,7 +56,7 @@ extend ' .mobile-menu li' has no matches
     z-index: 0;
     display: none;
     width: 300px;
-    background: #ffffff;
+    background: #FFF;
     color: #888888;
     box-shadow: 0 3px 5px #555555;
   }
@@ -64,13 +64,13 @@ extend ' .mobile-menu li' has no matches
     float: none;
   }
   #main-menu .main_menu ul li:hover {
-    background: #fcc605;
+    background: #EEE;
   }
   #footer-menu .main_menu li + li {
     margin-top: 1em;
   }
   #footer-menu .main_menu a {
-    color: #ffffff;
+    color: #FFF;
   }
   #footer-menu .main_menu a:hover,
   #footer-menu .main_menu a.current {
@@ -141,7 +141,7 @@ extend ' .mobile-menu li' has no matches
   background: #292929;
   display: block;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFF;
   padding: 1.07rem 0.714rem 1.285rem 2.142rem;
   margin-bottom: 0;
   white-space: nowrap;
@@ -151,7 +151,7 @@ extend ' .mobile-menu li' has no matches
 .featureditem.right-categories .page-title:hover,
 .featureditem.right-categories .page-title.current {
   background: #3F3F3F;
-  color: #ffffff;
+  color: #FFF;
 }
 .featureditem.categories .page-teaser-image {
   position: relative;
@@ -187,7 +187,7 @@ extend ' .mobile-menu li' has no matches
   font-weight: 100;
   text-transform: uppercase;
   text-align: left;
-  color: #ffffff;
+  color: #FFF;
   background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow: hidden;
@@ -277,7 +277,7 @@ extend ' .mobile-menu li' has no matches
 .featureditem[class*="footer-menu"] .page-title {
   margin: 0;
   font-size: 1em;
-  color: #ffffff;
+  color: #FFF;
   line-height: 1.357;
   display: inline-block;
   vertical-align: middle;
@@ -346,9 +346,6 @@ aside .relatedpages li p {
 .news-item .news-item-title {
   display: block;
 }
-.news-item .newslog-admin-actions {
-  text-align: right;
-}
 .news-item .news-item-description {
   display: block;
 }
@@ -361,7 +358,7 @@ aside .relatedpages li p {
   vertical-align: middle;
 }
 .news-item .news-item-tags a {
-  color: #ffffff;
+  color: #FFF;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5em;
@@ -395,7 +392,7 @@ aside .relatedpages li p {
 }
 .index-page .news-item .news-item-title {
   display: block;
-  color: #ffffff;
+  color: #FFF;
   font-weight: 700;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -419,16 +416,16 @@ aside .relatedpages li p {
   color: #292929;
 }
 .index-page .news-item:hover .news-item-date {
-  color: #ffffff;
+  color: #FFF;
 }
 .index-page .news-item:hover .news-item-date:before {
-  color: #ffffff;
+  color: #FFF;
 }
 .index-page .news-item:hover .news-item-tags a {
   color: #191919;
 }
 .index-page .news-item:hover .news-item-tags a:hover {
-  color: #ffffff;
+  color: #FFF;
 }
 .news-room-page .news-item {
   position: relative;
@@ -441,7 +438,7 @@ aside .relatedpages li p {
   text-transform: uppercase;
   padding: 0.47em 5em 0.5em 0.88em;
   margin-bottom: 2.142rem;
-  color: #ffffff;
+  color: #FFF;
   background: #191919;
 }
 .news-room-page .news-item .news-item-title .news-item-date {
@@ -543,10 +540,10 @@ aside .relatedpages li p {
 }
 .news-page .news-item-tags,
 .news-room-page .news-item-tags {
-  padding: 14px 0 5px;
+  padding: 14px 0 0.35rem;
   margin: 14px 0;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
 .news-page .news-item-tags a,
 .news-room-page .news-item-tags a {
@@ -578,7 +575,7 @@ aside .relatedpages li p {
 .news-room-page .news-item-tags a:active,
 .news-page .news-item-tags a.active,
 .news-room-page .news-item-tags a.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -596,7 +593,6 @@ aside .relatedpages li p {
   font-size: 0;
   margin-left: -1.07rem;
   margin-right: -1.07rem;
-  margin-bottom: -2.142rem;
 }
 .news-list-related >* {
   font-size: 14px;
@@ -640,7 +636,7 @@ aside .relatedpages li p {
   background: #292929;
   display: block;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFF;
   padding: 1.07rem 0.714rem 1.285rem 2.142rem;
   margin-bottom: 0;
   border-top: 1px solid #000;
@@ -651,7 +647,19 @@ aside .relatedpages li p {
 }
 .tag-cloud a:hover {
   background: #3F3F3F;
-  color: #ffffff;
+  color: #FFF;
+}
+.comment-block,
+.block-shadow {
+  padding: 1.07em;
+  background: #FDFDFD;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+.comment-block .h2,
+.block-shadow .h2 {
+  margin-bottom: 1.07rem;
 }
 .search-results li {
   margin-bottom: 30px;
@@ -728,7 +736,7 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 56px;
-  color: #ffffff;
+  color: #FFF;
   background: #fcc605;
 }
 .mobile-bar.top .btn.icon {
@@ -805,12 +813,12 @@ aside .relatedpages li p {
   height: 0;
 }
 .tabs::-webkit-scrollbar-track {
-  background: #666666;
+  background: #666;
   border-radius: 10px;
 }
 .tabs::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #cccccc;
+  background: #ccc;
 }
 .tabs .sub-menu-btn {
   display: none;
@@ -866,8 +874,8 @@ aside .relatedpages li p {
 }
 .tabs a.current {
   background-color: transparent !important;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #FFF;
+  color: #FFF;
 }
 .tabs.sub-of-main {
   display: none;
@@ -879,7 +887,7 @@ aside .relatedpages li p {
 .sub-menu-btn {
   width: 48px;
   text-align: center;
-  color: #ffffff;
+  color: #FFF;
   font-size: 1.25em;
   position: absolute;
   right: 0;
@@ -888,7 +896,7 @@ aside .relatedpages li p {
 .sub-menu-btn::before {
   content: "\e0ac";
   font-family: flexkit-icons;
-  color: #dddddd;
+  color: #DDD;
 }
 .sub-menu-btn:hover::before,
 .sub-menu-btn.active::before {
@@ -1056,7 +1064,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #ffffff !important;
+  background: #fff !important;
   color: #555555 !important;
   position: absolute;
   z-index: 92 !important;

@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-
-        <!-- Container -->
-        <div id="page" class="container">
-
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="grid_12 contact" role="main">
-                {$plugin:gmaps:bizlocation:1200:300}
-                <div class="grid_8 alpha mt30px">
-                    <h2>{$header:contact1}</h2>
-                    {$content:contact1}
-                </div>
-                <div class="grid_4 omega mt30px">
-                    <h3>{$header:contact2}</h3>
-                    <p class="fs12">
-                        <strong>Address: </strong>{$plugin:widcard:BizAddress1}  {$plugin:widcard:BizAddress2}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizState} {$plugin:widcard:BizZip}<br />
-                        <strong>Phone: </strong>{$plugin:widcard:BizTelephone}<br />
-                        <strong>Email: </strong><a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail}</a>
-                    </p>
-                    <h3>{$header:contact3}</h3>
-                    {$content:contact2}
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
-
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="default-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="clearfix" role="main">
+        <article class="grid_12">
+            {$plugin:gmaps:bizlocation:3440:300:15}
+        </article>
+        <article class="grid_5 omega">
+            <h2>{$header:contact-info}</h2>
+            <div class="block-shadow">
+                <address class="icon-location">
+                    <strong>
+                        {$header:address:static}:
+                    </strong>
+                    {$plugin:widcard:BizAddress1}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizZip}
+                </address>
+                <p class="icon-phone4">
+                    <strong>
+                        {$header:mobile-phone:static}:
+                    </strong>
+                    <a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a>
+                </p>
+                <p class="icon-mail2 mb0px">
+                    <strong>
+                        {$header:email:static}:
+                    </strong>
+                    <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
+                </p>
+            </div>
+        </article>
+        <article class="grid_7 p-l alpha">
+            <h2>{$header:contact-form}</h2>
+            <div class="block-shadow">
+                {$form:contact-form:recaptcha:custom:{$prepop:submit:text:static:readonly}}
+            </div>
+        </article>
+    </section>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>

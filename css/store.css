@@ -3,12 +3,12 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #ffffff;
+  color: #FFF;
   padding: 5px;
 }
 .product .product-image {
   display: block;
-  background: #ffffff;
+  background: #FFF;
   padding: 2.14rem;
   margin-bottom: 2.14rem;
 }
@@ -77,11 +77,12 @@
   user-select: none;
   box-shadow: none;
   display: block;
+  font-weight: 900;
 }
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -124,7 +125,7 @@
   margin-left: 0;
   margin-right: 0;
   overflow: hidden;
-  margin-bottom: 2.142rem;
+  margin-bottom: -2.142rem;
 }
 .product-list.owl-carousel .product-item {
   margin-left: 0%;
@@ -252,7 +253,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -291,15 +292,15 @@
 #quote-summary .quote-widget-title,
 #checkoutsummary .checkout-widget-title,
 .post-purchase-report-summary .summary-title {
-  background: #fcc605;
+  background: #EEE;
   margin: 0 0 2.142rem;
   padding: 0.5em 0.75em;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.5;
-  border-top: 1px solid #191919;
-  border-bottom: 1px solid #191919;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   color: #191919;
 }
 .cart-summary-row,
@@ -399,7 +400,7 @@
 #checkout-widget h3.checkout-forms-header {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding-bottom: 0.25em;
   margin-bottom: 1em;
 }
@@ -535,6 +536,10 @@
   clear: both;
   padding: 1.5em 10px 1.5em 60px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAxCAYAAAHWy3vSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzEzNTVEODlBMThGMTFFNDhDM0Q5RUI3QTI2REZENEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzEzNTVEOEFBMThGMTFFNDhDM0Q5RUI3QTI2REZENEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMTM1NUQ4N0ExOEYxMUU0OEMzRDlFQjdBMjZERkQ0RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMTM1NUQ4OEExOEYxMUU0OEMzRDlFQjdBMjZERkQ0RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pjna9kgAAAYkSURBVHjaYvz//z8D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") left center no-repeat;
+  margin-bottom: 2.142rem;
+}
+.security p:last-child {
+  margin-bottom: 0;
 }
 .olark {
   width: 250px;
@@ -554,12 +559,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #ffffff;
+  color: #FFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #ffffff;
+  background: #FFF;
   color: #555555;
   transition: all 0.3s;
 }
@@ -581,7 +586,7 @@
 .cart-content td {
   text-align: center;
   padding: 0.5em 0.75em;
-  border-bottom: 1px solid #191919;
+  border-bottom: 1px solid #dddddd;
 }
 .cart-content th.product-info,
 .cart-content td.product-info {
@@ -592,7 +597,7 @@
   width: 130px;
 }
 .cart-content th {
-  background: #fcc605;
+  background: #EEE;
 }
 .cart-content .quote-item-name,
 .cart-content .toastercart-item-name,
@@ -630,7 +635,7 @@
   }
   .cart-content tr {
     display: block;
-    border: 1px solid #191919;
+    border: 1px solid #dddddd;
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
@@ -725,7 +730,7 @@
   margin-left: 2%;
   margin-right: 0;
   width: 32%;
-  background: #cca002;
+  background: #d5d5d5;
   overflow: hidden;
   margin-bottom: 10px;
   border: none;
@@ -753,7 +758,7 @@
   }
 }
 #shipper-select .shipping-methods li:hover {
-  background: #fcc605;
+  background: #EEE;
 }
 #shipper-select .shipping-methods li label {
   padding: 5%;
@@ -783,7 +788,7 @@
 }
 #shipper-select .shipping-methods li .shipping-price:after {
   content: '';
-  border: 2px solid #cca002;
+  border: 2px solid #d5d5d5;
   position: absolute;
   left: 0;
   right: 0;
@@ -794,7 +799,7 @@
   display: block;
 }
 #shipper-select .shipping-methods li p {
-  border-top: 1px dotted #fcc605;
+  border-top: 1px dotted #EEE;
   clear: both;
   color: #000;
   font-size: 0.75em;
@@ -834,7 +839,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #ff0000;
+  box-shadow: 0 0 1px 1px #f00;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -849,7 +854,7 @@
   font-size: 18.2px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -915,7 +920,7 @@
   font-size: 17.5px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -945,7 +950,7 @@
   margin-bottom: 0.25em;
 }
 .post-purchase p.createdOrderDate {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
 }
 .post-purchase .post-purchase-report-billing,
 .post-purchase .post-purchase-report-shipping {
@@ -1065,7 +1070,7 @@
 .quote-info p.title {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 }
@@ -1162,7 +1167,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -1185,13 +1190,13 @@
 #user-orders-table {
   margin-bottom: 1em;
   background-color: #fff;
-  border: 1px solid #191919;
+  border: 1px solid #dddddd;
 }
 #user-orders-table th,
 #user-orders-table td {
   vertical-align: middle;
   padding: .5em .75em;
-  border-top: 1px solid #191919;
+  border-top: 1px solid #dddddd;
 }
 #user-orders-table th:last-child,
 #user-orders-table td:last-child {
@@ -1234,6 +1239,6 @@
 }
 #user-orders-table_paginate .paginate_active,
 #user-orders-table_paginate .paginate_button_disabled {
-  color: #dddddd;
+  color: #DDD;
   cursor: default;
 }

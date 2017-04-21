@@ -1,5 +1,4 @@
 <article class="news-item clearfix">
-    {$news:actions}
     <a class="news-item-title grid_12 alpha omega" href="{$news:url}">
         {$news:title}
         <time class="news-item-date icon-calendar2" datetime="{$news:date:Y-m-d}">{$news:date: F d, Y}</time>
@@ -10,6 +9,7 @@
         </a>
     </div>
     <div class="grid_8 alpha omega p-l static">
+        {$news:actions}
         <p class="news-item-description">{$news:teaser}</p>
         <p class="news-item-tags">{$news:tags}</p>
         <a href="{$news:url}" class="read-more btn">{$textonly:read-more:static}</a>

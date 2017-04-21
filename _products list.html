@@ -1,9 +1,10 @@
 <div class="product-item">
-	<a href="{$product:url}" class="product-image">
-		<img src="{$product:photourl:small}" alt="{$product:name}" />
-	</a>
-	<a class="product-title" href="{$product:url}">{$product:name}</a>
-	<span class="product-price">{$product:price:nocurrency}</span>
-	<p class="product-description">{$product:description}</p>
-	{$store:addtocart:{$product:id}}
+	<div class="product-item-content">
+		<a href="{$product:url}" class="product-image">
+			<img src="{$product:photourl:small}" alt="{$product:name}" />
+		</a>
+		<p class="product-price">{$product:price:nocurrency} uah</p>
+		<a class="product-title" href="{$product:url}">{$product:name}</a>
+		<a class="btn" href="{$product:url}">{$textonly:product-button:static}</a>
+	</div>
 </div>
