@@ -70,12 +70,34 @@
                 </ul>
                 <div class="product-tab" id="tab-1">
                     <h3 class="h2">{$header:full-header-tab1:static}</h3>
-                    <p class="product-description-full" itemprop="description">{$product:description:full}</p>
+                    <div class="product-description-full" itemprop="description">{$product:description:full}</div>
                     {$content:product-description-{$product:id}:static}
                 </div>
                 <div class="product-tab" id="tab-2">
                     <h3 class="h2">{$header:full-header-tab2:static}</h3>
-                    {$content:product-characteristics-{$product:id}:static}
+                    <table class="product-characteristics-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    {$header:product-characteristics-title:static}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {repeat:product-characteristics-repeat:key}
+                            <tr>
+                                <td>
+                                    <strong>
+                                        {$header:product-characteristics_key-row1}:
+                                    </strong>
+                                </td>
+                                <td>
+                                    {$header:product-characteristics_key-row2}
+                                </td>
+                            </tr>
+                            {/repeat}
+                        </tbody>
+                    </table>
                 </div>
                 <div class="product-tab" id="tab-3">
                     <h3 class="h2">{$header:full-header-tab3:static}</h3>

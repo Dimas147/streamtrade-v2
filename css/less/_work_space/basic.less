@@ -300,8 +300,12 @@ footer {
                 margin: 0 0 -1px 0;
             }
         }
+        & + .product-tab{
+            display: block;
+        }
     }
     .product-tab {
+        display: none;
         padding: 1.07em;
         background: #FDFDFD;
         border: 1px solid @input-border-color;
@@ -314,7 +318,7 @@ footer {
 }
 
 .starrating {
-    .r-head-text {
+    .r-head-text, .no-reviews {
         display: none;
     }
     .stars-container {

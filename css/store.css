@@ -3,12 +3,12 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #FFF;
+  color: #ffffff;
   padding: 5px;
 }
 .product .product-image {
   display: block;
-  background: #FFF;
+  background: #ffffff;
   padding: 2.14rem;
   margin-bottom: 2.14rem;
 }
@@ -82,7 +82,7 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -253,7 +253,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -292,7 +292,7 @@
 #quote-summary .quote-widget-title,
 #checkoutsummary .checkout-widget-title,
 .post-purchase-report-summary .summary-title {
-  background: #EEE;
+  background: #eeeeee;
   margin: 0 0 2.142rem;
   padding: 0.5em 0.75em;
   font-size: 14px;
@@ -400,7 +400,7 @@
 #checkout-widget h3.checkout-forms-header {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 0.25em;
   margin-bottom: 1em;
 }
@@ -559,12 +559,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #FFF;
+  background: #ffffff;
   color: #555555;
   transition: all 0.3s;
 }
@@ -576,6 +576,9 @@
 }
 .olark:hover div {
   height: auto;
+}
+#login-form p:nth-child(3) {
+  display: none;
 }
 .cart-content {
   border: none;
@@ -597,7 +600,7 @@
   width: 130px;
 }
 .cart-content th {
-  background: #EEE;
+  background: #eeeeee;
 }
 .cart-content .quote-item-name,
 .cart-content .toastercart-item-name,
@@ -758,7 +761,7 @@
   }
 }
 #shipper-select .shipping-methods li:hover {
-  background: #EEE;
+  background: #eeeeee;
 }
 #shipper-select .shipping-methods li label {
   padding: 5%;
@@ -799,7 +802,7 @@
   display: block;
 }
 #shipper-select .shipping-methods li p {
-  border-top: 1px dotted #EEE;
+  border-top: 1px dotted #eeeeee;
   clear: both;
   color: #000;
   font-size: 0.75em;
@@ -839,7 +842,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #f00;
+  box-shadow: 0 0 1px 1px #ff0000;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -854,7 +857,7 @@
   font-size: 18.2px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -920,7 +923,7 @@
   font-size: 17.5px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -950,7 +953,7 @@
   margin-bottom: 0.25em;
 }
 .post-purchase p.createdOrderDate {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
 }
 .post-purchase .post-purchase-report-billing,
 .post-purchase .post-purchase-report-shipping {
@@ -1070,7 +1073,7 @@
 .quote-info p.title {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 }
@@ -1167,7 +1170,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -1239,6 +1242,6 @@
 }
 #user-orders-table_paginate .paginate_active,
 #user-orders-table_paginate .paginate_button_disabled {
-  color: #DDD;
+  color: #dddddd;
   cursor: default;
 }

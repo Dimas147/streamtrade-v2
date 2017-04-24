@@ -172,7 +172,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 fieldset {
-  border: 1px solid #EEE;
+  border: 1px solid #eeeeee;
   padding: 9px 12px;
 }
 legend {
@@ -205,11 +205,11 @@ th {
 }
 ::-moz-selection {
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 ::selection {
   background: #fcc605;
-  color: #FFF;
+  color: #ffffff;
 }
 blockquote,
 q {
@@ -281,7 +281,7 @@ iframe {
 [contenteditable="true"] {
   display: inline-block;
   vertical-align: middle;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #dddddd;
   cursor: text;
   padding: 2px 6px;
