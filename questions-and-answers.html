@@ -4,7 +4,7 @@
     <!-- Include head template -->
     {$template:_head}
 </head>
-<body class="default-page">
+<body class="questions-and-answers-page">
 {$template:_header}
 <div class="top-title dark-bg">
     <div class="container">
@@ -15,7 +15,18 @@
     <section class="grid_9 omega p-r" role="main">
         <article>
             <h2>{$header:page-header}</h2>
-            {$content:content}
+            <ul class="list-questions-and-answers">
+                {repeat:list-questions-and-answers:key:1}
+                <li>
+                    <h3 class="h2 mb0px">
+                        {$header:question-key}
+                    </h3>
+                    <div class="block-shadow">
+                        {$textonly:question_key}
+                    </div>
+                </li>
+                {/repeat}
+            </ul>
         </article>
     </section>
     <aside class="grid_3 alpha" role="complementary">

@@ -3,12 +3,12 @@
   left: 0;
   top: 0;
   background-color: #fcc605;
-  color: #ffffff;
+  color: #FFF;
   padding: 5px;
 }
 .product .product-image {
   display: block;
-  background: #ffffff;
+  background: #FFF;
   padding: 2.14rem;
   margin-bottom: 2.14rem;
 }
@@ -22,7 +22,6 @@
   line-height: 1;
   color: #292929;
   padding: 0;
-  text-transform: uppercase;
 }
 .product .product-info .title {
   font-weight: bold;
@@ -82,7 +81,7 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -216,7 +215,6 @@
   color: #292929;
   padding: 0;
   margin-bottom: 0.2em;
-  text-transform: uppercase;
 }
 .product-item .tcart-add,
 .product-item .btn {
@@ -253,7 +251,7 @@
 .product-item .btn:active,
 .product-item .tcart-add.active,
 .product-item .btn.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -262,6 +260,12 @@
 .product-item .tcart-add.active,
 .product-item .btn.active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
+}
+.product-item .stars-container {
+  margin-bottom: 1.21em;
+}
+.product-item .total-review {
+  display: none;
 }
 .product-item-content {
   text-align: left;
@@ -291,8 +295,9 @@
 }
 #quote-summary .quote-widget-title,
 #checkoutsummary .checkout-widget-title,
-.post-purchase-report-summary .summary-title {
-  background: #eeeeee;
+.post-purchase-report-summary .summary-title,
+#checkout-widget .checkout-forms-header {
+  background: #EEE;
   margin: 0 0 2.142rem;
   padding: 0.5em 0.75em;
   font-size: 14px;
@@ -351,7 +356,10 @@
   font-size: 1.1em;
 }
 #cart-summary,
-#checkout-widget-preview {
+#checkout-widget-preview,
+#checkout-user-info,
+#checkout-address-preview,
+#checkout-shipping-selected {
   margin-bottom: 2.142rem;
 }
 #checkout-widget-preview .checkout-edit {
@@ -392,17 +400,7 @@
 #checkout-widget .back-button,
 #checkout-widget .checkout-edit {
   float: right;
-  font-size: 18px;
-  /*because of pickup back button :(*/
   font-weight: normal;
-  margin-top: 4px;
-}
-#checkout-widget h3.checkout-forms-header {
-  font-size: 1.5em;
-  color: #222222;
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 0.25em;
-  margin-bottom: 1em;
 }
 #checkout-widget form,
 #checkout-widget fieldset {
@@ -445,9 +443,9 @@
   vertical-align: top;
 }
 #checkout-landing-forms > div {
-  margin-left: 4%;
+  margin-left: 2.6%;
   margin-right: 0;
-  width: 48%;
+  width: 48.7%;
   margin-bottom: 2em;
 }
 #checkout-landing-forms > div:nth-of-type(2n + 1) {
@@ -497,7 +495,7 @@
 }
 #checkout-pickup-form img.pickup-location-map {
   clear: both;
-  display: block;
+  display: none;
   margin: 0 auto;
 }
 #checkout-pickup-form #initial-pickup-info p {
@@ -559,12 +557,12 @@
   display: block;
   line-height: 1;
   background: #fcc605;
-  color: #ffffff;
+  color: #FFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #ffffff;
+  background: #FFF;
   color: #555555;
   transition: all 0.3s;
 }
@@ -600,7 +598,8 @@
   width: 130px;
 }
 .cart-content th {
-  background: #eeeeee;
+  background: #EEE;
+  text-transform: uppercase;
 }
 .cart-content .quote-item-name,
 .cart-content .toastercart-item-name,
@@ -761,7 +760,7 @@
   }
 }
 #shipper-select .shipping-methods li:hover {
-  background: #eeeeee;
+  background: #EEE;
 }
 #shipper-select .shipping-methods li label {
   padding: 5%;
@@ -802,7 +801,7 @@
   display: block;
 }
 #shipper-select .shipping-methods li p {
-  border-top: 1px dotted #eeeeee;
+  border-top: 1px dotted #EEE;
   clear: both;
   color: #000;
   font-size: 0.75em;
@@ -842,7 +841,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #ff0000;
+  box-shadow: 0 0 1px 1px #f00;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -854,17 +853,15 @@
   vertical-align: top;
 }
 #payment-zone form.paymentForm h4 {
-  font-size: 18.2px;
-  color: #222222;
-  font-weight: 900;
-  border-bottom: 1px solid #dddddd;
-  padding: 0 0 0.25em;
-  margin: 0 0 0.5em;
-  display: block;
-}
-#payment-zone form.paymentForm h4 + fieldset {
-  margin-right: 4%;
-  margin-left: 0;
+  font-size: 2.43rem;
+  font-weight: 100;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0.47em 0.88em 0.5em;
+  margin-bottom: 2.142rem;
+  color: #FFF;
+  background: #191919;
+  width: 100%;
 }
 #payment-zone form.paymentForm > fieldset {
   margin-left: 4%;
@@ -891,12 +888,17 @@
   }
 }
 #payment-zone form.paymentForm legend {
-  font-size: 1.1em;
+  background: #EEE;
+  margin: 0 0 2.142rem;
+  padding: 0.5em 0.75em;
+  width: 100%;
+  font-size: 14px;
   font-weight: bold;
-  color: #3c3c3c;
-  padding: 0;
-  margin-bottom: 0.5em;
-  display: block;
+  text-transform: uppercase;
+  line-height: 1.5;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  color: #191919;
 }
 #payment-zone form.paymentForm .shipping-to-billing-label {
   width: auto;
@@ -923,7 +925,7 @@
   font-size: 17.5px;
   color: #222222;
   font-weight: 900;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0 0 0.25em;
   margin: 0 0 0.5em;
   display: block;
@@ -953,7 +955,7 @@
   margin-bottom: 0.25em;
 }
 .post-purchase p.createdOrderDate {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
 }
 .post-purchase .post-purchase-report-billing,
 .post-purchase .post-purchase-report-shipping {
@@ -1073,7 +1075,7 @@
 .quote-info p.title {
   font-size: 1.5em;
   color: #222222;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 }
@@ -1170,7 +1172,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
@@ -1242,6 +1244,6 @@
 }
 #user-orders-table_paginate .paginate_active,
 #user-orders-table_paginate .paginate_button_disabled {
-  color: #dddddd;
+  color: #DDD;
   cursor: default;
 }

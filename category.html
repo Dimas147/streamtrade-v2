@@ -12,16 +12,22 @@
     </div>
 </div>
 <div class="container main-content">
-    <section class="grid_9 push_3 alpha p-l" role="main">
+    <section class="grid_9 omega p-r" role="main">
         <article>
             <h2>{$header:page-header}</h2>
             {$content:content}
         </article>
     </section>
-    <aside class="pull_9 grid_3 omega" role="complementary">
+    <aside class="grid_3 alpha" role="complementary">
         <section class="aside-box">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
+        </section>
+        <section class="aside-box">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
         </section>
     </aside>
 </div>

@@ -24,7 +24,7 @@
         </div>
         <div class="grid_8 alpha omega p-l offers" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="product-top-part clearfix">
-                <div itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha">{$product:price:nocurrency} uah</div>
+                <div itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha">{$product:price}</div>
                 <div class="grid_6 product-rating omega text-right">
                     {$plugin:pagerating:stars}
                 </div>
@@ -118,15 +118,20 @@
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
         </section>
+        <section class="aside-box">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
+        </section>
     </aside>
-
 </div>
 {$template:_footer}
 {$template:_mobile elements}
 {$template:_scripts}
 <script src="js/plugin/owl.carousel.min.js"></script>
 <script>
-    $(document).ready(function () {
+    $(function () {
         $('#product-image-gallery .img_gallery, #products-in-carousel .product-list').addClass("owl-carousel");
         $('#product-image-gallery .img_gallery').owlCarousel({
             loop: 'true',

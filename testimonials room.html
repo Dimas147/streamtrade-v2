@@ -4,7 +4,7 @@
     <!-- Include head template -->
     {$template:_head}
 </head>
-<body class="default-page">
+<body class="testimonials-page">
 {$template:_header}
 <div class="top-title dark-bg">
     <div class="container">
@@ -15,7 +15,16 @@
     <section class="grid_9 omega p-r" role="main">
         <article>
             <h2>{$header:page-header}</h2>
-            {$content:content}
+            <ul class="list-testimonials">
+                {repeat:list-testimonials:key:1}
+                <li>
+                    <blockquote class="testimonial-container">
+                        <p class="testimonial-name">{$header:testimonial-name_key}</p>
+                        {$textonly:testimonial_key}
+                    </blockquote>
+                </li>
+                {/repeat}
+            </ul>
         </article>
     </section>
     <aside class="grid_3 alpha" role="complementary">

@@ -76,7 +76,7 @@
 </div>
 {$featured:area:categories:6:0:template=_fa - categories}
 <div class="container main-content">
-    <section class="grid_9 push_3 alpha p-l" role="main">
+    <section class="grid_9 p-r omega" role="main">
         <article>
             <h2>{$header:stock:static}</h2>
             <ul class="list-stock">
@@ -111,10 +111,16 @@
             </div>
         </article>
     </section>
-    <aside class="pull_9 grid_3 omega" role="complementary">
+    <aside class="grid_3 alpha" role="complementary">
         <section class="aside-box">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
+        </section>
+        <section class="aside-box">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
         </section>
     </aside>
 </div>
@@ -174,7 +180,7 @@
 <script src="js/plugin/owl.carousel.min.js"></script>
 <script>
     $(function () {
-        $("a[href^='#']").on("click", function(e) {
+        $("a.main-arrow").on("click", function(e) {
             e.preventDefault();
             $("html, body").animate({
                 scrollTop: $($(this).attr("href")).offset().top

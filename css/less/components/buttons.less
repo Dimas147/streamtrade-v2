@@ -24,6 +24,13 @@
         font-weight: bold;
     }
 
+    &.cart-btn{
+        &:hover, &.active{
+            background: @gray-lighter;
+            color: @brand-dark;
+        }
+    }
+
     &[class*="grid_"], [class*="column_"] > & {
         padding-left  : 0 !important;
         padding-right : 0 !important;

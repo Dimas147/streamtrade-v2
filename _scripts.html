@@ -17,7 +17,14 @@
 </script>
 {/device}
 <script>
-    $(document).ready(function () {
+    $(function () {
+
+        $(".cart-btn").click(function (e) {
+            e.preventDefault();
+            $('.toaster-cart').toggle();
+            $(this).toggleClass("active icon-arrow-up2");
+        });
+
         function loopIt() {
             $('#animation').each(function (i) {
                 var t = $('#animation');

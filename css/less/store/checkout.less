@@ -22,7 +22,8 @@
 //  summary block  for checkout, quote , post-purchase
 #quote-summary .quote-widget-title,
 #checkoutsummary .checkout-widget-title,
-.post-purchase-report-summary .summary-title {
+.post-purchase-report-summary .summary-title,
+#checkout-widget .checkout-forms-header{
 	background     : @gray-lighter;
 	margin         : 0 0 2.142rem;
 	padding        : 0.5em 0.75em;
@@ -67,7 +68,7 @@
 		font-size   : 1.1em;
 	}
 }
-#cart-summary, #checkout-widget-preview {
+#cart-summary, #checkout-widget-preview, #checkout-user-info, #checkout-address-preview, #checkout-shipping-selected {
 	margin-bottom : 2.142rem;
 }
 #checkout-widget-preview {
@@ -118,17 +119,7 @@
 	.back-button, .checkout-edit {
 		float       : right;
 		// font-size   : @font-size-small;
-		font-size   : 18px; /*because of pickup back button :(*/
 		font-weight : normal;
-		margin-top  : 4px;
-	}
-
-	h3.checkout-forms-header {
-		font-size      : @font-size-larger;
-		color          : @heading-color;
-		border-bottom  : 1px solid @gray-light;
-		padding-bottom : 0.25em;
-		margin-bottom  : 1em;
 	}
 
 	///////form styles
@@ -168,7 +159,7 @@
 	.inline-block-wrap(top);
 
 	& > div {
-		.grid-elements(2; 2*@grid-margin-width; true; 1; 1);
+		.grid-elements(2; 1.3*@grid-margin-width; true; 1; 1);
 		margin-bottom : 2em;
 	}
 }
@@ -180,7 +171,7 @@
 	}
 	img.pickup-location-map {
 		clear   : both;
-		display : block;
+		display : none;
 		margin  : 0 auto;
 	}
 	#initial-pickup-info {
