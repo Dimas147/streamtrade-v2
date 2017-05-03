@@ -14,13 +14,13 @@
 <div class="container main-content">
     <section class="grid_9 omega p-r" role="main">
         <article>
-            <h2>{$header:page-header}</h2>
+            <h2>{$header:testimonials-title:static}</h2>
             <ul class="list-testimonials">
                 {repeat:list-testimonials:key:1}
                 <li>
                     <blockquote class="testimonial-container">
-                        <p class="testimonial-name">{$header:testimonial-name_key}</p>
-                        {$textonly:testimonial_key}
+                        <p class="testimonial-name">{$header:testimonial-name_key:static}</p>
+                        {$textonly:testimonial_key:static}
                     </blockquote>
                 </li>
                 {/repeat}

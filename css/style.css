@@ -73,8 +73,8 @@ footer {
 }
 .webPage-go-top.btn,
 .call-us-btn .btn {
-  line-height: 4em;
-  width: 4em;
+  line-height: 4rem;
+  width: 4rem;
   background: #FFF;
   border-radius: 50%;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.25);
@@ -87,7 +87,11 @@ footer {
 }
 .webPage-go-top.btn::before,
 .call-us-btn .btn::before {
-  font-size: 2.142em;
+  font-size: 2.142rem;
+}
+.webPage-go-top.btn:hover {
+  background: #fcc605;
+  color: #191919;
 }
 .call-us-btn {
   position: absolute;
@@ -1518,15 +1522,15 @@ textarea.resize {
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .cart-btn::before {
-  font-size: 2.142em;
+  font-size: 2.142rem;
 }
 .cart-btn:hover {
   background: #FFF;
   color: #191919;
 }
 .cart-btn.btn {
-  line-height: 3.57em;
-  width: 3.57em;
+  line-height: 3.57rem;
+  width: 3.57rem;
 }
 .cart-container {
   position: relative;

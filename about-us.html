@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="about-us-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
+    </div>
+</div>
+
+<section class="container main-content" role="main">
+    <article class="grid_6 alpha m-b">
+        <h2>{$header:about-us-title_1}</h2>
+        {$content:about-us-content_1}
+    </article>
+    <article class="grid_6 omega m-b">
+        <h2>{$header:about-us-title_2}</h2>
+        {$content:about-us-content_2}
+    </article>
+</section>
+
+<div class="parallax height-auto take-from-widget">
+    {$imageonly:blog-parallax:original:static}
+    <section class="container blog">
+        <div class="grid_12">
+            <h2>{$header:blog-title:static}</h2>
+            <div class="news-list">
+                {$newslist:_news list - index:desc:3}
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="container main-content" role="main">
+    <article class="grid_6 alpha">
+        <h2>{$header:about-us-title_3}</h2>
+        {$content:about-us-content_3}
+    </article>
+    <article class="grid_6 omega">
+        <h2>{$header:testimonials-title:static}</h2>
+        <ul class="list-testimonials">
+            {repeat:list-testimonials:key:1}
+            <li>
+                <blockquote class="testimonial-container">
+                    <p class="testimonial-name">{$header:testimonial-name_key:static}</p>
+                    {$textonly:testimonial_key:static}
+                </blockquote>
+            </li>
+            {/repeat}
+        </ul>
+    </article>
+</section>
+
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
+</html>

@@ -2392,11 +2392,11 @@ a:hover.facebook {
   border-radius: 50%;
   background: #FFF;
   color: #191919;
-  line-height: 4em;
-  width: 4em;
+  line-height: 4rem;
+  width: 4rem;
 }
 .social-links .btn.icon::before {
-  font-size: 2em;
+  font-size: 2rem;
 }
 .social-links .btn.icon:hover,
 .social-links .btn.icon:focus {
@@ -2784,6 +2784,51 @@ ul.list-inline > li {
   vertical-align: top;
   margin: 0 0.5em;
 }
+ul.list-checkmark {
+  zoom: 1;
+}
+ul.list-checkmark > li {
+  padding-left: 3rem;
+  margin-bottom: 2.142rem;
+}
+ul.list-checkmark > li::before {
+  float: left;
+  color: inherit;
+  margin-left: -3rem;
+  margin-top: -0.2rem;
+  font-family: flexkit-icons;
+  font-size: 2rem;
+  content: '\e0a1';
+}
+ul.list-advantages {
+  zoom: 1;
+}
+ul.list-advantages > li {
+  padding-left: 3rem;
+  margin-bottom: 2.142rem;
+}
+ul.list-advantages > li::before {
+  float: left;
+  color: inherit;
+  margin-left: -3rem;
+  margin-top: -0.8rem;
+  font-family: flexkit-icons;
+  font-size: 2rem;
+  content: '\e08e';
+}
+ul.list-bullet {
+  zoom: 1;
+}
+ul.list-bullet > li {
+  padding-left: 1em;
+}
+ul.list-bullet > li::before {
+  content: '\002022';
+  vertical-align: top;
+  color: #fcc605;
+  margin-left: -1em;
+  margin-right: 1em;
+}
 ul.list-bordered {
   zoom: 1;
 }
@@ -2801,6 +2846,7 @@ ul.list-bordered.dashed > li {
 }
 ul.list-testimonials {
   margin-top: 0;
+  margin-bottom: 2.142rem;
   position: relative;
   zoom: 1;
   min-height: 20px;
@@ -2864,7 +2910,7 @@ ul.list-select > li:hover {
 }
 ul.list-stock li {
   overflow: hidden;
-  background: #000000;
+  background: #000;
   margin-bottom: 0;
 }
 ul.list-stock li::after {
@@ -3970,6 +4016,9 @@ a.inherit-color:hover {
   .p-r {
     padding-right: 2.142rem;
   }
+}
+.m-b {
+  margin-bottom: 2.142rem;
 }
 .primary {
   color: #fcc605;

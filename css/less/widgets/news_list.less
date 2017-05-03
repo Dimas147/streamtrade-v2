@@ -30,7 +30,7 @@
 			color        : @primary-color;
 			.inline-block();
 
-			margin-right : 0.5em;
+			margin-right : 1em;
 
 			&::before {
 				margin-right : 0.5em;
@@ -45,7 +45,7 @@
 		}
 	}
 
-	.index-page & {
+	.index-page &, .about-us-page & {
 		.news-item-content {
 			.rgba(#000; 65%);
 			.transition();
@@ -165,7 +165,7 @@
 		}
 	}
 }
-.index-page {
+.index-page, .about-us-page {
 	.news-list {
 		.inline-block-wrap(top);
 		.flexbox(row; wrap);
