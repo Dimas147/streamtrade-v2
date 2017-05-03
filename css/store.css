@@ -152,6 +152,9 @@
     margin-left: 0;
   }
 }
+.product-list.owl-carousel .product-image {
+  padding: 0;
+}
 .product-list.owl-carousel .owl-nav {
   text-align: right;
 }
