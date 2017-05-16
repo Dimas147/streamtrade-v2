@@ -873,11 +873,11 @@ textarea.resize {
   border-color: #191919;
 }
 #search-form [type="submit"] {
-  overflow: hidden;
   padding: 0;
-  white-space: nowrap;
   width: 3.57em;
   height: 3.57em;
+  overflow: hidden;
+  white-space: nowrap;
   line-height: 3.57em;
   color: #FFF;
 }
@@ -886,8 +886,8 @@ textarea.resize {
   background-color: #cca002;
 }
 #search-form [type="submit"]::before {
-  width: 100%;
   float: left;
+  width: 100%;
   margin: 0;
   font-size: 1.714em;
   line-height: inherit !important;

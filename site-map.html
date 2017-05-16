@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="category-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="grid_9 omega p-r" role="main">
+        <article>
+            <h2>{$header:page-header}</h2>
+            {$content:content}
+        </article>
+    </section>
+    <aside class="grid_3 alpha" role="complementary">
+        <section class="aside-box">
+            <h3>{$header:right-categories:static}</h3>
+            {$featured:area:right-categories:6:0:template=_fa - categories - right}
+        </section>
+        <section class="aside-box">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
+        </section>
+    </aside>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
+</html>

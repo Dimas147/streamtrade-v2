@@ -23,16 +23,20 @@
 			.grid-elements(1; 0; true; 1; 1);
 			padding-left  : 0;
 			padding-right : 0;
+			&::before {
+				display : none;
+			}
 		}
-		.product-image{
-			padding: 0;
+		.product-image {
+			padding : 0;
 		}
-		.owl-nav{
-			text-align: right;
+		.owl-nav {
+			text-align : right;
 		}
 	}
 }
 .product-item {
+	position      : relative;
 	.grid-elements(4; 0; true; 2; 1);
 	.clearfix-mixin();
 	padding-left  : 1.07rem;
@@ -48,20 +52,28 @@
 	// General styles
 	.product-image {
 		display       : block;
-		margin-bottom : 3.214em;
-
-		img {
+		margin-bottom : 2em;
+		height        : 200px;
+		overflow      : hidden;
+		&.parallax {
+			background-size       : contain;
+			background-attachment : scroll;
+			background-repeat     : no-repeat;
+			background-position   : 50% 50%;
 		}
 	}
 
 	.product-title {
 		display        : block;
 		font-weight    : 400;
-		font-size      : 1em;
-		line-height    : 1.4;
+		font-size      : 1.2em;
+		line-height    : 1.1;
 		color          : #292929;
-		padding-bottom : 0.71em;
+		margin-top     : 0.5em;
+		margin-bottom  : 0.5em;
 		text-transform : uppercase;
+		height         : 36px;
+		overflow       : hidden;
 	}
 
 	.product-description {
@@ -70,13 +82,14 @@
 	}
 
 	.product-price {
-		display       : block;
-		font-weight   : 700;
-		font-size     : 2.428em;
-		line-height   : 1;
-		color         : #292929;
-		padding       : 0;
-		margin-bottom : 0.2em;
+		display        : block;
+		font-weight    : 700;
+		font-size      : 2.1em;
+		line-height    : 1;
+		color          : #292929;
+		padding        : 0;
+		margin-bottom  : 0.2em;
+		letter-spacing : -1px;
 		//text-transform: uppercase;
 	}
 
@@ -93,17 +106,31 @@
 		display        : block;
 		margin         : 0;
 	}
-	.stars-container{
-		margin-bottom: 1.21em;
+	.stars-container {
+		margin-bottom : 1.21em;
 	}
-	.total-review{
-		display: none;
+	.total-review {
+		display : none;
 	}
 }
 .product-item-content {
+	position   : relative;
 	text-align : left;
 	background : #FFF;
 	padding    : 2.142em;
+	z-index    : 1;
+	border     : 1px solid @primary-color;
+	.transition();
+	&:hover {
+		border-color : #DDD;
+	}
+}
+.owl-item {
+	.product-item-content {
+		&:hover {
+			box-shadow : none;
+		}
+	}
 }
 // Products List in SideBar
 //==================================================

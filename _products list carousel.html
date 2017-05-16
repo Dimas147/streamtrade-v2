@@ -1,10 +1,10 @@
 <div class="product-item item">
 	<div class="product-item-content">
-		<a href="{$product:url}" class="product-image">
+		<a href="{$product:url}" class="product-image parallax take-from-widget">
 			<img src="{$product:photourl:small}" alt="{$product:name}" />
 		</a>
 		<p class="product-price">{$product:price}</p>
-		<a class="product-title" href="{$product:url}">{$product:name}</a>
+		<a class="product-title tooltip" href="{$product:url}" title="{$product:name}">{$product:name}</a>
 		{$plugin:pagerating:stars:{$product:id}}
 		<a class="btn" href="{$product:url}">{$textonly:product-button:static}</a>
 	</div>
