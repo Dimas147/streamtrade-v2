@@ -142,16 +142,44 @@ extend ' .mobile-menu li' has no matches
   display: inline-block;
   vertical-align: middle;
 }
-.featureditem.right-categories li {
-  border-top: 1px solid #000;
+.featureditem.right-categories > li {
+  position: relative;
+  border-top: 1px solid #000000;
   margin-bottom: 0;
+}
+.featureditem.right-categories > li .show-sub-menu {
+  display: none;
+  position: absolute;
+  right: 0.71rem;
+  top: 0.71rem;
+  width: 2.57rem;
+  height: 2.57rem;
+  line-height: 2.57rem;
+  background: #fcc605;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  color: #FFF;
+}
+.featureditem.right-categories > li .show-sub-menu::before {
+  font-size: 1.4rem;
+}
+.featureditem.right-categories > li .show-sub-menu.active {
+  background: #888888;
+  color: #191919;
+}
+.featureditem.right-categories > li.has-subpages .show-sub-menu {
+  display: block;
+}
+.featureditem.right-categories > li.has-subpages > .page-title {
+  padding-right: 4rem;
 }
 .featureditem.right-categories .page-title {
   background: #292929;
   display: block;
   text-transform: uppercase;
   color: #FFF;
-  padding: 1.07rem 0.714rem 1.285rem 2.142rem;
+  padding: 1.07rem 0.714rem 1.07rem 2.142rem;
   margin-bottom: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -161,6 +189,31 @@ extend ' .mobile-menu li' has no matches
 .featureditem.right-categories .page-title.current {
   background: #3F3F3F;
   color: #FFF;
+}
+.featureditem.right-categories ul {
+  display: none;
+  background: #FFF;
+}
+.featureditem.right-categories ul li {
+  margin: 0;
+}
+.featureditem.right-categories ul li + li {
+  border-top: 1px solid #191919;
+}
+.featureditem.right-categories ul .page-title {
+  padding: 0.64rem 0.35rem 0.535rem 3rem;
+  font-size: 0.85em;
+  background: #FFF;
+  color: #191919;
+}
+.featureditem.right-categories ul .page-title.current {
+  background: inherit;
+  color: inherit;
+}
+.featureditem.right-categories ul .page-title:hover,
+.featureditem.right-categories ul .page-title.current:hover {
+  background: #fcc605;
+  color: #191919;
 }
 .featureditem.categories .page-teaser-image {
   position: relative;
@@ -213,7 +266,7 @@ extend ' .mobile-menu li' has no matches
 }
 .featureditem.categories li:hover .page-title {
   background: #fcc605;
-  color: #000;
+  color: #000000;
   white-space: normal;
   text-overflow: initial;
 }

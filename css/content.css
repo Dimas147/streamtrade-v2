@@ -4049,14 +4049,20 @@ a.inherit-color:hover {
 .main-content [role="main"] article {
   margin-bottom: 2.142rem;
 }
-@media only screen and (min-width: 1024px + 1) {
+.p-l {
+  padding-left: 2.142rem;
+}
+@media only screen and (max-width: 1024px) {
   .p-l {
-    padding-left: 2.142rem;
+    padding-left: 0;
   }
 }
-@media only screen and (min-width: 1024px + 1) {
+.p-r {
+  padding-right: 2.142rem;
+}
+@media only screen and (max-width: 1024px) {
   .p-r {
-    padding-right: 2.142rem;
+    padding-right: 0;
   }
 }
 .m-b {

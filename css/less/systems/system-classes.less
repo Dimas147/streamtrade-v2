@@ -374,9 +374,9 @@
     * {
         color: #000000;
     }
-    input[type="text"]{
+    input[type="text"] {
         border-color: @primary-color;
-        &:focus, &:active{
+        &:focus, &:active {
             border-color: @brand-dark;
         }
     }
@@ -389,7 +389,8 @@
 .absolute {
     position: absolute;
 }
-.static{
+
+.static {
     position: static;
 }
 
@@ -399,7 +400,7 @@
     padding-bottom: 0.71em;
     z-index: 121;
     width: 100%;
-    &.shadow{
+    &.shadow {
         .box-shadow(0px 5px 20px 0px #000000);
     }
 }
@@ -417,17 +418,19 @@
 }
 
 .p-l {
-    @media only screen and (min-width : @responsive-size-tablet + 1) {
-        padding-left: 2.142rem;
+    padding-left: 2.142rem;
+    @media only screen and (max-width: @responsive-size-tablet) {
+        padding-left: 0;
     }
 }
 
 .p-r {
-    @media only screen and (min-width : @responsive-size-tablet + 1) {
-        padding-right: 2.142rem;
+    padding-right: 2.142rem;
+    @media only screen and (max-width: @responsive-size-tablet) {
+        padding-right: 0;
     }
 }
 
-.m-b{
+.m-b {
     margin-bottom: 2.142rem;
 }

@@ -104,7 +104,7 @@
         </article>
         <article>
             <h2>{$header:new-products:static}</h2>
-            {$productlist:_products list new-products:tagnames-New products}
+            {$productlist:_products list new-products:tagnames-New products:12}
         </article>
         <article>
             <h2>{$header:products-for-sale:static}</h2>
@@ -203,11 +203,17 @@
                     nav: 'false',
                     margin: 30
                 },
-                1024: {
+                480: {
                     items: 2,
                     nav: 'true',
                     loop: 'false',
                     margin: 26
+                },
+                1024: {
+                    items: 4,
+                    nav: 'true',
+                    loop: 'false',
+                    margin: 30
                 }
             }
         });

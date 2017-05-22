@@ -1,15 +1,19 @@
 .show-more {
 	border-bottom  : 1px solid #DDD;
 	border-top     : 1px solid #DDD;
-	display        : block;
+	display        : block !important;
 	font-size      : 1.428em;
 	padding        : 0.5em 0;
 	text-align     : center;
 	text-transform : uppercase;
+	margin-bottom: 2.142rem;
+	margin-left: 1.07rem;
+	margin-right: 1.07rem;
 }
 // Products List
 //==================================================
 .product-list {
+	overflow: hidden;
 	.inline-block-wrap(top);
 	margin-left   : -1.07rem;
 	margin-right  : -1.07rem;
@@ -180,5 +184,12 @@
 		.tcart-add {
 		}
 
+	}
+}
+
+
+#products-in-carousel, .product-list{
+	.show-more{
+		display: none !important;
 	}
 }
