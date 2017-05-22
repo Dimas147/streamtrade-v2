@@ -9,6 +9,9 @@
 	background-attachment : fixed;
 	overflow              : hidden;
 	height                : @parallax-height;
+	@media only screen and (max-width : @responsive-size-tablet) {
+		background-attachment : scroll;
+	}
 
 	&.take-from-widget, .take-from-widget {
 		position : relative;

@@ -82,6 +82,7 @@
             <ul class="list-stock">
                 {repeat:list-stock:key}
                 <li>
+                    
                     <div class="text">
                         <h3>
                             {$header:stock-title_key:static}
@@ -93,9 +94,10 @@
                             {$header:stock-text_key:static}
                         </p>
                     </div>
-                    <div class="image">
+                    <div class="image parallax take-from-widget">
                         {$imageonly:stock-image_key:540:static}
                     </div>
+
                 </li>
                 {/repeat}
             </ul>
@@ -201,11 +203,11 @@
                     nav: 'false',
                     margin: 30
                 },
-                801: {
-                    items: 4,
+                1024: {
+                    items: 2,
                     nav: 'true',
                     loop: 'false',
-                    margin: 30
+                    margin: 26
                 }
             }
         });

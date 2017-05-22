@@ -25,7 +25,7 @@
   min-width: 100%;
 }
 .carousel .carousel-wrap .carousel-item {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: top;
 }
@@ -373,7 +373,7 @@
   font-size: 0;
 }
 .paginator >* {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -583,6 +583,11 @@
   background-attachment: fixed;
   overflow: hidden;
   height: 200px;
+}
+@media only screen and (max-width: 1024px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 .parallax.take-from-widget,
 .parallax .take-from-widget {

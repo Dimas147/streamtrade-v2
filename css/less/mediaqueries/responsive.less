@@ -25,12 +25,48 @@
 }
 
 //================================================\\
-//*************** Divece screen size *************\\
+//*************** Device screen size *************\\
 //================================================\\
 
 //***** Bigger than Desktop site size *****\\
 @responsive-size-desktop-above : (@responsive-size-desktop + 1);
 @media only screen and (min-width : @responsive-size-desktop-above) {
+}
+
+@media only screen and (max-width : 1681px) {
+    .webPage-go-top.btn, .call-us-btn .btn{
+        width: 3.57em;
+        height: 3.57em;
+        line-height: 3.57em;
+        .border-radius(0 0 0 0);
+    }
+    .call-us-btn{
+        top: 0.708rem;
+    }
+    .animated-circles{
+        &::before, &::after{
+            display: none;
+        }
+    }
+    .search-form{
+        margin-right: 3.57em;
+        margin-left: -3.57em;
+    }
+}
+
+@media only screen and (max-width : 1601px) {
+}
+
+@media only screen and (max-width : 1441px) {
+    html{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 1367px) {
+}
+
+@media only screen and (max-width : 1281px) {
 }
 
 //***** Tablet Portrait *****\\
