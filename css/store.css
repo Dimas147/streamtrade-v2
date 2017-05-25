@@ -101,16 +101,44 @@
   margin-bottom: 14px;
 }
 .show-more {
-  border-bottom: 1px solid #DDD;
-  border-top: 1px solid #DDD;
   display: block !important;
-  font-size: 1.428em;
-  padding: 0.5em 0;
-  text-align: center;
+  clear: both;
+  cursor: pointer;
+  text-decoration: none;
+  height: auto;
+  line-height: 3.5em;
+  padding: 0 1em;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  color: #000000;
+  border-color: #f99a00;
+  background-color: #fcc605;
+  border: none;
+  transition: background 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.6;
+  padding: 0.76em 0.47em;
   text-transform: uppercase;
-  margin-bottom: 2.142rem;
-  margin-left: 1.07rem;
-  margin-right: 1.07rem;
+  text-align: center;
+  margin: 2.142rem auto;
+}
+.show-more:hover,
+.show-more:active,
+.show-more.active {
+  color: #FFF;
+  border-color: #f99a00;
+  background-color: #000000;
+}
+.show-more:active,
+.show-more.active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .product-list {
   overflow: hidden;
@@ -164,6 +192,45 @@
 }
 .product-list.owl-carousel .owl-nav {
   text-align: right;
+}
+.product-list .show-more {
+  cursor: pointer;
+  text-decoration: none;
+  height: auto;
+  line-height: 3.5em;
+  padding: 0 1em;
+  font-family: Roboto, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  color: #000000;
+  border-color: #f99a00;
+  background-color: #fcc605;
+  border: none;
+  transition: background 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  max-width: 300px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.6;
+  padding: 0.76em 0.47em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 2.142rem;
+}
+.product-list .show-more:hover,
+.product-list .show-more:active,
+.product-list .show-more.active {
+  color: #FFF;
+  border-color: #f99a00;
+  background-color: #000000;
+}
+.product-list .show-more:active,
+.product-list .show-more.active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .product-item {
   position: relative;
@@ -310,8 +377,7 @@
 .owl-item .product-item-content:hover {
   box-shadow: none;
 }
-#products-in-carousel .show-more,
-.product-list .show-more {
+#products-in-carousel .show-more {
   display: none !important;
 }
 .ui-state-error,

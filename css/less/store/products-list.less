@@ -1,19 +1,21 @@
 .show-more {
-	border-bottom  : 1px solid #DDD;
-	border-top     : 1px solid #DDD;
 	display        : block !important;
-	font-size      : 1.428em;
-	padding        : 0.5em 0;
-	text-align     : center;
+	clear          : both;
+	.button();
+	.user-select();
+	.box-shadow(none; @input-shadow-focus);
+	font-size      : 1.5rem;
+	font-weight    : 900;
+	line-height    : 1.6;
+	padding        : 0.76em 0.47em;
 	text-transform : uppercase;
-	margin-bottom: 2.142rem;
-	margin-left: 1.07rem;
-	margin-right: 1.07rem;
+	text-align     : center;
+	margin         : 2.142rem auto;
 }
 // Products List
 //==================================================
 .product-list {
-	overflow: hidden;
+	overflow      : hidden;
 	.inline-block-wrap(top);
 	margin-left   : -1.07rem;
 	margin-right  : -1.07rem;
@@ -38,6 +40,19 @@
 			text-align : right;
 		}
 	}
+	.show-more {
+		.button();
+		.user-select();
+		.box-shadow(none; @input-shadow-focus);
+		max-width      : 300px;
+		font-size      : 1.5rem;
+		font-weight    : 900;
+		line-height    : 1.6;
+		padding        : 0.76em 0.47em;
+		text-transform : uppercase;
+		text-align     : center;
+		margin         : 0 auto 2.142rem;
+	}
 }
 .product-item {
 	position      : relative;
@@ -60,7 +75,7 @@
 		height        : 200px;
 		overflow      : hidden;
 		@media only screen and (max-width : @responsive-size-tablet) {
-			height: 300px;
+			height : 300px;
 		}
 		&.parallax {
 			background-size       : contain;
@@ -186,10 +201,8 @@
 
 	}
 }
-
-
-#products-in-carousel, .product-list{
-	.show-more{
-		display: none !important;
+#products-in-carousel {
+	.show-more {
+		display : none !important;
 	}
 }
