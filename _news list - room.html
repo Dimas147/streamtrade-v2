@@ -3,12 +3,12 @@
         {$news:title}
         <time class="news-item-date icon-calendar2" datetime="{$news:date:Y-m-d}">{$news:date: F d, Y}</time>
     </a>
-    <div class="grid_4 alpha omega">
+    <div class="grid_4 alpha omega t-grid_2">
         <a class="news-item-image" href="{$news:url}">
             <img src="{$news:preview:crop:370x370}" alt="{$news:title:inline}"/>
         </a>
     </div>
-    <div class="grid_8 alpha omega p-l static">
+    <div class="grid_8 alpha omega p-l static t-grid_4">
         {$news:actions}
         <p class="news-item-description">{$news:teaser}</p>
         <p class="news-item-tags">{$news:tags}</p>

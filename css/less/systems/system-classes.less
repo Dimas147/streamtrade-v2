@@ -19,6 +19,34 @@
 .text-justify {
     text-align: justify;
 }
+@media only screen and (max-width : @responsive-size-tablet) {
+    .t-text-left {
+        text-align: left;
+    }
+    .t-text-center {
+        text-align: center;
+    }
+    .t-text-right {
+        text-align: right;
+    }
+    .t-text-justify {
+        text-align: justify;
+    }
+}
+@media only screen and (max-width : @responsive-size-mobile) {
+    .m-text-left {
+        text-align: left;
+    }
+    .m-text-center {
+        text-align: center;
+    }
+    .m-text-right {
+        text-align: right;
+    }
+    .m-text-justify {
+        text-align: justify;
+    }
+}
 
 .align-top {
     vertical-align: top !important;
@@ -433,4 +461,12 @@
 
 .m-b {
     margin-bottom: 2.142rem;
+}
+
+.t_m-b {
+    @media only screen and (max-width: @responsive-size-tablet) {
+        &, &.company-description, &.company-description {
+            margin-bottom: 6.428rem;
+        }
+    }
 }

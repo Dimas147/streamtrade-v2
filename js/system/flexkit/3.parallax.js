@@ -10,7 +10,7 @@ function _parallax() {
 }
 _parallax();
 $(".show-more").click(function () {
-    setTimeout(function(){
+    setTimeout(function () {
         console.log("clicked");
         _parallax();
     }, 1000);

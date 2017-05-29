@@ -36,6 +36,9 @@ header {
             .inline-block();
             .gradient-vertical(#292929 1%, #222222 100%);
         }
+        @media only screen and (max-width : @responsive-size-tablet) {
+            margin-bottom: 1.07rem;
+        }
 
         img {
         }
@@ -58,7 +61,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
     padding-top: 1rem;
     border-bottom: 1px solid darken(@brand-primary, 20%);
     p {

@@ -2,25 +2,19 @@
 <div class="mobile-bar top clearfix">
     <span class="btn icon-menu" data-refer="main"></span>
     <span class="title">{$page:h1}</span>
-    <span class=" btn icon-search"></span>
-    <span class="dropdown-btn btn icon-more-vert" data-refer="drop"></span>
-    <div class="tabs">
-        <ul class="items-wrap">
-        <li><a href="#">First Item</a></li>
-        <li><a href="#" class="current">Second Item</a></li>
-        <li><a href="#">Third Item</a></li>
-        <li><a href="#">Fourth Item</a></li>
-        <li><a href="#">Fifth Item</a></li>
-        </ul>
-    </div>
+    <span class="btn icon-search" data-refer="search"></span>
+    <span class="dropdown-btn btn icon-cart" data-refer="cart"></span>
 </div>
 
 <aside class="m-menu left" data-el="main">
     <div class="menu-top-header"></div>
     {$menu:main:_main menu}
 </aside>
-<aside class="m-menu dropdown right top" data-el="drop">
-    {$menu:main:_main menu}
+<aside class="m-menu dropdown search" data-el="search">
+    {$search:form}
+</aside>
+<aside class="m-menu dropdown right top cart-container" data-el="cart">
+    {$store:cartblock}
 </aside>
 
 <!-- Bottom bar for mobile, with button show/hide menu -->

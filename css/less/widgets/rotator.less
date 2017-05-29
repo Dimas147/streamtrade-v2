@@ -172,6 +172,9 @@
 .top-slider {
     min-height: 100%;
     margin-bottom: -5rem;
+    @media only screen and (max-width: @responsive-size-tablet) {
+        margin-bottom: 0;
+    }
     .cycle-slideshow {
         position: absolute;
         top: 0;
@@ -213,6 +216,11 @@
         }
         &:focus, &:active {
             .box-shadow(none);
+        }
+    }
+    .tablet &, .mobile &{
+        .action-button {
+            display: none;
         }
     }
 }

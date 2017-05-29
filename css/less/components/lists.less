@@ -522,27 +522,39 @@ ul {
             overflow: hidden;
             .clearfix-mixin();
             margin-bottom: 0;
+            @media only screen and (max-width: @responsive-size-tablet) {
+                & + li{
+                    margin-top: 2.142rem;
+                }
+            }
             .image, .text {
                 float: left;
-                .grid-elements(2; 0; true; 2; 1);
+                .grid-elements(2; 0; true; 1; 1);
             }
-            .image {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                .tpopup {
+            @media only screen and (min-width: @responsive-size-tablet) {
+                .image {
                     position: absolute;
                     top: 0;
+                    bottom: 0;
+                    right: 0;
+                    .tpopup {
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+                &:nth-child(2n) {
+                    .text {
+                        float: right;
+                    }
+                    .image {
+                        right: auto;
+                        left: 0;
+                    }
                 }
             }
-            &:nth-child(2n) {
-                .text {
-                    float: right;
-                }
-                .image {
-                    right: auto;
-                    left: 0;
+            @media only screen and (max-width: @responsive-size-tablet) {
+                .parallax.image {
+                    height: 300px;
                 }
             }
             &:hover {
@@ -565,6 +577,9 @@ ul {
             padding: 3em 0.714em 3em 1.785em;
             z-index: 1;
             background: #000000;
+            @media only screen and (max-width: @responsive-size-mobile) {
+                font-size: 0.8em;
+            }
         }
         .image {
             overflow: hidden;
@@ -613,6 +628,9 @@ ul {
             font-size: 0.857em;
             color: @primary-color;
             line-height: 1.4;
+            @media only screen and (max-width: @responsive-size-mobile) {
+                font-size: 1.3em;
+            }
         }
     }
     &.list-questions-and-answers {

@@ -168,7 +168,7 @@
 .product-list.owl-carousel .product-item:nth-of-type(1n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .product-list.owl-carousel .product-item {
     width: 100%;
   }
@@ -252,7 +252,7 @@
 .product-item:nth-of-type(4n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .product-item {
     width: 50%;
   }
@@ -282,7 +282,7 @@
   height: 200px;
   overflow: hidden;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   .product-item .product-image {
     height: 300px;
   }
@@ -567,7 +567,7 @@
 #checkout-landing-forms > div:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #checkout-landing-forms > div {
     width: 100%;
   }
@@ -593,7 +593,7 @@
 #checkout-pickup-form div.checkout-pickup-default:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #checkout-pickup-form div.checkout-pickup-default {
     width: 100%;
   }
@@ -634,7 +634,7 @@
 #checkout-pickup-form #pickup-with-price-result {
   margin-right: 4%;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   #checkout-pickup-form #initial-pickup-info p,
   #checkout-pickup-form #location-list-pickup {
     width: auto;
@@ -746,7 +746,7 @@
 .cart-content .product-unit-price input {
   width: 100px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   .cart-content thead,
   .cart-content .product-unit-additional-row {
     display: none;
@@ -819,7 +819,7 @@
 #checkout-user-address > fieldset:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #checkout-user-address > fieldset {
     width: 100%;
   }
@@ -856,7 +856,7 @@
 #shipper-select .shipping-methods li:nth-of-type(3n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #shipper-select .shipping-methods li {
     width: 49%;
   }
@@ -987,7 +987,7 @@
 #payment-zone form.paymentForm > fieldset:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #payment-zone form.paymentForm > fieldset {
     width: 100%;
   }
@@ -1077,7 +1077,7 @@
 .post-purchase .post-purchase-report-shipping {
   margin-bottom: 2em;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1026px) {
   .post-purchase .post-purchase-report-billing,
   .post-purchase .post-purchase-report-shipping {
     float: left;
@@ -1087,13 +1087,13 @@
     margin-right: 4%;
   }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1026px) {
   .post-purchase-report-summary {
     float: right;
     width: 24%;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1025px) {
   .post-purchase-report-summary {
     float: right;
     width: 49%;
@@ -1114,7 +1114,7 @@
 .product form.toaster-quote > fieldset:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   #checkout-widget form.toaster-quote > fieldset,
   .product form.toaster-quote > fieldset {
     width: 100%;
@@ -1138,7 +1138,7 @@
 .product form.toaster-quote .captcha {
   clear: both;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1026px) {
   #checkout-widget form.toaster-quote > p,
   .product form.toaster-quote > p {
     float: left;
@@ -1176,7 +1176,7 @@
 .quote-info {
   margin-bottom: 2em;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1026px) {
   .quote-info {
     float: left;
     width: 48%;

@@ -16,7 +16,7 @@ extend ' .mobile-menu li' has no matches
   display: inline-block;
   vertical-align: top;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   #main-menu .main_menu {
     position: relative;
     z-index: 12;
@@ -105,7 +105,7 @@ extend ' .mobile-menu li' has no matches
 .relatedpages li:nth-of-type(3n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .featureapage,
   .featureditem li,
   .relatedpages li {
@@ -215,6 +215,30 @@ extend ' .mobile-menu li' has no matches
   background: #fcc605;
   color: #191919;
 }
+.featureditem.categories li {
+  margin-left: 0%;
+  margin-right: 0;
+  width: 33.33333333%;
+}
+.featureditem.categories li:nth-of-type(3n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
+  .featureditem.categories li {
+    width: 100%;
+  }
+  .featureditem.categories li:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .featureditem.categories li {
+    width: 100%;
+  }
+  .featureditem.categories li:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
 .featureditem.categories .page-teaser-image {
   position: relative;
   overflow: hidden;
@@ -285,7 +309,7 @@ extend ' .mobile-menu li' has no matches
 .category-page .featureditem.categories li:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .category-page .featureditem.categories li {
     width: 100%;
   }
@@ -313,11 +337,12 @@ extend ' .mobile-menu li' has no matches
   margin-left: 0%;
   margin-right: 0;
   width: 100%;
+  margin-bottom: 1em;
 }
 .featureditem[class*="footer-menu"] li:nth-of-type(1n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .featureditem[class*="footer-menu"] li {
     width: 100%;
   }
@@ -332,9 +357,6 @@ extend ' .mobile-menu li' has no matches
   .featureditem[class*="footer-menu"] li:nth-of-type(1n + 1) {
     margin-left: 0;
   }
-}
-.featureditem[class*="footer-menu"] li + li {
-  margin-top: 1em;
 }
 .featureditem[class*="footer-menu"] .page-title {
   margin: 0;
@@ -516,7 +538,7 @@ aside .relatedpages li p {
   font-weight: 100;
   line-height: 1;
   text-transform: uppercase;
-  padding: 0.47em 5em 0.5em 0.88em;
+  padding: 0.47em 6em 0.5em 0.88em;
   margin-bottom: 2.142rem;
   color: #FFF;
   background: #191919;
@@ -601,7 +623,7 @@ aside .relatedpages li p {
 .about-us-page .news-list .news-item:nth-of-type(3n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .index-page .news-list .news-item,
   .about-us-page .news-list .news-item {
     width: 50%;
@@ -702,7 +724,7 @@ aside .relatedpages li p {
 .news-list-related .news-item:nth-of-type(4n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .news-list-related .news-item {
     width: 100%;
   }
@@ -782,13 +804,13 @@ aside .relatedpages li p {
 .search-results .static {
   padding-bottom: 3.55em;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1026px) {
   body .mobile-bar,
   body .mobile-menu {
     display: none;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   body {
     padding-top: 56px;
   }
@@ -904,13 +926,13 @@ aside .relatedpages li p {
 .sub-menu-btn::before {
   content: "\e0ac";
   font-family: flexkit-icons;
-  color: #DDD;
+  color: #fcc605;
 }
 .sub-menu-btn:hover::before,
 .sub-menu-btn.active::before {
   content: "\e0aa";
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   .mobile-menu {
     z-index: 124;
     transition: all 0.3s;
@@ -974,9 +996,9 @@ aside .relatedpages li p {
 .m-menu {
   width: 260px;
   position: fixed;
-  z-index: 92;
+  z-index: 124;
   overflow: auto;
-  background: #ffffff;
+  background: #FFF;
   display: none;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
@@ -994,6 +1016,12 @@ aside .relatedpages li p {
   width: 250px;
   overflow: auto;
   max-height: 70%;
+}
+.m-menu.dropdown.search {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  width: auto;
 }
 .m-menu.dropdown.top {
   top: 10px;
@@ -1064,7 +1092,7 @@ aside .relatedpages li p {
 .m-menu li li + li {
   border-top: 1px solid #f2f2f2;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   .dropdown-menu-mobile {
     display: none;
   }
@@ -1072,7 +1100,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #fff !important;
+  background: #FFF !important;
   color: #555555 !important;
   position: absolute;
   z-index: 124 !important;

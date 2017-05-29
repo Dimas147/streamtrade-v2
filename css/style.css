@@ -29,6 +29,11 @@ header .logo a {
   background-image: -ms-linear-gradient(top, #292929 1%, #222222 100%);
   background-image: linear-gradient(top, #292929 1%, #222222 100%);
 }
+@media only screen and (max-width: 1025px) {
+  header .logo {
+    margin-bottom: 1.07rem;
+  }
+}
 .index-page header {
   position: absolute;
   top: 0;
@@ -43,7 +48,6 @@ header .logo a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
   padding-top: 1rem;
   border-bottom: 1px solid #997802;
 }
@@ -510,7 +514,7 @@ form .captcha #recaptcha_audio_play_again::before {
 form .captcha #recaptcha_audio_download::before {
   content: "\e0e1";
 }
-@media only screen and (max-width: 480px), only screen and (min-width: 1024px) {
+@media only screen and (max-width: 480px), only screen and (min-width: 1025px) {
   aside form .captcha .recaptcha_links {
     width: 100%;
   }
@@ -578,6 +582,12 @@ form#subscribeform input[type="submit"] {
 }
 form#subscribeform input[type="text"] {
   width: calc(100% - 7.143em);
+}
+@media only screen and (max-width: 480px) {
+  form#subscribeform input[type="text"] {
+    width: 100%;
+    margin-bottom: 1.07rem;
+  }
 }
 form#subscribeform input[type="submit"] {
   background: #191919;
@@ -957,7 +967,7 @@ textarea.resize {
 .img_gallery li:nth-of-type(3n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .img_gallery li {
     width: 100%;
   }
@@ -1006,7 +1016,7 @@ textarea.resize {
 .img_gallery.owl-carousel li:nth-of-type(1n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .img_gallery.owl-carousel li {
     width: 100%;
   }
@@ -1187,6 +1197,11 @@ textarea.resize {
   min-height: 100%;
   margin-bottom: -5rem;
 }
+@media only screen and (max-width: 1025px) {
+  .top-slider {
+    margin-bottom: 0;
+  }
+}
 .top-slider .cycle-slideshow {
   position: absolute;
   top: 0;
@@ -1242,6 +1257,10 @@ textarea.resize {
 .top-slider .action-button:focus,
 .top-slider .action-button:active {
   box-shadow: none;
+}
+.tablet .top-slider .action-button,
+.mobile .top-slider .action-button {
+  display: none;
 }
 .slider-navigation {
   position: absolute;
@@ -1545,6 +1564,7 @@ textarea.resize {
   right: 0;
   width: 300px;
   background: #EEE;
+  z-index: 123;
 }
 .cart-container .toaster-cart * {
   color: #191919;
@@ -1570,7 +1590,7 @@ textarea.resize {
 .cart-container .toaster-cart [class*="-row"] span:nth-of-type(2n + 1) {
   margin-left: 0;
 }
-@media only screen and (max-width: 1024px) and (min-width: 481px) {
+@media only screen and (max-width: 1025px) and (min-width: 481px) {
   .cart-container .toaster-cart [class*="-row"] span {
     width: 100%;
   }
@@ -1626,14 +1646,28 @@ textarea.resize {
 .cart-container .cartblock-gotocart-row a.active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
-@media only screen and (min-width: 1025px) {
+.cart-container.m-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  left: auto;
+  width: 260px;
+  margin: 0;
+}
+.cart-container.m-menu .toaster-cart {
+  display: block;
+  margin-top: 0;
+  width: auto;
+  position: static;
+}
+@media only screen and (min-width: 1026px) {
   .d-hide,
   .t-visible,
   .m-visible {
     display: none !important;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1025px) {
   .t-hide,
   .d-visible,
   .m-visible {
@@ -1645,6 +1679,12 @@ textarea.resize {
   .d-visible,
   .t-visible {
     display: none !important;
+  }
+}
+@media only screen and (max-width: 1681px) and (min-width: 1025px) {
+  .search-form {
+    margin-right: 3.57em;
+    margin-left: -3.57em;
   }
 }
 @media only screen and (max-width: 1681px) {
@@ -1661,10 +1701,6 @@ textarea.resize {
   .animated-circles::before,
   .animated-circles::after {
     display: none;
-  }
-  .search-form {
-    margin-right: 3.57em;
-    margin-left: -3.57em;
   }
 }
 @media only screen and (max-width: 1441px) {
@@ -1697,7 +1733,7 @@ html.tablet::before {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 101;
+  z-index: 125;
   background-color: #fcc605;
 }
 html.mobile .mobile-loader,
@@ -1708,7 +1744,7 @@ html.tablet .mobile-loader {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 102;
+  z-index: 126;
 }
 html.mobile .mobile-loader::after,
 html.tablet .mobile-loader::after,

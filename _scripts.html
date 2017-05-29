@@ -34,20 +34,19 @@
 //        setEqualHeight($(".product-list > .product-item"));
 //    });
 
-
-    $(function () {
-        $( ".right-categories > li:has(ul)" ).each(function() {
-            $(this).addClass("has-subpages");
-        });
-        $(".show-sub-menu").click(function () {
-            $(this).next("ul").slideToggle();
-            $(this).toggleClass("active");
-        });
-    })
 </script>
 {/device}
 <script>
     $(function () {
+
+        $( ".right-categories > li:has(ul)" ).each(function() {
+            $(this).addClass("has-subpages");
+        });
+
+        $(".show-sub-menu").click(function () {
+            $(this).next("ul").slideToggle();
+            $(this).toggleClass("active");
+        });
 
         $(".cart-btn").click(function (e) {
             e.preventDefault();

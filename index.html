@@ -53,11 +53,20 @@
          data-cycle-auto-height="calc"
          data-cycle-tmpl-regex="\[\[((\.)?.*?)\]\]"
          data-cycle-pager-template="<span>[[slideNum]]</span>">
-        {repeat:top-slider:key:0}
-        <div class="slide parallax take-from-widget">
-            {$imageonly:top-slider-image_key:original}
-        </div>
-        {/repeat}
+
+        {device:desktop}
+            {repeat:top-slider:key:0}
+            <div class="slide parallax take-from-widget">
+                {$imageonly:top-slider-image_key:original}
+            </div>
+            {/repeat}
+        {/device}
+
+        {device:tablet,mobile}
+            <div class="slide parallax take-from-widget">
+                {$imageonly:top-slider-image_1:medium}
+            </div>
+        {/device}
     </div>
     <div id="slider-pager" class="slider-navigation text-center d-visible"></div>
     <button class="action-button cycle-prev icon-arrow-left"></button>
@@ -113,12 +122,12 @@
             </div>
         </article>
     </section>
-    <aside class="grid_3 alpha" role="complementary">
-        <section class="aside-box">
+    <aside class="grid_3 alpha t-grid_6 t-alpha t-omega" role="complementary">
+        <section class="aside-box t-grid_3">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:6:0:template=_fa - categories - right}
         </section>
-        <section class="aside-box">
+        <section class="aside-box t-grid_3">
             <h3>{$header:tag-cloud:static}</h3>
             <div class="tag-cloud">
                 {$news:tagcloud:newslist}
@@ -142,8 +151,8 @@
 
 <div class="subscribe yellow-bg">
     <section class="container">
-        <h3 class="grid_5 icon-mail text-right">{$header:subscribe-title:static}</h3>
-        <div class="grid_4">
+        <h3 class="grid_5 t-grid_4 t-prefix_1 t-suffix_1 icon-mail text-right t-text-center">{$header:subscribe-title:static}</h3>
+        <div class="grid_4 t-grid_4 t-prefix_1 t-suffix_1">
             {$form:subscribe-form:{$prepop:submit:text:static:readonly}}
             {adminonly}
             <div class="panel">
@@ -182,12 +191,25 @@
 <script src="js/plugin/owl.carousel.min.js"></script>
 <script>
     $(function () {
-        $("a.main-arrow").on("click", function(e) {
-            e.preventDefault();
-            $("html, body").animate({
-                scrollTop: $($(this).attr("href")).offset().top
-            }, 1000);
+
+        $("a.main-arrow").on({
+            touchstart:function(e){
+                e.preventDefault();
+                console.log("touch");
+                $("html, body").animate({
+                    scrollTop: $(".featureditem.categories").offset().top - 56
+                }, 1000);
+            },
+            click:function(e){
+                e.preventDefault();
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top
+                }, 1000);
+            }
         });
+
+
+
         $('#products-in-carousel .product-list').addClass("owl-carousel");
         $('.owl-carousel').owlCarousel({
             loop: 'true',
@@ -209,7 +231,7 @@
                     loop: 'false',
                     margin: 26
                 },
-                1024: {
+                1025: {
                     items: 4,
                     nav: 'true',
                     loop: 'false',
