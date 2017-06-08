@@ -1,75 +1,85 @@
 & when (@mobile-loader) {
-    html {
-        &.mobile, &.tablet {
-            overflow : hidden;
+	html {
+		&.mobile, &.tablet {
+			//overflow : hidden;
 
-            &::before {
-                content          : "";
-                display          : block;
-                position         : fixed;
-                top              : 0;
-                left             : 0;
-                bottom           : 0;
-                right            : 0;
-                z-index          : 125;
-                background-color : @brand-primary;
-            }
+			//&::before {
+			//    content          : "";
+			//    display          : block;
+			//    position         : fixed;
+			//    top              : 0;
+			//    left             : 0;
+			//    bottom           : 0;
+			//    right            : 0;
+			//    z-index          : 125;
+			//    background-color : @brand-primary;
+			//}
 
-            .mobile-loader {
-                display  : block;
-                position : fixed;
-                top      : 0;
-                left     : 0;
-                bottom   : 0;
-                right    : 0;
-                z-index  : 126;
+			.mobile-loader {
+				display  : block;
+				position : fixed;
+				top      : 0;
+				left     : 0;
+				height   : 6px;
+				width    : 100%;
+				z-index  : 126;
 
-                &::after, &::before {
-                    margin           : auto;
-                    content          : "";
-                    display          : block;
-                    border           : 5px solid transparent;
-                    border-top-color : @primary-color;
-                    position         : absolute;
-                    left             : 0;
-                    right            : 0;
-                    bottom           : 0;
-                    top              : 0;
-                    .border-radius(50%);
-                }
+				&::after, &::before {
+					content    : "";
+					.inline-block();
+					position   : absolute;
+					width      : 0;
+					height     : 100%;
+					left       : 50%;
+					text-align : center;
+				}
 
-                &::after {
-                    animation : rotate 1.45s linear infinite;
-                    width     : 4em;
-                    height    : 4em;
+				&::after {
+					background-color : #DA4733;
+					animation        : loading 2s linear infinite;
+				}
+				&::before {
+					background-color : #3B78E7;
+					animation        : loading 2s linear 1s infinite;
+				}
+			}
 
-                }
-                &::before {
-                    animation : rotate 1.85s linear infinite;
-                    width     : 4.75em;
-                    height    : 4.75em;
-                }
-            }
+			&.loaded {
+				overflow : initial;
 
-            &.loaded {
-                overflow : initial;
+				&::before {
+					content : none;
+				}
+				.mobile-loader {
+					display : none;
+				}
+			}
+		}
+	}
 
-                &::before {
-                    content : none;
-                }
-                .mobile-loader {
-                    display : none;
-                }
-            }
-        }
-    }
+	@keyframes rotate {
+		0% {
+			transform : rotate(0deg)
+		}
+		100% {
+			transform : rotate(360deg)
+		}
+	}
 
-    @keyframes rotate {
-        0% {
-            transform : rotate(0deg)
-        }
-        100% {
-            transform : rotate(360deg)
-        }
-    }
+	@keyframes loading {
+		from {
+			left    : 50%;
+			width   : 0;
+			z-index : 100;
+		}
+		33.3333% {
+			left    : 0;
+			width   : 100%;
+			z-index : 10;
+		}
+		to {
+			left  : 0;
+			width : 100%;
+		}
+	}
 }

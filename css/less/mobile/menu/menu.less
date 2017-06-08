@@ -36,9 +36,11 @@
 
 		&.search {
 			top   : @dropdown-margin-vertical;
-			left  : @dropdown-margin-vertical;
 			right : @dropdown-margin-vertical;
-			width : auto;
+			width : 50%;
+			@media only screen and (max-width : @responsive-size-mobile) {
+				width: 280px;
+			}
 		}
 
 		&.top {

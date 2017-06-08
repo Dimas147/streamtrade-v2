@@ -12,24 +12,28 @@
     </div>
 </div>
 <div class="container main-content">
-    <section class="grid_9 omega p-r" role="main">
-        <article>
-            <h2>{$header:page-header}</h2>
-            {$content:content}
-        </article>
-    </section>
-    <aside class="grid_3 alpha t-grid_6 t-alpha t-omega" role="complementary">
+    <aside class="grid_3 push_9 alpha t-grid_6 t-alpha t-omega" role="complementary">
         <section class="aside-box t-grid_3">
+            <h3>{$header:filter:static}</h3>
+            <div class="sorting-container">{$content:filter-content}</div>
+        </section>
+        <section class="aside-box t-grid_3 d-visible">
             <h3>{$header:right-categories:static}</h3>
             {$featured:area:right-categories:100:0:template=_fa - categories - right}
         </section>
-        <section class="aside-box t-grid_3">
+        <section class="aside-box t-grid_3 d-visible">
             <h3>{$header:tag-cloud:static}</h3>
             <div class="tag-cloud">
                 {$news:tagcloud:newslist}
             </div>
         </section>
     </aside>
+    <section class="grid_9 pull_3 omega p-r" role="main">
+        <article>
+            <h2>{$header:page-header}</h2>
+            {$content:content}
+        </article>
+    </section>
 </div>
 {$template:_footer}
 {$template:_mobile elements}

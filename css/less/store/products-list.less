@@ -64,7 +64,12 @@
 }
 .product-item {
 	position      : relative;
-	.grid-elements(4; 0; true; 2; 1);
+	.grid-elements(4; 0; true; 2; 2);
+	@media only screen and (max-width : @responsive-size-phone) {
+		width        : 100%;
+		margin-left  : 0;
+		margin-right : 0;
+	}
 	.clearfix-mixin();
 	padding-left  : 1.07rem;
 	padding-right : 1.07rem;
@@ -85,12 +90,19 @@
 		@media only screen and (max-width : @responsive-size-tablet) {
 			height : 300px;
 		}
+		@media only screen and (max-width : @responsive-size-mobile) {
+			height : 150px;
+		}
+		@media only screen and (max-width : @responsive-size-phone) {
+			height: 300px;
+		}
 		&.parallax {
 			background-size       : contain;
 			background-attachment : scroll;
 			background-repeat     : no-repeat;
 			background-position   : 50% 50%;
 		}
+
 	}
 
 	.product-title {

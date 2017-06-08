@@ -522,16 +522,16 @@ ul {
             overflow: hidden;
             .clearfix-mixin();
             margin-bottom: 0;
-            @media only screen and (max-width: @responsive-size-tablet) {
+            @media only screen and (max-width: @responsive-size-mobile) {
                 & + li{
                     margin-top: 2.142rem;
                 }
             }
             .image, .text {
                 float: left;
-                .grid-elements(2; 0; true; 1; 1);
+                .grid-elements(2; 0; true; 2; 1);
             }
-            @media only screen and (min-width: @responsive-size-tablet) {
+            @media only screen and (min-width: @responsive-size-mobile) {
                 .image {
                     position: absolute;
                     top: 0;
@@ -552,7 +552,7 @@ ul {
                     }
                 }
             }
-            @media only screen and (max-width: @responsive-size-tablet) {
+            @media only screen and (max-width: @responsive-size-mobile) {
                 .parallax.image {
                     height: 300px;
                 }

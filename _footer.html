@@ -4,17 +4,18 @@
 <footer itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
     <div class="footer-content container">
         <nav id="footer-menu" class="grid_2 d-visible" role="navigation">{$menu:main:_main menu - footer}</nav>
-        <div class="grid_2 menu-in-footer">
+        <div class="grid_2 menu-in-footer d-visible">
             {$featured:area:footer-menu-1:6:0:template=_fa - footer}
         </div>
-        <div class="grid_2 suffix_2 menu-in-footer t_m-b">
+        <div class="grid_2 suffix_2 menu-in-footer d-visible">
             {$featured:area:footer-menu-2:6:0:template=_fa - footer}
         </div>
-        <div class="grid_4 t-grid_3">
+        <div class="grid_4 t-text-center">
             <div class="footer-logo">
-                {$imageonly:footer-logo:270:static}
+                <span class="d-visible">{$imageonly:footer-logo:270:static}</span>
+                <img class="d-hide" src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="270" height="110" itemprop="logo">
             </div>
-            <div class="company-description text-justify t_m-b">
+            <div class="company-description text-justify t_m-b t-grid_4 t-prefix_1 t-suffix_1 t-text-center">
                 {$content:footer-content:static}
             </div>
             <p class="social-links">
@@ -22,7 +23,7 @@
             </p>
         </div>
     </div>
-    <div class="copyright">
+    <div class="copyright t-text-center">
         <div class="container">
             <h4 class="grid_12">{$header:copyright:static}</h4>
         </div>

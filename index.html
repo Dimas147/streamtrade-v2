@@ -91,7 +91,6 @@
             <ul class="list-stock">
                 {repeat:list-stock:key}
                 <li>
-                    
                     <div class="text">
                         <h3>
                             {$header:stock-title_key:static}
@@ -106,7 +105,6 @@
                     <div class="image parallax take-from-widget">
                         {$imageonly:stock-image_key:540:static}
                     </div>
-
                 </li>
                 {/repeat}
             </ul>
@@ -118,14 +116,14 @@
         <article>
             <h2>{$header:products-for-sale:static}</h2>
             <div id="products-in-carousel">
-                {$productlist:_products list carousel:tagnames-New products}
+                {$productlist:_products list carousel:tagnames-New products:12}
             </div>
         </article>
     </section>
     <aside class="grid_3 alpha t-grid_6 t-alpha t-omega" role="complementary">
         <section class="aside-box t-grid_3">
             <h3>{$header:right-categories:static}</h3>
-            {$featured:area:right-categories:6:0:template=_fa - categories - right}
+            {$featured:area:right-categories:100:0:template=_fa - categories - right}
         </section>
         <section class="aside-box t-grid_3">
             <h3>{$header:tag-cloud:static}</h3>
@@ -166,8 +164,8 @@
     </section>
 </div>
 
-<div class="contact-info text-center">
-    {$plugin:gmaps:bizlocation:3440:470:12}
+<div class="contact-info text-center parallax take-from-widget bg-scroll">
+    {$imageonly:map:1920}
     <div class="container contact-text icon-location">
         <div class="grid_12">
             <address>
@@ -207,9 +205,7 @@
                 }, 1000);
             }
         });
-
-
-
+        $('#products-in-carousel .show-more').remove();
         $('#products-in-carousel .product-list').addClass("owl-carousel");
         $('.owl-carousel').owlCarousel({
             loop: 'true',

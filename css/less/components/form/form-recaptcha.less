@@ -46,6 +46,9 @@
 
 	.recaptcha_links {
 		float : left;
+		@media only screen and (max-width : @responsive-size-phone) {
+			margin-bottom: 1em;
+		}
 		a {
 			&[href="javascript:Recaptcha.reload();"] {
 				&::before {

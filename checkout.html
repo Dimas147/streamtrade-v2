@@ -13,7 +13,7 @@
 </div>
 <section class="container main-content">
     <article class="grid_12" role="main">
-        <div class="grid_12 alpha omega">
+        <div class="grid_12 alpha omega t-grid_6 t-alpha t-omega m-grid_4 m-alpha m-omega">
             <table class="checkout-cart-table cart-content">
                 <thead class="t-hide m-hide">
                 <tr>
@@ -41,27 +41,21 @@
                 </tbody>
             </table>
         </div>
-        <div class="grid_9 alpha">
+        <div class="grid_9 alpha t-grid_6 t-alpha t-omega m-grid_4 m-alpha m-omega">
             {$store:checkout}
 
             <div class="security">
                 {$content:payment-security:static}
             </div>
-            <!-- Select the required payment gateways-->
             {paymentgateways}
-            {$quote:form}
-            <!--{ $plugin:authorize:button}-->
-            <!--{ $plugin:paypal:button}-->
-            <!--{ $plugin:paybox:checkout}-->
-            <!--{ $plugin:authorize:creditcard}-->
-            {$plugin:paypal:creditcard}
-            <!--{ $plugin:eway:creditcard}-->
-            <!--{ $plugin:elavon:creditcard}-->
-            <!--{ $plugin:securepay:creditcard}-->
+                <div class="plugin-quote-quoteform-container">
+                    <h3 class="checkout-forms-header">{$header:plugin-quote-quoteform-header:static}</h3>
+                    {$quote:form}
+                </div>
             {/paymentgateways}
         </div>
 
-        <div id="checkoutsummary" class="grid_3 omega t-grid_3 t-omega t-push_3">
+        <div id="checkoutsummary" class="grid_3 omega t-grid_6 t-alpha t-omega m-grid_4 m-alpha m-omega">
             {$store:cartsummary}
             {$store:buyersummary}
         </div>
@@ -69,6 +63,15 @@
 </section>
 {$template:_footer}
 {$template:_mobile elements}
-{$template:_scripts}
+<script>
+    $( window ).load(function() {
+        $.getScript("https://www.streamtrade.in.ua/themes/streamtrade-v2/js/system/flexkit.min.js");
+        $(".cart-btn").click(function (e) {
+            e.preventDefault();
+            $('.toaster-cart').toggle();
+            $(this).toggleClass("active icon-arrow-up2");
+        });
+    });
+</script>
 </body>
 </html>

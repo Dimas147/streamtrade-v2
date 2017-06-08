@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="container main-content">
-    <section class="grid_9 omega p-r product" role="main">
+    <section class="grid_9 omega p-r product t-grid_6 t-alpha t-omega" role="main">
         <div class="grid_4 alpha omega">
             {$product:editproduct}
             <a class="_lbox product-image" href="{$product:photourl:original}">
@@ -24,8 +24,8 @@
         </div>
         <div class="grid_8 alpha omega p-l offers" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="product-top-part clearfix">
-                <div itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha">{$product:price}</div>
-                <div class="grid_6 product-rating omega text-right">
+                <div itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha t-grid_3 t-alpha">{$product:price}</div>
+                <div class="grid_6 t-grid_3 t-omega product-rating omega text-right m-text-left">
                     {$plugin:pagerating:stars}
                 </div>
             </div>
@@ -54,8 +54,8 @@
             </ul>
             <div class="product-options">{$product:options}</div>
             <div class="clearfix">
-                <input class="grid_6 alpha" id="productquantity" type="text" name="productquantity-{$product:id}" value="1"/>
-                <div class="grid_6 omega">
+                <input class="grid_6 alpha t-grid_3 t-alpha m-grid_2 m-alpha" id="productquantity" type="text" name="productquantity-{$product:id}" value="1"/>
+                <div class="grid_6 omega t-grid_3 t-omega m-grid_2 m-omega">
                     {$store:addtocart:{$product:id}}
                 </div>
             </div>
@@ -64,8 +64,8 @@
             <div class="product-tabs">
                 <ul class="tab_nav list-inline">
                     <li><a href="#tab-1">{$header:tab1:static}</a></li>
-                    <li><a href="#tab-2">{$header:tab2:static}</a></li>
-                    <li><a href="#tab-3">{$header:tab3:static}</a></li>
+                    <!--<li><a href="#tab-2">{_$header:tab2:static}</a></li>-->
+                    <!--<li><a href="#tab-3">{_$header:tab3:static}</a></li>-->
                     <li><a href="#tab-4">{$header:tab4:static}</a></li>
                 </ul>
                 <div class="product-tab" id="tab-1">
@@ -73,36 +73,39 @@
                     <div class="product-description-full" itemprop="description">{$product:description:full}</div>
                     {$content:product-description-{$product:id}:static}
                 </div>
-                <div class="product-tab" id="tab-2">
-                    <h3 class="h2">{$header:full-header-tab2:static}</h3>
-                    <table class="product-characteristics-table">
-                        <thead>
-                            <tr>
-                                <th colspan="2">
-                                    {$header:product-characteristics-title:static}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {repeat:product-characteristics-repeat:key}
-                            <tr>
-                                <td>
-                                    <strong>
-                                        {$header:product-characteristics_key-row1}:
-                                    </strong>
-                                </td>
-                                <td>
-                                    {$header:product-characteristics_key-row2}
-                                </td>
-                            </tr>
-                            {/repeat}
-                        </tbody>
-                    </table>
-                </div>
-                <div class="product-tab" id="tab-3">
-                    <h3 class="h2">{$header:full-header-tab3:static}</h3>
-                    {$form:order-form:grecaptcha:custom:{$prepop:submit:text:static:readonly}}
-                </div>
+
+                <!--<div class="product-tab" id="tab-2">-->
+                    <!--<h3 class="h2">{$header:full-header-tab2:static}</h3>-->
+                    <!--<table class="product-characteristics-table">-->
+                        <!--<thead>-->
+                            <!--<tr>-->
+                                <!--<th colspan="2">-->
+                                    <!--{$header:product-characteristics-title:static}-->
+                                <!--</th>-->
+                            <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                            <!--{repeat:product-characteristics-repeat:key}-->
+                            <!--<tr>-->
+                                <!--<td>-->
+                                    <!--<strong>-->
+                                        <!--{$header:product-characteristics_key-row1}:-->
+                                    <!--</strong>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--{$header:product-characteristics_key-row2}-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <!--{/repeat}-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                <!--</div>-->
+                <!--<div class="product-tab" id="tab-3">-->
+                    <!--<h3 class="h2">{_$header:full-header-tab3:static}</h3>-->
+                    <!--{_$form:order-form:grecaptcha:custom:{$prepop:submit:text:static:readonly}}-->
+                    <!--&lt;!&ndash;{_$quote:form}&ndash;&gt;-->
+                <!--</div>-->
+
                 <div class="product-tab" id="tab-4">
                     {$plugin:pagerating:review:moderated}
                 </div>
@@ -116,7 +119,7 @@
     <aside class="grid_3 alpha t-grid_6 t-alpha t-omega" role="complementary">
         <section class="aside-box t-grid_3">
             <h3>{$header:right-categories:static}</h3>
-            {$featured:area:right-categories:6:0:template=_fa - categories - right}
+            {$featured:area:right-categories:100:0:template=_fa - categories - right}
         </section>
         <section class="aside-box t-grid_3">
             <h3>{$header:tag-cloud:static}</h3>
@@ -132,6 +135,7 @@
 <script src="js/plugin/owl.carousel.min.js"></script>
 <script>
     $(function () {
+        $('#products-in-carousel .show-more').remove();
         $('#product-image-gallery .img_gallery, #products-in-carousel .product-list').addClass("owl-carousel");
         $('#product-image-gallery .img_gallery').owlCarousel({
             loop: 'true',
