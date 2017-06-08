@@ -218,13 +218,15 @@ footer {
   position: absolute;
   bottom: 85px;
   left: 50%;
-  margin-left: -30px;
   display: inline-block;
   vertical-align: middle;
   font-size: 60px;
   line-height: 1;
   color: #fcc605;
   z-index: 122;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .main-arrow:hover {
   color: #FFF;
