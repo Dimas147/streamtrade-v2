@@ -268,7 +268,7 @@ footer {
 		.inline-block-wrap(top);
 		li {
 			.grid-elements(1; 0; true; 1; 2);
-			width: auto;
+			width  : auto;
 			&.active {
 				a {
 					color      : #FFF;
@@ -439,5 +439,37 @@ footer {
 .checkout-page {
 	.mobile-loader {
 		display : none !important;
+	}
+}
+.page-404 {
+	.main-content {
+		a {
+			color : #CCA002;
+			&:hover {
+				color : @brand-dark;
+			}
+		}
+	}
+	.listpages {
+		border-left   : 1px solid #CCA002;
+		padding       : 0.5rem 0;
+		margin-bottom : 2.142rem;
+		li {
+			display       : block;
+			margin-bottom : 0;
+			padding-left  : 1.07rem;
+			& + li {
+				padding-top : 1.07rem;
+			}
+		}
+		a {
+			margin    : 0;
+			font-size : 1em;
+			color     : @text-color;
+			.inline-block();
+			&:hover {
+				color : #CCA002;
+			}
+		}
 	}
 }

@@ -528,6 +528,35 @@ footer {
 .checkout-page .mobile-loader {
   display: none !important;
 }
+.page-404 .main-content a {
+  color: #CCA002;
+}
+.page-404 .main-content a:hover {
+  color: #191919;
+}
+.page-404 .listpages {
+  border-left: 1px solid #CCA002;
+  padding: 0.5rem 0;
+  margin-bottom: 2.142rem;
+}
+.page-404 .listpages li {
+  display: block;
+  margin-bottom: 0;
+  padding-left: 1.07rem;
+}
+.page-404 .listpages li + li {
+  padding-top: 1.07rem;
+}
+.page-404 .listpages a {
+  margin: 0;
+  font-size: 1em;
+  color: #555555;
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-404 .listpages a:hover {
+  color: #CCA002;
+}
 form::after {
   content: "";
   display: table;

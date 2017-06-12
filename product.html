@@ -13,7 +13,7 @@
 </div>
 <div class="container main-content">
     <section class="grid_9 omega p-r product t-grid_6 t-alpha t-omega" role="main">
-        <div class="grid_4 alpha omega">
+        <div class="grid_4 alpha omega t-grid_2">
             {$product:editproduct}
             <a class="_lbox product-image" href="{$product:photourl:original}">
                 <img itemprop="image" src="{$product:photourl:medium}" alt="{$product:name}"/>
@@ -22,7 +22,7 @@
                 {$content:product-gallery}
             </div>
         </div>
-        <div class="grid_8 alpha omega p-l offers" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <div class="grid_8 alpha omega p-l offers t-grid_4" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <div class="product-top-part clearfix">
                 <div itemprop="price" content="{$product:price:nocurrency}" class="product-price grid_6 alpha t-grid_3 t-alpha">{$product:price}</div>
                 <div class="grid_6 t-grid_3 t-omega product-rating omega text-right m-text-left">

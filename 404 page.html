@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-
-        <!-- Container -->
-        <div id="page" class="container page404">
-
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="error uppercase text-center fs64" role="heading">{$page:h1}</h1>
-
-            <!-- Content box -->
-            <section class="text-center mb30px" role="main">
-                <div style="line-height: 1; font-size: 17em;">404</div>
-                <div class="larger">
-                    {$content:404:static}<br>
-                    <a class="btn outline large" href="{$website:url}" title="{$header:button:readonly}">{$header:button:static}</a>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <!-- Include Footer template -->
-            {$template:_footer}
-        </div>
-
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="page-404">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="grid_6 t-grid_3" role="main">
+        <article>
+            {$content:content}
+        </article>
+    </section>
+    <aside class="grid_6 t-grid_3 text-center" role="complementary">
+        <section class="aside-box">
+            {$imageonly:page-404-image:original}
+        </section>
+    </aside>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
 </html>
