@@ -410,7 +410,7 @@
 }
 .ui-state-error,
 .errors {
-  margin: 0 0 10px;
+  margin: 0;
   padding: 0;
   background: #fdeae9;
   border: 1px solid #f69593;
@@ -545,9 +545,20 @@
   font-size: 1.5em;
   margin-bottom: 2.142rem;
 }
+@media only screen and (max-width: 767px) {
+  #checkout-widget .checkout-button {
+    margin-top: -1.07rem;
+  }
+}
 #checkout-widget .checkout-button a {
   color: #888888;
   vertical-align: middle;
+}
+@media only screen and (max-width: 767px) {
+  #checkout-widget .checkout-button a {
+    display: block;
+    margin: 1.07rem 0;
+  }
 }
 #checkout-widget .checkout-button a:hover {
   color: #555555;
@@ -561,6 +572,7 @@
   font-size: 0.85em;
   width: 50px;
   line-height: 50px;
+  margin: 0 0.55rem;
 }
 #checkout-widget .back-button,
 #checkout-widget .checkout-edit {
@@ -644,7 +656,8 @@
   margin-bottom: 0;
   border-top: none;
 }
-#checkout-landing-forms a.forgot-password {
+#checkout-landing-forms a.forgot-password,
+#checkout-landing-forms #remember-password {
   margin-left: 10px;
 }
 #checkout-pickup-form::after {

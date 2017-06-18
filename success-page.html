@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="success-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="grid_6 t-grid_3" role="main">
+        <article>
+            {$content:content}
+        </article>
+    </section>
+    <aside class="grid_6 t-grid_3 text-center" role="complementary">
+        <section class="aside-box">
+            {$imageonly:success-image:original}
+        </section>
+    </aside>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
+</html>
