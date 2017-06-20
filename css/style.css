@@ -178,6 +178,12 @@ footer {
   margin-bottom: 0;
   margin-top: 8.5px;
 }
+@media only screen and (max-width: 480px) {
+  .contact-info .email,
+  .contact-info .phone {
+    font-size: 2.2em;
+  }
+}
 .contact-info .email a,
 .contact-info .phone a {
   color: #fcc605;

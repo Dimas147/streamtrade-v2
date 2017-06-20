@@ -1,6 +1,6 @@
 /// checkout styles
 .ui-state-error, .errors {
-	margin     : 0 0 10px;
+	margin     : 0;
 	padding    : 0;
 	background : @state-error-bg;
 	border     : 1px solid @state-error-border;
@@ -120,13 +120,20 @@
 #checkout-widget {
 	.clearfix-mixin();
 	.checkout-button {
-		text-align : center;
-		font-size  : @font-size-larger;
-		margin-bottom: 2.142rem;
+		text-align    : center;
+		font-size     : @font-size-larger;
+		margin-bottom : 2.142rem;
+		@media only screen and (max-width : @responsive-size-mobile) {
+			margin-top : -1.07rem;
+		}
 
 		a {
 			color          : @gray;
 			vertical-align : middle;
+			@media only screen and (max-width : @responsive-size-mobile) {
+				display : block;
+				margin  : 1.07rem 0;
+			}
 
 			&:hover {
 				color : @gray-dark;
@@ -141,6 +148,7 @@
 			font-size   : @font-size-small;
 			width       : 50px;
 			line-height : 50px;
+			margin      : 0 0.55rem;
 		}
 	}
 
@@ -202,7 +210,7 @@
 		margin-bottom : 0;
 		border-top    : none;
 	}
-	a.forgot-password {
+	a.forgot-password, #remember-password {
 		margin-left : 10px;
 	}
 }
@@ -348,8 +356,8 @@
 		}
 	}
 	@media only screen and (max-width : @responsive-size-phone) {
-		input[type="submit"]{
-			width: 100%;
+		input[type="submit"] {
+			width : 100%;
 		}
 	}
 }
