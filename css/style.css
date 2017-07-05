@@ -283,12 +283,9 @@ footer {
 }
 @media only screen and (max-width: 767px) {
   .product-tabs .tab_nav li {
-    width: 50%;
+    width: 100%;
   }
-  .product-tabs .tab_nav li:nth-of-type(n) {
-    margin-left: 0%;
-  }
-  .product-tabs .tab_nav li:nth-of-type(2n + 1) {
+  .product-tabs .tab_nav li:nth-of-type(1n + 1) {
     margin-left: 0;
   }
 }
@@ -393,14 +390,24 @@ footer {
   background: #FFF !important;
 }
 .admin-actions,
-.newslog-admin-actions {
+.newslog-admin-actions,
+.form-controls {
+  font-size: 0;
   padding: 14px 0 0.35rem;
   margin: 14px 0;
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
 }
+.admin-actions >*,
+.newslog-admin-actions >*,
+.form-controls >* {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
 .admin-actions a,
-.newslog-admin-actions a {
+.newslog-admin-actions a,
+.form-controls a {
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -426,32 +433,41 @@ footer {
 }
 .admin-actions a:hover,
 .newslog-admin-actions a:hover,
+.form-controls a:hover,
 .admin-actions a:active,
 .newslog-admin-actions a:active,
+.form-controls a:active,
 .admin-actions a.active,
-.newslog-admin-actions a.active {
+.newslog-admin-actions a.active,
+.form-controls a.active {
   color: #FFF;
   border-color: #f99a00;
   background-color: #000000;
 }
 .admin-actions a:active,
 .newslog-admin-actions a:active,
+.form-controls a:active,
 .admin-actions a.active,
-.newslog-admin-actions a.active {
+.newslog-admin-actions a.active,
+.form-controls a.active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .static .admin-actions,
 .static .newslog-admin-actions,
+.static .form-controls,
 .news-page .admin-actions,
-.news-page .newslog-admin-actions {
+.news-page .newslog-admin-actions,
+.news-page .form-controls {
   padding-top: 0;
   margin-top: 0;
   border-top: none;
 }
 .blog .admin-actions,
 .blog .newslog-admin-actions,
+.blog .form-controls,
 .pagerating-list .admin-actions,
-.pagerating-list .newslog-admin-actions {
+.pagerating-list .newslog-admin-actions,
+.pagerating-list .form-controls {
   margin-bottom: 0;
 }
 .offers {
@@ -562,6 +578,24 @@ footer {
 }
 .page-404 .listpages a:hover {
   color: #CCA002;
+}
+.form-sent-sign h2 {
+  background: none;
+  color: #191919;
+  padding: 0;
+  margin-bottom: 1.07rem;
+}
+.form-sent-sign::before {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 2.142rem;
+  font-size: 150px;
+  line-height: 290px;
+  background: #fcc605;
+  color: #191919;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
 }
 form::after {
   content: "";
@@ -907,6 +941,9 @@ textarea {
 }
 textarea.resize {
   resize: vertical;
+}
+[id*="review-form"] [type="submit"] {
+  margin-top: 2%;
 }
 .forgot-password,
 .retrieveFormBlock > form + a {
@@ -1873,8 +1910,7 @@ textarea.resize {
   }
 }
 @media only screen and (max-width: 767px) {
-  .captcha,
-  .captcha img {
+  .captcha {
     width: 100%;
   }
   form [type="submit"],

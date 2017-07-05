@@ -901,6 +901,31 @@ aside .relatedpages li p {
 .search-results .static {
   padding-bottom: 3.55em;
 }
+@media only screen and (max-width: 1025px) {
+  .search-results .page-teaser-image,
+  .search-results .search-item-description {
+    margin-bottom: 2.142rem;
+  }
+  .search-results .page-teaser-image img {
+    width: auto;
+  }
+  .search-results .static {
+    padding-bottom: 0;
+  }
+  .search-results .read-more {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .search-results .page-teaser-image img {
+    width: 100%;
+  }
+  .search-results .page-title {
+    padding-right: 0.88em;
+  }
+}
 @media (min-width: 1026px) {
   body .mobile-bar,
   body .mobile-menu {
@@ -983,12 +1008,13 @@ aside .relatedpages li p {
   padding: 0 calc(72px -  56px );
   margin-right: auto;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 46%;
-  -ms-flex: 0 1 46%;
-  flex: 0 1 46%;
+  -webkit-flex: 0 1 10%;
+  -ms-flex: 0 1 10%;
+  flex: 0 1 10%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  opacity: 0;
 }
 .mobile-bar .btn {
   line-height: inherit;
@@ -1019,6 +1045,7 @@ aside .relatedpages li p {
   position: absolute;
   right: 0;
   top: 0;
+  background: #191919;
 }
 .sub-menu-btn::before {
   content: "\e0ac";

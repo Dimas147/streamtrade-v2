@@ -39,5 +39,31 @@
     .static {
         padding-bottom : 3.55em;
     }
-
+    @media only screen and (max-width : @responsive-size-tablet) {
+        .page-teaser-image, .search-item-description{
+            margin-bottom: 2.142rem;
+        }
+        .page-teaser-image{
+            img{
+                width: auto;
+            }
+        }
+        .static{
+            padding-bottom: 0;
+        }
+        .read-more{
+            position: static;
+            .inline-block();
+        }
+    }
+    @media only screen and (max-width : @responsive-size-phone) {
+        .page-teaser-image{
+            img{
+                width: 100%;
+            }
+        }
+        .page-title{
+            padding-right: 0.88em;
+        }
+    }
 }

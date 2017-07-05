@@ -1,70 +1,69 @@
 // Base styles
 // --------------------------------------------------
 .btn, button, [type="submit"], [type="button"], [type="reset"] {
-    .button();
+	.button();
 
-    &[disabled], &.disabled {
-        border-color     : @gray-light !important;
-        color            : @gray-light !important;
-        background-color : @gray-lighter !important;
-        & when (@ie) and (@ie8) {
-            cursor : default !important;
-        }
-        cursor           : not-allowed !important;
-        .box-shadow(~'none !important', @button-box-shadow);
-    }
+	&[disabled], &.disabled {
+		border-color     : @gray-light !important;
+		color            : @gray-light !important;
+		background-color : @gray-lighter !important;
+		& when (@ie) and (@ie8) {
+			cursor : default !important;
+		}
+		cursor           : not-allowed !important;
+		.box-shadow(~'none !important', @button-box-shadow);
+	}
 }
 .btn {
 
-    &.hide {
-        &:extend(.hide);
-    }
+	&.hide {
+		&:extend(.hide);
+	}
 
-    &.read-more{
-        font-weight: bold;
-    }
+	&.read-more {
+		font-weight : bold;
+	}
 
-    &.cart-btn{
-        &:hover, &.active{
-            background: @gray-lighter;
-            color: @brand-dark;
-        }
-    }
+	&.cart-btn {
+		&:hover, &.active {
+			background : @gray-lighter;
+			color      : @brand-dark;
+		}
+	}
 
-    &[class*="grid_"], [class*="column_"] > & {
-        padding-left  : 0 !important;
-        padding-right : 0 !important;
-    }
+	&[class*="grid_"], [class*="column_"] > & {
+		padding-left  : 0 !important;
+		padding-right : 0 !important;
+	}
 
-    // Buttons style
-    // --------------------------------------------------
-    @import "button/buttons-style";
+	// Buttons style
+	// --------------------------------------------------
+	@import "button/buttons-style";
 
-    // Alternate color buttons
-    // --------------------------------------------------
-    @import "button/buttons-color";
+	// Alternate color buttons
+	// --------------------------------------------------
+	@import "button/buttons-color";
 
-    // Block button
-    // --------------------------------------------------
-    @import "button/buttons-block";
+	// Block button
+	// --------------------------------------------------
+	@import "button/buttons-block";
 
-    // Button with icon
-    // --------------------------------------------------
-    @import "button/buttons-icon";
+	// Button with icon
+	// --------------------------------------------------
+	@import "button/buttons-icon";
 
-    // Button link
-    // --------------------------------------------------
-    @import "button/buttons-link";
+	// Button link
+	// --------------------------------------------------
+	@import "button/buttons-link";
 
-    // Button outline
-    // --------------------------------------------------
-    @import "button/buttons-outline";
+	// Button outline
+	// --------------------------------------------------
+	@import "button/buttons-outline";
 
-    // Button caption
-    // --------------------------------------------------
-    @import "button/buttons-caption";
+	// Button caption
+	// --------------------------------------------------
+	@import "button/buttons-caption";
 }
-
 // Button group
 // --------------------------------------------------
 @import "button/buttons-group";

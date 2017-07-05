@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="default-page">
+{$template:_header}
+<div class="top-title dark-bg">
+    <div class="container">
+        <h1 class="grid_12 text-center" role="heading">{$header:h1:static}</h1>
+    </div>
+</div>
+<div class="container main-content">
+    <section class="grid_12 text-center" role="main">
+        <article class="icon-thumbs-up form-sent-sign">
+            <h2 class="">{$header:h2:static}</h2>
+            {$content:thank-you-content:static}
+        </article>
+    </section>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+</body>
+</html>
