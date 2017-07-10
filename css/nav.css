@@ -823,9 +823,12 @@ aside .relatedpages li p {
 }
 @media only screen and (max-width: 1025px) and (min-width: 768px) {
   .news-list-related .news-item {
-    width: 100%;
+    width: 25%;
   }
-  .news-list-related .news-item:nth-of-type(1n + 1) {
+  .news-list-related .news-item:nth-of-type(n) {
+    margin-left: 0%;
+  }
+  .news-list-related .news-item:nth-of-type(4n + 1) {
     margin-left: 0;
   }
 }
@@ -843,6 +846,9 @@ aside .relatedpages li p {
 .news-page .news-item-image,
 .news-page .news-item-content {
   margin-bottom: 2.142rem;
+}
+.news-page [id*="review-form"] [type="submit"] {
+  margin-top: 0;
 }
 .tag-cloud a {
   background: #292929;
