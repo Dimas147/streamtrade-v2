@@ -1222,6 +1222,10 @@
 .product form.toaster-quote {
   margin-bottom: 2em;
 }
+.product-page #checkout-widget form.toaster-quote,
+.product-page .product form.toaster-quote {
+  margin-bottom: 0;
+}
 #checkout-widget form.toaster-quote > fieldset,
 .product form.toaster-quote > fieldset {
   margin-left: 4%;
@@ -1272,55 +1276,45 @@
   border: none;
   padding: 0;
 }
-.product-tabs form.toaster-quote {
-  margin-bottom: 0;
-}
 #quote-search {
   padding: 7px;
-  width: 700px;
+  width: 100%;
   display: block;
-  margin: 0 auto;
+  margin-top: 15px;
 }
 .ui-menu {
   z-index: 55 !important;
 }
-#storeinfo {
-  text-align: right;
-}
 #storeinfo h1 {
-  font-size: 2em;
+  font-size: inherit;
   font-weight: bold;
-  margin: 0;
+  color: #222222;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 #storeinfo p {
-  margin: 0;
+  margin-bottom: 10px;
 }
-.quote-info {
-  margin-bottom: 2em;
+.quote-info p {
+  margin-bottom: 10px;
 }
-@media only screen and (min-width: 1026px) {
-  .quote-info {
-    float: left;
-    width: 48%;
-  }
-  .quote-info:first-child {
-    margin-right: 4%;
-  }
-}
-.quote-info > p {
-  margin: 0;
+.quote-info p:last-child {
+  margin-bottom: 0;
 }
 .quote-info p.title {
-  font-size: 1.5em;
+  font-size: inherit;
+  font-weight: bold;
   color: #222222;
-  border-bottom: 1px solid #DDD;
-  padding-bottom: 0.25em;
-  margin-bottom: 0.5em;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .quote-info fieldset {
   margin: 0;
   padding: 0;
   border: none;
+  margin-bottom: 10px;
 }
 .quote-info fieldset > p {
   margin-bottom: 0.5em;
@@ -1335,9 +1329,11 @@
   float: left;
   width: 35%;
 }
-.quote-info label[for='same-for-shipping'] {
-  width: auto;
-  margin-right: 5px;
+.quote-info label[for="same-for-shipping"].optional,
+.quote-info label[for="overwrite-quote-user-billing"].optional,
+.quote-info label[for="overwrite-quote-user-shipping"].optional {
+  width: 100%;
+  margin-bottom: 10px;
 }
 .quote-info input,
 .quote-info select,
@@ -1345,11 +1341,35 @@
   float: left;
   width: 65%;
 }
+.quote-info textarea.quote-disclaimer-text {
+  width: 100%;
+  float: none;
+  display: block;
+  min-height: 300px;
+}
+.quote-info .quote-disclaimer-text:not(textarea) {
+  min-height: 180px;
+  width: 100%;
+  display: block;
+  border: 1px solid #DDDDDD;
+  padding: 10px;
+}
 #quote-details {
   clear: both;
+  text-align: center;
+  margin-bottom: 0;
+}
+#quote-details h2,
+#quote-details .h2 {
+  font-size: 1.8em;
 }
 #quote-details h2 {
-  margin-bottom: 5px;
+  font-weight: bold;
+  color: #222222;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 2em;
 }
 #quote-details input {
   width: auto;
@@ -1357,14 +1377,15 @@
   padding: 5px;
 }
 #quote-details span {
-  color: #000;
+  color: #000000;
 }
-#quoteControlls {
-  height: 70px;
+#quote-details .dates {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 #quoteControlls .quote-controlls {
   background: rgba(170, 170, 170, 0.008);
-  border-top: 5px solid #888;
+  border-top: 5px solid #888888;
   bottom: 0;
   left: 0;
   padding: 10px 0;
@@ -1377,8 +1398,158 @@
   width: 500px;
   padding: 5px;
   font-size: 18px;
-  color: #666;
-  border: 1px solid #ddd;
+  color: #666666;
+  border: 1px solid #DDDDDD;
+}
+body.quote {
+  font-size: 14px;
+  padding-bottom: 55px;
+}
+body.quote .container {
+  max-width: 960px;
+  width: auto;
+}
+body.quote .logo-background {
+  background: #343434;
+}
+body.quote .logo-background.box {
+  background: #343434;
+}
+body.quote header {
+  position: relative;
+  line-height: 1.4;
+  padding: 0;
+  background: none;
+}
+body.quote .logo-quote {
+  text-align: center;
+}
+body.quote .box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #DDDDDD;
+  background: #FFF;
+}
+body.quote .box p:empty {
+  display: none;
+}
+body.quote .box p:last-child {
+  margin-bottom: 0;
+}
+body.quote .cart-content {
+  margin-bottom: 0;
+}
+body.quote .cart-content thead th {
+  border-bottom: none;
+}
+body.quote .cart-content td {
+  padding: 15px 10px;
+}
+body.quote .cart-content tr:last-child {
+  margin-bottom: 0;
+}
+body.quote .cart-content tr:last-child td {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+body.quote table tr:first-child > * {
+  border-top: none;
+}
+body.quote #quote-summary .quote-widget-title,
+body.quote #checkoutsummary .checkout-widget-title,
+body.quote .post-purchase-report-summary .summary-title {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+body.quote .cart-summary-row,
+body.quote .quote-summary-row,
+body.quote .post-purchase-row {
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+body.quote .dates span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.quote .quote-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.quote .middle-content .box,
+body.quote .bottom-content .box {
+  margin-top: 0;
+}
+body.quote .video-container h4.title {
+  font-size: inherit;
+  font-weight: bold;
+  color: #222222;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+body.quote .quote-expired-notification {
+  margin-top: 15px;
+  padding: 15px;
+}
+body.quote #paypal_button {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #DDDDDD;
+}
+body.quote #paypal_button fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.quote #paypal_button legend {
+  width: 100%;
+  padding: 0 0 10px 0;
+  font-size: inherit;
+  font-weight: bold;
+  color: #222222;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 10px;
+}
+body.quote #paypal_button .seo-tip {
+  margin-bottom: 0;
+  padding-right: 160px;
+}
+body.quote #paypalSubmit {
+  border: none;
+  margin: 0;
+  float: right;
+  padding: 0;
+}
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  body.quote [class*=" grid_"],
+  body.quote [class^="grid_"],
+  body.quote [class*="-grid_"],
+  body.quote [class*="_grid_"] {
+    float: left;
+    position: relative;
+    width: 98%;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  body.quote {
+    padding-top: 0;
+  }
+  body.quote .video-container {
+    display: none;
+  }
+}
+body.quote .toaster-quote-content {
+  border-top: 1px solid #DDDDDD;
+  background: #FFF;
+}
+body.quote select,
+body.quote textarea,
+body.quote input {
+  border-color: #DDDDDD;
 }
 #user-grid-part ul.user-stats {
   list-style: none outside none;

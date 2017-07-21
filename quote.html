@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-        <meta name="robots" content="noindex">
-    </head>
-    <body class="quote">
-        {adminonly}<div class="text-center">{$quote:search}</div>{/adminonly}
-        <div id="container" class="container">
-
-        <!-- Start of the header -->
-        <header class="grid_12">
-            <div class="grid_8 alpha">
-                <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}">
-                {$content:specialText}
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+    <meta name="robots" content="noindex">
+</head>
+<body class="quote">
+<header class="">
+    <div class="logo-quote">
+        <div class="container">
+            <div class="grid_12 box mb0px logo-background">
+                <a href="{$website:url}" title="{$page:h1}">
+                    <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}">
+                </a>
             </div>
-            <div id="storeinfo" class="grid_4 omega">
+        </div>
+    </div>
+    <div class="container">
+        {quoteexpired}
+        <div class="grid_12 message error quote-expired-notification">
+            <div class="grid_9 alpha text-left">
+                {$header:quoteexpired:static}
+            </div>
+            <div class="grid_3 omega text-right">
+                <a href="/contact-us.html" class="btn">Contact us</a>
+            </div>
+        </div>
+        {/quoteexpired}
+        {adminonly}
+        <div class="text-center grid_12">{$quote:search}</div>
+        {/adminonly}
+        <div class="clearfix quote-top-content">
+            <div class="grid_6 box">
+                {$content:specialText:static}
+            </div>
+            <div id="storeinfo" class="grid_6 box {$mobile:device:desktop=text-left:tablet=mt0px:mobile=mt0px}">
                 <h1>{$plugin:shopping:company}</h1>
                 <p>{$plugin:shopping:address1}, {$plugin:shopping:address2}</p>
                 <p>{$plugin:shopping:city} {$plugin:shopping:state} {$plugin:shopping:zip}</p>
                 <p>{$plugin:shopping:country}</p>
+                <p><a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a></p>
                 <p><a href="mailto:{$plugin:shopping:email}">{$plugin:shopping:email}</a></p>
             </div>
-        </header>
-        <!-- end of the header -->
-
-        <!-- Main Column -->
-        <main id="content" class="grid_12">
-
-            {$quote:address:billing}
-            {$quote:address:shipping}
-
+        </div>
+    </div>
+</header>
+<main id="content" class="container">
+    <div class="grid_12 mt0px">
+        <div id="quote-details" class="box mt0px">
+            <h2>{$header:quote-number:static} : <span class="quote-title">{$quote:title}</span></h2>
+            <div class="dates h2">
+                {$header:quote-created-on:static} : <span>{$quote:date:created}</span> -
+                {$header:quote-expires:static} : <span>{$quote:date:expires}</span>
+            </div>
+        </div>
+    </div>
+    <div class="quote-middle-content clearfix">
+        <div class="grid_6 box">
+            {adminonly}
+            <div class="box">
+                {$quote:address:billing}
+            </div>
+            <div class="box">
+                {$quote:address:shipping}
+            </div>
+            {/adminonly}
             {customersonly}
             <div class="quote-info" id="quote-billing-info">
-                <p class="title">Billing info</p>
+                <p class="title">{$header:billing-info:static}</p>
                 <p>{$quote:address:billing:firstname} {$quote:address:billing:lastname}</p>
                 <p>{$quote:address:billing:company}</p>
                 <p>{$quote:address:billing:address1} {$quote:address:billing:address2}</p>
@@ -42,93 +76,97 @@
                 <p><a href="mailto:{$quote:address:billing:email}">{$quote:address:billing:email}</a></p>
                 <p>{$quote:address:billing:phone}</p>
             </div>
-
-            <div class="quote-info" id="quote-shipping-info">
-                <p class="title">Shipped to</p>
-                <p>{$quote:address:shipping:firstname} {$quote:address:shipping:lastname}</p>
-                <p>{$quote:address:shipping:company}</p>
-                <p>{$quote:address:shipping:address1} {$quote:address:shipping:address2}</p>
-                <p>{$quote:address:shipping:city} {$quote:address:shipping:state} {$quote:address:shipping:zip}</p>
-                <p>{$quote:address:shipping:country}</p>
-                <p><a href="mailto:{$quote:address:shipping:email}">{$quote:address:shipping:email}</a></p>
-                <p>{$quote:address:shipping:phone}</p>
-            </div>
             {/customersonly}
-
-
-
-            <div id="quote-details" class="mb20px">
-                <h2>{adminonly}Quote title: {/adminonly}{$quote:title}</h2>
-                <div class="dates">
-                     created on: <span>{$quote:date:created}</span> -
-                     expires: <span>{$quote:date:expires}</span></div>
+        </div>
+        <div class="grid_6 box {$mobile:device:tablet=mt0px:mobile=mt0px}">
+            <div class="quote-info notes">
+                <p class="title">{$header:quote-note:static}</p>
+                <p>{$quote:disclaimer}</p>
             </div>
+        </div>
+    </div>
+    <div class="grid_12">
+        <table class="toaster-quote-content cart-content">
+            <thead class="t-hide m-hide">
+            <tr>
+                <th class="product-info" colspan="2">{$header:quote-product:static}</th>
+                <th class="product-note">{$header:quote-note:static}</th>
+                <th class="product-unit-price">{$header:quote-unit-price:static}</th>
+                <th class="product-qty">{$header:quote-qty:static}</th>
+                <th class="product-total">{$header:quote-total:static}</th>
+                <th class="product-remove">{$header:quote-remove:static}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {toasterquote}
+            <tr>
+                <td class="product-img">{$quote:item:photo}</td>
+                <td class="product-info">
+                    <span class="quote-item-name">{$quote:item:name}</span>
+                    <p class="itemID"><span>ID:</span> <span>{$quote:item:sku}</span></p>
+                    {$quote:item:options}
+                </td>
+                <td class="product-note">{$header:{$quote:item:id}-note}</td>
+                <td class="product-unit-price">{$quote:item:price:unit}</td>
+                <td class="product-qty">{$quote:item:qty}</td>
+                <td class="product-total">{$quote:item:price}</td>
+                <td class="product-remove">{$quote:item:remove}</td>
+            </tr>
+            {/toasterquote}
+            </tbody>
+        </table>
+    </div>
 
-            <table class="toaster-quote-content cart-content">
-                <thead class="t-hide m-hide">
-                    <tr>
-                        <th class="product-info" colspan="2">Product</th>
-                        <th class="product-note">Note</th>
-                        <th class="product-unit-price">Unit price</th>
-                        <th class="product-qty">Qty</th>
-                        <th class="product-total">Total</th>
-                        <th class="product-remove">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {toasterquote}
-                <tr>
-                    <td class="product-img"> {$quote:item:photo} </td>
-                    <td class="product-info">
-                        <span class="quote-item-name">{$quote:item:name}</span>
-                        <p class="itemID"><span>Item ID:</span> <span>{$quote:item:sku}</span></p>
-                        {$quote:item:options}
-                    </td>
-                    <td class="product-note">{$header:{$quote:item:id}-note}</td>
-                    <td class="product-unit-price">{$quote:item:price:unit}</td>
-                    <td class="product-qty">{$quote:item:qty}</td>
-                    <td class="product-total">{$quote:item:price}</td>
-                    <td class="product-remove">{$quote:item:remove}</td>
-                </tr>
-                {/toasterquote}
-                </tbody>
-            </table>
-
-            <div id="quote-summary" class="grid_3 omega push_9 t-grid_3 t-omega t-push_3">
-                <h3 class="quote-widget-title">Summary</h3>
+    <div class="clearfix quote-bottom-content">
+        <div class="box grid_6 video-container">
+            {$videolink:quote-video}
+        </div>
+        <div class="box grid_6">
+            <div id="quote-summary">
+                <h3 class="quote-widget-title mt0px">{$header:summary:static}</h3>
                 <div id="cart-summary">
-                    <div class="quote-summary-row"><span>Subtotal:</span>{$quote:total:sub}</div>
-                    <div class="quote-summary-row"><span>Total Tax:</span>{$quote:total:tax}</div>
-                    <div class="quote-summary-row"><span>Shipping:</span>{$quote:shipping}</div>
-                    <div class="quote-summary-row"><span>Discount:</span>{$quote:discount}</div>
-                    <div class="quote-summary-row cart-total"><span>Total:</span>{$quote:total}</div>
-                    <div class="quote-summary-row cart-total"><span>Efective tax:</span>{$quote:total:taxdiscount}</div>
+                    <div class="quote-summary-row"><span>{$header:subtotal:static} : </span>{$quote:total:sub}</div>
+                    <div class="quote-summary-row"><span>{$header:total-tax:static} : </span>{$quote:total:tax}</div>
+                    <div class="quote-summary-row"><span>{$header:shipping:static} : </span>{$quote:shipping}</div>
+                    <div class="quote-summary-row"><span>{$header:discount:static} : </span>{$quote:discount}</div>
+                    <div class="quote-summary-row cart-total"><span>{$header:total:static} : </span>{$quote:total}</div>
                 </div>
             </div>
-        </main>
-
         </div>
-        {adminonly}
-            <!-- ADMIN PANEL -->
-            <div id="quoteControlls">{$quote:controls}</div>
-        {/adminonly}
+    </div>
+    <!--{ quoteexpired:not}-->
+    <!--<div class="grid_12">-->
+    <!--<div id="#paypal_button">-->
+    <!--{ $plugin:paypal:quote}-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--{ /quoteexpired}-->
+</main>
 
-        <!-- SCRIPTS ZONE -->
-        <script type="text/javascript">
-            $(function() {
-                if(!$('.cart-content td.product-remove a').length) {
-                    $('.cart-content .product-remove').remove();
+{adminonly}
+<!-- ADMIN PANEL -->
+<div id="quoteControlls">{$quote:controls}</div>
+{/adminonly}
+<!-- SCRIPTS ZONE -->
+<script type="text/javascript">
+    $(function () {
+        if (!$('.cart-content td.product-remove a').length) {
+            $('.cart-content .product-remove').remove();
+        }
+        /*{device:desktop}*/
+        $('.quote-top-content, .quote-middle-content, .quote-bottom-content').each(function () {
+            var highestBox = 0;
+            $(this).children().each(function () {
+                if ($(this).height() > highestBox) {
+                    highestBox = $(this).height();
                 }
             });
-         </script>
-        <script src="js/scripts.min.js"></script>
-        <script src="js/system/flexkit.min.js"></script>
-
-        <!-- begin olark code -->
-        <div class="olark">
-            <a class="title" href="http://www.olark.com/?r=yb7h013i" target="_blank">Click here to open a free account with Olark to chat with prospects at this critical stage</a>
-            <div>After registering with Olark replace this placeholder with functioning Olark script in the checkout and quote template</div>
-        </div>
-        <!-- end olark code -->
-    </body>
+            $(this).children().height(highestBox);
+        });
+        /*{/device}*/
+    });
+</script>
+<script src="js/scripts.min.js"></script>
+<script src="js/system/flexkit.min.js"></script>
+</body>
 </html>

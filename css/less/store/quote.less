@@ -1,170 +1,357 @@
 // quote form on the checkout page
-form.toaster-quote{
-    #checkout-widget &, .product & {
-        margin-bottom : 2em;
+form.toaster-quote {
+	#checkout-widget &, .product & {
+		margin-bottom : 2em;
 
-        // usual widget {$ quote : form}
-        & > fieldset{
-            .grid-elements(2; 2*@grid-margin-width; true; 1; 1);
-            float : left;
-        }
+		.product-page & {
+			margin-bottom : 0;
+		}
 
-        .captcha{
-            clear : both;
-        }
+		// usual widget {$ quote : form}
+		& > fieldset {
+			.grid-elements(2; 2*@grid-margin-width; true; 1; 1);
+			float : left;
+		}
 
-        //specific widget like  { $ quote:form:firstname*:lastname:city:zip:email*:phone:address1}
-        @media only screen and (min-width : (@responsive-size-tablet + 1)){
-            & > p when (@responsive){
-                float : left;
-                width : 48%;
+		.captcha {
+			clear : both;
+		}
 
-                &:nth-child(odd){
-                    margin-right : 4%;
-                }
-            }
-        }
-    }
-    .product & {
-        fieldset {
-            border: none;
-            padding: 0;
-        }
-    }
-    .product-tabs &{
-        margin-bottom: 0;
-    }
+		//specific widget like  { $ quote:form:firstname*:lastname:city:zip:email*:phone:address1}
+		@media only screen and (min-width : (@responsive-size-tablet + 1)) {
+			& > p when (@responsive) {
+				float : left;
+				width : 48%;
+
+				&:nth-child(odd) {
+					margin-right : 4%;
+				}
+			}
+		}
+	}
+	.product & {
+		fieldset {
+			border  : none;
+			padding : 0;
+		}
+	}
+
 }
-
-
-
 
 // Quote
 //==================================================
-#quote-search{
-    padding : 7px;
-    width   : 700px;
-    display : block;
-    margin  : 0 auto;
+#quote-search {
+	padding    : 7px;
+	width      : 100%;
+	display    : block;
+	margin-top : 15px;
 }
 
-.ui-menu{
-    z-index : 55 !important;
+.ui-menu {
+	z-index : 55 !important;
 }
 
-#storeinfo{
-    text-align : right;
+#storeinfo {
+	h1 {
+		font-size      : inherit;
+		font-weight    : bold;
+		color          : @heading-color;
+		border-bottom  : 1px solid #DDDDDD;
+		padding-bottom : 10px;
+		margin-bottom  : 10px;
+	}
 
-    h1{
-        font-size   : 2em;
-        font-weight : bold;
-        margin      : 0;
-    }
-
-    p{
-        margin : 0;
-    }
+	p {
+		margin-bottom : 10px;
+	}
 }
 
 // quote-info
 //==================================================
-.quote-info{
-    margin-bottom : 2em;
+.quote-info {
 
-    @media only screen and (min-width : (@responsive-size-tablet + 1)){
-        & when (@responsive){
-            float : left;
-            width : 48%;
-        }
+	p {
+		margin-bottom : 10px;
+		&:last-child {
+			margin-bottom : 0;
+		}
+	}
 
-        &:first-child when (@responsive){
-            margin-right : 4%;
-        }
-    }
+	p.title {
+		font-size      : inherit;
+		font-weight    : bold;
+		color          : @heading-color;
+		border-bottom  : 1px solid #DDDDDD;
+		padding-bottom : 10px;
+		margin-bottom  : 10px;
+	}
 
-    & > p{
-        margin : 0;
-    }
+	fieldset {
+		margin        : 0;
+		padding       : 0;
+		border        : none;
+		margin-bottom : 10px;
 
-    p.title{
-        font-size      : 1.5em;
-        color          : @heading-color;
-        border-bottom  : 1px solid @gray-light;
-        padding-bottom : 0.25em;
-        margin-bottom  : 0.5em;
-    }
+		& > p {
+			margin-bottom : 0.5em;
+			.clearfix-mixin();
+		}
+	}
 
-    fieldset{
-        margin  : 0;
-        padding : 0;
-        border  : none;
+	label {
+		margin : 0.25em 0 0;
+		float  : left;
+		width  : 35%;
+		&[for="same-for-shipping"].optional,
+		&[for="overwrite-quote-user-billing"].optional,
+		&[for="overwrite-quote-user-shipping"].optional {
+			width         : 100%;
+			margin-bottom : 10px;
+		}
+	}
 
-        & > p{
-            margin-bottom : 0.5em;
-            .clearfix-mixin();
-        }
-    }
+	input,
+	select,
+	textarea {
+		float : left;
+		width : 65%;
+	}
+	textarea {
+		&.quote-disclaimer-text {
+			width      : 100%;
+			float      : none;
+			display    : block;
+			min-height : 300px;
+		}
+	}
+	.quote-disclaimer-text:not(textarea) {
+		min-height : 180px;
+		width      : 100%;
+		display    : block;
+		border     : 1px solid #DDDDDD;
+		padding    : 10px;
+	}
 
-    label{
-        margin : 0.25em 0 0;
-        float  : left;
-        width  : 35%;
-
-        &[for='same-for-shipping']{
-            width        : auto;
-            margin-right : 5px;
-        }
-    }
-
-    input,
-    select,
-    textarea{
-        float : left;
-        width : 65%;
-    }
 }
 
 //===============quote-details=================
-#quote-details{
-    clear : both;
+#quote-details {
+	clear         : both;
+	text-align    : center;
+	margin-bottom : 0;
+	h2, .h2 {
+		font-size : 1.8em;
+	}
 
-    h2{
-        margin-bottom : 5px;
-    }
+	h2 {
+		font-weight    : bold;
+		color          : @heading-color;
+		border-bottom  : 1px solid #DDDDDD;
+		padding-bottom : 15px;
+		margin-bottom  : 10px;
+		font-size      : 2em;
+	}
 
-    input{
-        width   : auto;
-        height  : auto;
-        padding : 5px;
-    }
+	input {
+		width   : auto;
+		height  : auto;
+		padding : 5px;
+	}
 
-    span{
-        color : #000;
-    }
+	span {
+		color : #000000;
+	}
+	.dates {
+		margin-top    : 0;
+		margin-bottom : 0;
+	}
 }
 
 // Quote admin-panel
 //==================================================
-#quoteControlls{
-    height : 70px;
+#quoteControlls {
+	//height : 70px;
 
-    .quote-controlls{
-        .rgba(rgb(170, 170, 170), 0.8);
-        border-top : 5px solid #888;
-        bottom     : 0;
-        left       : 0;
-        padding    : 10px 0;
-        position   : fixed;
-        width      : 100%;
-        z-index    : 10;
-        text-align : center;
-    }
+	.quote-controlls {
+		.rgba(rgb(170, 170, 170), 0.8);
+		border-top : 5px solid #888888;
+		bottom     : 0;
+		left       : 0;
+		padding    : 10px 0;
+		position   : fixed;
+		width      : 100%;
+		z-index    : 10;
+		text-align : center;
+	}
 
-    .quote-search{
-        width     : 500px;
-        padding   : 5px;
-        font-size : 18px;
-        color     : #666;
-        border    : 1px solid #ddd;
-    }
+	.quote-search {
+		width     : 500px;
+		padding   : 5px;
+		font-size : 18px;
+		color     : #666666;
+		border    : 1px solid #DDDDDD;
+	}
+}
+
+body.quote {
+	font-size      : 14px;
+	padding-bottom : 55px;
+	.container {
+		max-width : 960px;
+		width     : auto;
+	}
+	.logo-background {
+		background : #343434;
+		&.box {
+			background : #343434;
+		}
+	}
+	header {
+		position    : relative;
+		line-height : 1.4;
+		padding     : 0;
+		background  : none;
+	}
+	.logo-quote {
+		text-align : center;
+	}
+	.top-part {
+
+	}
+	.box {
+		margin-top    : 15px;
+		margin-bottom : 15px;
+		padding       : 15px;
+		border        : 1px solid #DDDDDD;
+		background    : @primary-color;
+		p {
+			&:empty {
+				display : none;
+			}
+			&:last-child {
+				margin-bottom : 0;
+			}
+		}
+	}
+	.cart-content {
+		margin-bottom : 0;
+		thead {
+			th {
+				border-bottom : none;
+			}
+		}
+		td {
+			padding : 15px 10px;
+		}
+		tr {
+			&:last-child {
+				margin-bottom : 0;
+				td {
+					border-bottom  : none;
+					padding-bottom : 0;
+				}
+			}
+		}
+	}
+	table tr:first-child > * {
+		border-top : none;
+	}
+	#quote-summary .quote-widget-title,
+	#checkoutsummary .checkout-widget-title,
+	.post-purchase-report-summary .summary-title {
+		font-size     : 14px;
+		margin-bottom : 0;
+	}
+	.cart-summary-row,
+	.quote-summary-row,
+	.post-purchase-row {
+		margin        : 0;
+		padding       : 10px;
+		border-bottom : 1px solid #DDDDDD;
+	}
+	.dates {
+		span {
+			font-weight    : bold;
+			text-transform : uppercase;
+		}
+	}
+	.quote-title {
+		font-weight    : bold;
+		text-transform : uppercase;
+	}
+	.middle-content, .bottom-content {
+		.box {
+			margin-top : 0;
+		}
+	}
+
+	.video-container {
+		h4.title {
+			font-size      : inherit;
+			font-weight    : bold;
+			color          : @heading-color;
+			border-bottom  : 1px solid #DDDDDD;
+			padding-bottom : 10px;
+			margin-bottom  : 10px;
+		}
+	}
+	.quote-expired-notification {
+		margin-top : 15px;
+		padding    : 15px;
+	}
+	#paypal_button {
+		margin-bottom : 15px;
+		padding       : 15px;
+		border        : 1px solid #DDDDDD;
+		fieldset {
+			margin  : 0;
+			padding : 0;
+			border  : none;
+		}
+		legend {
+			width         : 100%;
+			padding       : 0 0 10px 0;
+			font-size     : inherit;
+			font-weight   : bold;
+			color         : @heading-color;
+			border-bottom : 1px solid #DDDDDD;
+			margin-bottom : 10px;
+		}
+		.seo-tip {
+			margin-bottom : 0;
+			padding-right : 160px;
+		}
+	}
+	#paypalSubmit {
+		border  : none;
+		margin  : 0;
+		float   : right;
+		padding : 0;
+	}
+	@media only screen and (max-width : @responsive-size-desktop) and (min-width : @responsive-size-tablet) {
+		[class*=" grid_"], [class^="grid_"], [class*="-grid_"], [class*="_grid_"] {
+			float        : left;
+			position     : relative;
+			width        : 98%;
+			margin-left  : 1% !important;
+			margin-right : 1% !important;
+		}
+	}
+	@media only screen and (max-width : @responsive-size-tablet) {
+		padding-top : 0;
+		.video-container {
+			display : none;
+		}
+	}
+	.toaster-quote-content {
+		border-top : 1px solid #DDDDDD;
+		background : @primary-color;
+	}
+	select, textarea, input {
+		border-color : #DDDDDD;
+	}
+}
+
+#quote-summary {
+
 }

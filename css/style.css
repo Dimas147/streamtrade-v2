@@ -22,12 +22,12 @@ header .logo a {
   padding: 2.14rem;
   display: inline-block;
   vertical-align: middle;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+WzxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMyOTI5MjkiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIyMiIgc3RvcC1vcGFjaXR5PSIxIi8+XTwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #222));
-  background-image: -webkit-linear-gradient(top, #292929 1%, #222 100%);
-  background-image: -moz-linear-gradient(top, #292929 1%, #222 100%);
-  background-image: -ms-linear-gradient(top, #292929 1%, #222 100%);
-  background-image: linear-gradient(top, #292929 1%, #222 100%);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+WzxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMyOTI5MjkiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIyMjIyMiIgc3RvcC1vcGFjaXR5PSIxIi8+XTwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #292929 1%, #222222 100%);
+  background-image: -moz-linear-gradient(top, #292929 1%, #222222 100%);
+  background-image: -ms-linear-gradient(top, #292929 1%, #222222 100%);
+  background-image: linear-gradient(top, #292929 1%, #222222 100%);
 }
 @media only screen and (max-width: 1025px) {
   header .logo {
@@ -39,6 +39,109 @@ header .logo a {
   top: 0;
   left: 0;
   right: 0;
+}
+header.header {
+  padding-top: 0;
+}
+header.header .logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0;
+}
+@media only screen and (max-width: 1025px) {
+  header.header .logo a {
+    display: block;
+    text-align: center;
+  }
+}
+header.header .top-panel {
+  border-bottom: #404040;
+  background: #222222;
+  padding: 0.857rem 0;
+}
+header.header .middle-panel {
+  padding: 3.357rem 0;
+}
+header.header .list-contact-information {
+  padding-top: 3rem;
+  font-size: 0;
+}
+@media only screen and (max-width: 1025px) {
+  header.header .list-contact-information {
+    padding-top: 3.57rem;
+  }
+}
+header.header .list-contact-information >* {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 1025px) {
+  header.header .list-contact-information li {
+    float: none;
+    width: auto;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1.07rem;
+  }
+  header.header .list-contact-information li + li {
+    margin-left: 4.7rem !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header.header .list-contact-information li + li {
+    margin-top: 1.05rem;
+  }
+}
+header.header .list-contact-information a {
+  color: #FFF;
+  transition: all 0.3s;
+}
+header.header .list-contact-information a:hover {
+  color: #fcc605;
+}
+header.header .list-contact-information address,
+header.header .list-contact-information p {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 3.857rem;
+  margin: 0;
+  text-align: left;
+  color: #FFF;
+}
+header.header .list-contact-information address::before,
+header.header .list-contact-information p::before {
+  margin-left: -3.857rem;
+  float: left;
+  height: 3.142rem;
+  width: 3.142rem;
+  line-height: 3.142rem;
+  background: #FFF;
+  color: #191919;
+  font-size: 1.57rem;
+  border-radius: 50%;
+}
+header.header .list-contact-information address.icon-phone,
+header.header .list-contact-information p.icon-phone,
+header.header .list-contact-information address.icon-contact-email,
+header.header .list-contact-information p.icon-contact-email {
+  font-size: 1.857rem;
+}
+header.header .slogan {
+  margin-bottom: 0;
+  color: #FFF;
+  margin-top: 1.2rem;
+}
+header.header .cart-container {
+  margin: 0;
+}
+header.header .cart-container .toaster-cart {
+  top: 4.92rem;
+}
+header.header .cart-btn {
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
 }
 .header-container {
   padding: 2.14rem 0;
@@ -76,7 +179,8 @@ footer {
   margin-bottom: 1.571em;
 }
 .webPage-go-top.btn,
-.call-us-btn .btn {
+.call-us-btn .btn,
+.call-us-btn_1 .btn {
   line-height: 4rem;
   width: 4rem;
   background: #FFF;
@@ -85,13 +189,25 @@ footer {
   z-index: 50;
 }
 .webPage-go-top.btn:hover,
-.call-us-btn .btn:hover {
+.call-us-btn .btn:hover,
+.call-us-btn_1 .btn:hover {
   background: #191919;
   color: #FFF;
 }
 .webPage-go-top.btn::before,
-.call-us-btn .btn::before {
+.call-us-btn .btn::before,
+.call-us-btn_1 .btn::before {
   font-size: 2.142rem;
+}
+.call-us-btn_1 {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 0.72rem;
+}
+.call-us-btn_1 .btn:hover {
+  color: #191919;
+  background: #fcc605;
 }
 .webPage-go-top.btn:hover {
   background: #fcc605;
@@ -189,13 +305,13 @@ footer {
   color: #fcc605;
 }
 .copyright {
-  border-top: 1px solid #777;
+  border-top: 1px solid #777777;
   margin-top: 95px;
 }
 .copyright h4 {
   font-size: 0.857em;
   line-height: 1.5;
-  color: #777;
+  color: #777777;
   padding: 2.41em 0;
   font-weight: 400;
 }
@@ -290,7 +406,7 @@ footer {
   }
 }
 .product-tabs .tab_nav li.active a {
-  color: #FFF;
+  color: #FFFFFF;
   background: #292929;
   border: 1px solid #101010;
 }
@@ -306,7 +422,7 @@ footer {
   font-weight: bold;
   text-decoration: none;
   display: block;
-  background: #EEE;
+  background: #EEEEEE;
   border-radius: 0 0 0 0;
   border: 1px solid #dddddd;
   margin: 0 0 -1px 0;
@@ -1765,7 +1881,7 @@ textarea.resize {
   right: 0;
   width: 300px;
   background: #EEE;
-  z-index: 123;
+  z-index: 125;
 }
 .cart-container .toaster-cart * {
   color: #191919;

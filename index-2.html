@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {$template:_head}
+</head>
+<body class="index-page-2">
+<!-- Header -->
+<header class="header">
+    <div class="top-panel d-visible">
+        <div class="container">
+            <div class="grid_3 t-grid_2 m-grid_2 social-links">
+                {$template:_social links}
+            </div>
+            <div class="grid_6 t-grid_2 slogan text-center m-hide">
+                {$header:working-time:static}
+            </div>
+            <div class="grid_3 t-grid_2 text-right cart-container m-grid_2">
+                <div class="animated-circles call-us-btn_1" id="animation">
+                    <button id="call-us-btn" class="dialog-btn btn icon icon-phone4 tooltip" title="{$header:order-call:static:readonly}" data-dialog-element="#call-us">{$header:order-call:static}</button>
+                </div>
+                <a href="#" class="icon-cart btn icon cart-btn">Cart</a>
+                {$store:cartblock}
+            </div>
+        </div>
+    </div>
+    <div class="middle-panel container">
+        <h1 class="logo grid_3" itemscope itemtype="http://schema.org/Organization">
+            <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
+                <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="176" height="43" itemprop="logo">
+            </a>
+        </h1>
+
+        <div class="grid_9">
+            <ul class="list-contact-information text-right clearfix">
+                <li class="t-grid_3 t-text-center m-text-left">
+                    <address class="icon-location">
+                        {$plugin:widcard:BizAddress1:notag}, {$plugin:widcard:BizCity:notag},<br/>
+                        {$plugin:widcard:BizZip:notag}
+                    </address>
+                </li>
+                <li class="m-visible m-text-left t-grid_3">
+                    <p class="icon-clock">
+                        {$header:working-time:static}
+                    </p>
+                </li>
+                <li>
+                    <p class="icon-contact-email d-visible">
+                        <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
+                    </p>
+                </li>
+                <li class="t-grid_3 t-text-center m-text-left">
+                    <p class="icon-phone">
+                        <a href="tel:{$plugin:widcard:BizTelephone:notag}" class="phone" target="_blank">{$plugin:widcard:BizTelephone:notag}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="yellow-bg navigation-box shadow d-visible" id="navigation-box">
+    <div class="container">
+        <nav id="main-menu" class="d-visible grid_9" role="navigation">{$menu:main:_main menu}</nav>
+        <div class="grid_3 alpha" role="search">{$search:form}</div>
+    </div>
+</div>
+{$featured:area:categories:6:0:template=_fa - categories}
+<div class="container main-content">
+    <section class="grid_9 p-r omega" role="main">
+        <article>
+            <h2>{$header:stock:static}</h2>
+            <ul class="list-stock">
+                {repeat:list-stock:key}
+                <li>
+                    <div class="text">
+                        <h3>
+                            {$header:stock-title_key:static}
+                        </h3>
+                        <h4>
+                            {$header:stock-subtitle_key:static}
+                        </h4>
+                        <p>
+                            {$header:stock-text_key:static}
+                        </p>
+                    </div>
+                    <div class="image parallax take-from-widget">
+                        {$imageonly:stock-image_key:540:static}
+                    </div>
+                </li>
+                {/repeat}
+            </ul>
+        </article>
+        <article>
+            <h2>{$header:new-products:static}</h2>
+            {$productlist:_products list new-products::12}
+        </article>
+        <article>
+            <h2>{$header:products-for-sale:static}</h2>
+            <div id="products-in-carousel">
+                {$productlist:_products list carousel::12}
+            </div>
+        </article>
+    </section>
+    <aside class="grid_3 alpha t-grid_6 t-alpha t-omega" role="complementary">
+        <section class="aside-box t-grid_3">
+            <h3>{$header:right-categories:static}</h3>
+            {$featured:area:right-categories:100:0:template=_fa - categories - right}
+        </section>
+        <section class="aside-box t-grid_3">
+            <h3>{$header:tag-cloud:static}</h3>
+            <div class="tag-cloud">
+                {$news:tagcloud:newslist}
+            </div>
+        </section>
+    </aside>
+</div>
+
+<div class="parallax height-auto take-from-widget">
+    {$imageonly:blog-parallax:original:static}
+    <section class="container blog">
+        <div class="grid_12">
+            <h2>{$header:blog-title:static}</h2>
+
+            <div class="news-list">
+                {$newslist:_news list - index:desc:3}
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="subscribe yellow-bg">
+    <section class="container">
+        <h3 class="grid_5 t-grid_4 t-prefix_1 t-suffix_1 icon-mail text-right t-text-center">{$header:subscribe-title:static}</h3>
+        <div class="grid_4 t-grid_4 t-prefix_1 t-suffix_1">
+            {$form:subscribe-form:{$prepop:submit:text:static:readonly}}
+            {adminonly}
+            <div class="panel">
+                <div class="panel-header">Name for submit button:</div>
+                <div class="panel-content">
+                    <p class="icon-cog">{$prepop:submit:text:static}</p>
+                </div>
+            </div>
+            {/adminonly}
+        </div>
+    </section>
+</div>
+
+<div class="contact-info text-center parallax take-from-widget bg-scroll">
+    {$imageonly:map:1920}
+    <div class="container contact-text icon-location">
+        <div class="grid_12">
+            <address>
+                {$plugin:widcard:BizAddress1}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizZip}
+            </address>
+            <p class="icon-contact-mobile phone">
+                <a href="tel:{$plugin:widcard:BizTelephone:href}">{$plugin:widcard:BizTelephone:notag}</a>
+            </p>
+            <p class="icon-contact-email email">
+                <a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag}</a>
+            </p>
+        </div>
+    </div>
+</div>
+{$template:_footer}
+{$template:_mobile elements}
+{$template:_scripts}
+{device:desktop}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+{/device}
+<script src="js/plugin/owl.carousel.min.js"></script>
+<script>
+    $(function () {
+
+        $("a.main-arrow").on({
+            touchstart:function(e){
+                e.preventDefault();
+                console.log("touch");
+                $("html, body").animate({
+                    scrollTop: $(".featureditem.categories").offset().top - 56
+                }, 1000);
+            },
+            click:function(e){
+                e.preventDefault();
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top
+                }, 1000);
+            }
+        });
+        $('#products-in-carousel .show-more').remove();
+        $('#products-in-carousel .product-list').addClass("owl-carousel");
+        $('.owl-carousel').owlCarousel({
+            loop: 'true',
+            margin: 10,
+            responsiveClass: 'true',
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: 'true'
+                },
+                481: {
+                    items: 2,
+                    nav: 'false',
+                    margin: 30
+                },
+                480: {
+                    items: 2,
+                    nav: 'true',
+                    loop: 'false',
+                    margin: 26
+                },
+                1025: {
+                    items: 4,
+                    nav: 'true',
+                    loop: 'false',
+                    margin: 30
+                }
+            }
+        });
+    })
+</script>
+
+</body>
+</html>
